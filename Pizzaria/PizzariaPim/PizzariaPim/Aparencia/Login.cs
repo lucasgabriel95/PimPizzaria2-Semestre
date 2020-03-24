@@ -1,4 +1,5 @@
-﻿using PizzariaPim.Aparencia;
+﻿//using PizzariaPim.Aparencia;
+using PizzariaPim.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +21,19 @@ namespace PizzariaPim
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            CadastroUsuario Menu = new CadastroUsuario();
-            Menu.Show();
+            Controle controle = new Controle();
+            controle.acessar(txbLogin.Text, txbSenha.Text);
+            if (controle.tem)
+            {
+                MessageBox.Show("Logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CadastroUsuario Menu = new CadastroUsuario();
+                Menu.Show();
+            }
+            else
+            {
+                MessageBox.Show("Login não econtrado, verifique login e senha", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

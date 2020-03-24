@@ -57,3 +57,15 @@ J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPi
 J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.GenerateResource.Cache
 J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Form2.resources
 J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.CadastroUsuario.resources
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Form1.resources
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.CadastroUsuario.resources
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.tb_config.resources
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Selec_Config.resources
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Properties.Resources.resources
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.GenerateResource.cache
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.exe
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.pdb
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe.config
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe
+C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.pdb

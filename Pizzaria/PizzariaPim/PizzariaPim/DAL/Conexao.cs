@@ -12,7 +12,7 @@ namespace PizzariaPim
         SqlConnection con = new SqlConnection();
         public Conexao ()
         {
-            con.ConnectionString = @"Data Source=DESKTOP-788MSMO;Initial Catalog=BDpizzaria;Integrated Security=True";
+            con.ConnectionString = @"Data Source=bdpizzaria.cclb1vxbhmpa.sa-east-1.rds.amazonaws.com;Initial Catalog=BDpizzaria;Persist Security Info=True;User ID=admin;Password=19954567";
         }
         public SqlConnection Conectar ()
         {
