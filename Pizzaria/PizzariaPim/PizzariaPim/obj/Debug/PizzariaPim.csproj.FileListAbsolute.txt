@@ -1,0 +1,59 @@
+C:\projetos\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csprojAssemblyReference.cache
+C:\projetos\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Form1.resources
+C:\projetos\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Properties.Resources.resources
+C:\projetos\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.GenerateResource.cache
+C:\projetos\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe.config
+C:\projetos\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe
+C:\projetos\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.pdb
+C:\projetos\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.exe
+C:\projetos\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.pdb
+C:\Users\Lucas\Desktop\PIM 2º SEMESTRE\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe.config
+C:\Users\Lucas\Desktop\PIM 2º SEMESTRE\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe
+C:\Users\Lucas\Desktop\PIM 2º SEMESTRE\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.pdb
+C:\Users\Lucas\Desktop\PIM 2º SEMESTRE\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csprojAssemblyReference.cache
+C:\Users\Lucas\Desktop\PIM 2º SEMESTRE\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Form1.resources
+C:\Users\Lucas\Desktop\PIM 2º SEMESTRE\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Properties.Resources.resources
+C:\Users\Lucas\Desktop\PIM 2º SEMESTRE\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.GenerateResource.cache
+C:\Users\Lucas\Desktop\PIM 2º SEMESTRE\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.exe
+C:\Users\Lucas\Desktop\PIM 2º SEMESTRE\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.pdb
+C:\Users\Lucas\Desktop\PIM 2º SEMESTRE\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Aparencia.CadastroUsuario.resources
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe.config
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.exe
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.pdb
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.pdb
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\mscorlib.dll
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\System.Net.Http.dll
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\System.Net.Http.xml
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\pt-BR\mscorlib.resources.dll
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\normidna.nlp
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\normnfc.nlp
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\normnfd.nlp
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\normnfkc.nlp
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\normnfkd.nlp
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csprojResolveAssemblyReference.cache
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Aparencia.CadastroUsuario.resources
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Form1.resources
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Properties.Resources.resources
+C:\Users\abner\Downloads\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.GenerateResource.Cache
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe.config
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.exe
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.pdb
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.pdb
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\mscorlib.dll
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\System.Net.Http.dll
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\System.Net.Http.xml
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\pt-BR\mscorlib.resources.dll
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\normidna.nlp
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\normnfc.nlp
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\normnfd.nlp
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\normnfkc.nlp
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\normnfkd.nlp
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csprojResolveAssemblyReference.cache
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Aparencia.CadastroUsuario.resources
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Form1.resources
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Properties.Resources.resources
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.GenerateResource.Cache
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Form2.resources
+J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.CadastroUsuario.resources
