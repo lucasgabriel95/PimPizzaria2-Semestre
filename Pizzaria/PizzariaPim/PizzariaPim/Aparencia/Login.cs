@@ -12,28 +12,28 @@ using System.Windows.Forms;
 
 namespace PizzariaPim
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
-
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Controle controle = new Controle();
+            ControleFuncionario controle = new ControleFuncionario();
             controle.acessar(txbLogin.Text, txbSenha.Text);
             if (controle.tem)
             {
                 MessageBox.Show("Logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CadastroUsuario Menu = new CadastroUsuario();
+                MenuPrincipal Menu = new MenuPrincipal();
                 Menu.Show();
+                Login ln = new Login();
+                this.Hide(); 
             }
             else
             {
                 MessageBox.Show("Login não econtrado, verifique login e senha", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
     }
 }

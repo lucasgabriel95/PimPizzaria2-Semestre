@@ -1,6 +1,6 @@
 ﻿namespace PizzariaPim
 {
-    partial class tb_config
+    partial class ConfigUser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tb_config));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_sair = new System.Windows.Forms.Button();
-            this.btn_opc = new System.Windows.Forms.Button();
-            this.btn_config = new System.Windows.Forms.Button();
-            this.btn_relatorio = new System.Windows.Forms.Button();
-            this.btnPedido = new System.Windows.Forms.Button();
-            this.btn_Sabores = new System.Windows.Forms.Button();
-            this.btn_Clientes = new System.Windows.Forms.Button();
-            this.btn_Bebidas = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigUser));
             this.boxCPF = new System.Windows.Forms.TextBox();
             this.boxNomeCompleto = new System.Windows.Forms.TextBox();
             this.boxCargo = new System.Windows.Forms.TextBox();
@@ -59,203 +50,91 @@
             this.boxNumero = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.boxBairro = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Login = new System.Windows.Forms.Label();
+            this.boxConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.boxSenha = new System.Windows.Forms.TextBox();
+            this.boxLogin = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.dgGride = new System.Windows.Forms.DataGridView();
+            this.bDpizzariaDataSet = new PizzariaPim.BDpizzariaDataSet();
+            this.cadFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cad_FuncionarioTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_FuncionarioTableAdapter();
+            this.codigoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpfFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefoneFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cepFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logradouroFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bairroFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.complementeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senhaFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadFuncionarioBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.CausesValidation = false;
-            this.panel1.Controls.Add(this.btn_sair);
-            this.panel1.Controls.Add(this.btn_opc);
-            this.panel1.Controls.Add(this.btn_config);
-            this.panel1.Controls.Add(this.btn_relatorio);
-            this.panel1.Controls.Add(this.btnPedido);
-            this.panel1.Controls.Add(this.btn_Sabores);
-            this.panel1.Controls.Add(this.btn_Clientes);
-            this.panel1.Controls.Add(this.btn_Bebidas);
-            this.panel1.Location = new System.Drawing.Point(0, 92);
-            this.panel1.Name = "panel1";
-            this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panel1.Size = new System.Drawing.Size(162, 466);
-            this.panel1.TabIndex = 3;
-            // 
-            // btn_sair
-            // 
-            this.btn_sair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_sair.BackgroundImage")));
-            this.btn_sair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_sair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_sair.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_sair.Location = new System.Drawing.Point(68, 340);
-            this.btn_sair.Name = "btn_sair";
-            this.btn_sair.Size = new System.Drawing.Size(31, 25);
-            this.btn_sair.TabIndex = 2;
-            this.btn_sair.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_sair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_sair.UseVisualStyleBackColor = true;
-            // 
-            // btn_opc
-            // 
-            this.btn_opc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_opc.BackgroundImage")));
-            this.btn_opc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_opc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_opc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_opc.Location = new System.Drawing.Point(15, 279);
-            this.btn_opc.Name = "btn_opc";
-            this.btn_opc.Size = new System.Drawing.Size(130, 40);
-            this.btn_opc.TabIndex = 8;
-            this.btn_opc.Tag = "";
-            this.btn_opc.UseVisualStyleBackColor = true;
-            // 
-            // btn_config
-            // 
-            this.btn_config.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_config.BackgroundImage")));
-            this.btn_config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_config.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_config.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_config.Location = new System.Drawing.Point(15, 233);
-            this.btn_config.Name = "btn_config";
-            this.btn_config.Size = new System.Drawing.Size(130, 40);
-            this.btn_config.TabIndex = 7;
-            this.btn_config.Tag = "";
-            this.btn_config.UseVisualStyleBackColor = true;
-            // 
-            // btn_relatorio
-            // 
-            this.btn_relatorio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_relatorio.BackgroundImage")));
-            this.btn_relatorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_relatorio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_relatorio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_relatorio.Location = new System.Drawing.Point(15, 187);
-            this.btn_relatorio.Name = "btn_relatorio";
-            this.btn_relatorio.Size = new System.Drawing.Size(100, 40);
-            this.btn_relatorio.TabIndex = 6;
-            this.btn_relatorio.UseVisualStyleBackColor = true;
-            // 
-            // btnPedido
-            // 
-            this.btnPedido.BackColor = System.Drawing.Color.Transparent;
-            this.btnPedido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPedido.BackgroundImage")));
-            this.btnPedido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPedido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPedido.FlatAppearance.BorderSize = 0;
-            this.btnPedido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPedido.Location = new System.Drawing.Point(15, 3);
-            this.btnPedido.Name = "btnPedido";
-            this.btnPedido.Size = new System.Drawing.Size(100, 40);
-            this.btnPedido.TabIndex = 2;
-            this.btnPedido.UseVisualStyleBackColor = false;
-            // 
-            // btn_Sabores
-            // 
-            this.btn_Sabores.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Sabores.BackgroundImage")));
-            this.btn_Sabores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Sabores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Sabores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Sabores.Location = new System.Drawing.Point(15, 141);
-            this.btn_Sabores.Name = "btn_Sabores";
-            this.btn_Sabores.Size = new System.Drawing.Size(100, 40);
-            this.btn_Sabores.TabIndex = 5;
-            this.btn_Sabores.UseVisualStyleBackColor = true;
-            // 
-            // btn_Clientes
-            // 
-            this.btn_Clientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Clientes.BackgroundImage")));
-            this.btn_Clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Clientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Clientes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Clientes.Location = new System.Drawing.Point(15, 49);
-            this.btn_Clientes.Name = "btn_Clientes";
-            this.btn_Clientes.Size = new System.Drawing.Size(100, 40);
-            this.btn_Clientes.TabIndex = 3;
-            this.btn_Clientes.UseVisualStyleBackColor = true;
-            // 
-            // btn_Bebidas
-            // 
-            this.btn_Bebidas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Bebidas.BackgroundImage")));
-            this.btn_Bebidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Bebidas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Bebidas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Bebidas.Location = new System.Drawing.Point(15, 95);
-            this.btn_Bebidas.Name = "btn_Bebidas";
-            this.btn_Bebidas.Size = new System.Drawing.Size(100, 40);
-            this.btn_Bebidas.TabIndex = 4;
-            this.btn_Bebidas.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // boxCPF
             // 
-            this.boxCPF.Location = new System.Drawing.Point(200, 127);
+            this.boxCPF.Location = new System.Drawing.Point(13, 92);
             this.boxCPF.Name = "boxCPF";
             this.boxCPF.Size = new System.Drawing.Size(167, 20);
             this.boxCPF.TabIndex = 0;
+            this.boxCPF.TextChanged += new System.EventHandler(this.boxCPF_TextChanged);
             // 
             // boxNomeCompleto
             // 
-            this.boxNomeCompleto.Location = new System.Drawing.Point(200, 164);
+            this.boxNomeCompleto.Location = new System.Drawing.Point(13, 129);
             this.boxNomeCompleto.Name = "boxNomeCompleto";
             this.boxNomeCompleto.Size = new System.Drawing.Size(294, 20);
             this.boxNomeCompleto.TabIndex = 1;
-            this.boxNomeCompleto.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // boxCargo
             // 
-            this.boxCargo.Location = new System.Drawing.Point(201, 235);
+            this.boxCargo.Location = new System.Drawing.Point(14, 200);
             this.boxCargo.Name = "boxCargo";
             this.boxCargo.Size = new System.Drawing.Size(152, 20);
             this.boxCargo.TabIndex = 3;
-            this.boxCargo.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // boxUnidade
             // 
-            this.boxUnidade.Location = new System.Drawing.Point(200, 272);
+            this.boxUnidade.Location = new System.Drawing.Point(13, 237);
             this.boxUnidade.Name = "boxUnidade";
             this.boxUnidade.Size = new System.Drawing.Size(167, 20);
             this.boxUnidade.TabIndex = 4;
-            this.boxUnidade.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // boxCEP
             // 
-            this.boxCEP.Location = new System.Drawing.Point(200, 346);
+            this.boxCEP.Location = new System.Drawing.Point(13, 311);
             this.boxCEP.Name = "boxCEP";
             this.boxCEP.Size = new System.Drawing.Size(167, 20);
             this.boxCEP.TabIndex = 5;
             // 
             // boxTelefone
             // 
-            this.boxTelefone.Location = new System.Drawing.Point(201, 198);
+            this.boxTelefone.Location = new System.Drawing.Point(14, 163);
             this.boxTelefone.Name = "boxTelefone";
             this.boxTelefone.Size = new System.Drawing.Size(167, 20);
             this.boxTelefone.TabIndex = 2;
-            this.boxTelefone.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(203, 116);
+            this.label1.Location = new System.Drawing.Point(16, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 10;
@@ -264,58 +143,53 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 153);
+            this.label2.Location = new System.Drawing.Point(13, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "NOME COMPLETO";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(201, 224);
+            this.label3.Location = new System.Drawing.Point(14, 192);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 12;
             this.label3.Text = "CARGO";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(203, 261);
+            this.label4.Location = new System.Drawing.Point(16, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "UNIDADE DE TRABALHO";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(196, 314);
+            this.label5.Location = new System.Drawing.Point(9, 279);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "ENDEREÇO";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(201, 189);
+            this.label6.Location = new System.Drawing.Point(14, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "TELEFONE";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txt_Config
             // 
             this.txt_Config.AutoSize = true;
-            this.txt_Config.Location = new System.Drawing.Point(121, 44);
+            this.txt_Config.Location = new System.Drawing.Point(121, 26);
             this.txt_Config.Name = "txt_Config";
             this.txt_Config.Size = new System.Drawing.Size(134, 13);
             this.txt_Config.TabIndex = 16;
@@ -324,7 +198,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(200, 339);
+            this.label7.Location = new System.Drawing.Point(13, 304);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 13);
             this.label7.TabIndex = 20;
@@ -333,15 +207,15 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(373, 339);
+            this.label8.Location = new System.Drawing.Point(186, 304);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.Size = new System.Drawing.Size(84, 13);
             this.label8.TabIndex = 22;
-            this.label8.Text = "LOGADOURO";
+            this.label8.Text = "LOGRADOURO";
             // 
             // boxLogadouro
             // 
-            this.boxLogadouro.Location = new System.Drawing.Point(373, 347);
+            this.boxLogadouro.Location = new System.Drawing.Point(186, 312);
             this.boxLogadouro.Name = "boxLogadouro";
             this.boxLogadouro.Size = new System.Drawing.Size(167, 20);
             this.boxLogadouro.TabIndex = 6;
@@ -349,7 +223,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(560, 339);
+            this.label9.Location = new System.Drawing.Point(373, 304);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(19, 13);
             this.label9.TabIndex = 24;
@@ -357,7 +231,7 @@
             // 
             // boxNumero
             // 
-            this.boxNumero.Location = new System.Drawing.Point(560, 346);
+            this.boxNumero.Location = new System.Drawing.Point(373, 311);
             this.boxNumero.Name = "boxNumero";
             this.boxNumero.Size = new System.Drawing.Size(73, 20);
             this.boxNumero.TabIndex = 7;
@@ -365,7 +239,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(197, 380);
+            this.label10.Location = new System.Drawing.Point(10, 345);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 13);
             this.label10.TabIndex = 26;
@@ -373,35 +247,37 @@
             // 
             // boxBairro
             // 
-            this.boxBairro.Location = new System.Drawing.Point(199, 390);
+            this.boxBairro.Location = new System.Drawing.Point(12, 355);
             this.boxBairro.Name = "boxBairro";
             this.boxBairro.Size = new System.Drawing.Size(168, 20);
             this.boxBairro.TabIndex = 8;
             // 
-            // button1
+            // btn_Salvar
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(492, 525);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salvar.Location = new System.Drawing.Point(305, 508);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Salvar.TabIndex = 10;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
-            // button2
+            // btn_Cancelar
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(573, 525);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cancelar.Location = new System.Drawing.Point(386, 508);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Cancelar.TabIndex = 11;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // button3
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(654, 525);
+            this.button3.Location = new System.Drawing.Point(467, 508);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 12;
@@ -412,7 +288,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(161, 57);
+            this.label11.Location = new System.Drawing.Point(161, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(56, 13);
             this.label11.TabIndex = 31;
@@ -421,7 +297,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(371, 380);
+            this.label12.Location = new System.Drawing.Point(184, 345);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 13);
             this.label12.TabIndex = 33;
@@ -429,91 +305,258 @@
             // 
             // boxComplemento
             // 
-            this.boxComplemento.Location = new System.Drawing.Point(373, 390);
+            this.boxComplemento.Location = new System.Drawing.Point(186, 355);
             this.boxComplemento.Name = "boxComplemento";
             this.boxComplemento.Size = new System.Drawing.Size(167, 20);
             this.boxComplemento.TabIndex = 9;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dgGride);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.Login);
+            this.panel2.Controls.Add(this.boxConfirmarSenha);
+            this.panel2.Controls.Add(this.boxSenha);
+            this.panel2.Controls.Add(this.boxLogin);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.txt_Config);
+            this.panel2.Controls.Add(this.boxComplemento);
             this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(168, 2);
+            this.panel2.Controls.Add(this.btn_Cancelar);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btn_Salvar);
+            this.panel2.Controls.Add(this.boxCPF);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.boxNomeCompleto);
+            this.panel2.Controls.Add(this.boxBairro);
+            this.panel2.Controls.Add(this.boxCargo);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.boxUnidade);
+            this.panel2.Controls.Add(this.boxNumero);
+            this.panel2.Controls.Add(this.boxCEP);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.boxTelefone);
+            this.panel2.Controls.Add(this.boxLogadouro);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(560, 418);
+            this.panel2.Size = new System.Drawing.Size(741, 560);
             this.panel2.TabIndex = 14;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(411, 134);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 13);
+            this.label15.TabIndex = 39;
+            this.label15.Text = "Confirmar Senha";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(411, 94);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(38, 13);
+            this.label14.TabIndex = 38;
+            this.label14.Text = "Senha";
+            // 
+            // Login
+            // 
+            this.Login.AutoSize = true;
+            this.Login.Location = new System.Drawing.Point(413, 53);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(33, 13);
+            this.Login.TabIndex = 37;
+            this.Login.Text = "Login";
+            // 
+            // boxConfirmarSenha
+            // 
+            this.boxConfirmarSenha.Location = new System.Drawing.Point(412, 150);
+            this.boxConfirmarSenha.Name = "boxConfirmarSenha";
+            this.boxConfirmarSenha.PasswordChar = '*';
+            this.boxConfirmarSenha.Size = new System.Drawing.Size(100, 20);
+            this.boxConfirmarSenha.TabIndex = 36;
+            // 
+            // boxSenha
+            // 
+            this.boxSenha.Location = new System.Drawing.Point(412, 110);
+            this.boxSenha.Name = "boxSenha";
+            this.boxSenha.PasswordChar = '*';
+            this.boxSenha.Size = new System.Drawing.Size(100, 20);
+            this.boxSenha.TabIndex = 35;
+            // 
+            // boxLogin
+            // 
+            this.boxLogin.Location = new System.Drawing.Point(412, 69);
+            this.boxLogin.Name = "boxLogin";
+            this.boxLogin.Size = new System.Drawing.Size(100, 20);
+            this.boxLogin.TabIndex = 34;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(31, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(31, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(84, 76);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
             // 
-            // tb_config
+            // dgGride
+            // 
+            this.dgGride.AutoGenerateColumns = false;
+            this.dgGride.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgGride.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoFuncionarioDataGridViewTextBoxColumn,
+            this.cpfFuncionarioDataGridViewTextBoxColumn,
+            this.nomeFuncionarioDataGridViewTextBoxColumn,
+            this.telefoneFuncionarioDataGridViewTextBoxColumn,
+            this.cargoFuncionarioDataGridViewTextBoxColumn,
+            this.unidadeFuncionarioDataGridViewTextBoxColumn,
+            this.cepFuncionarioDataGridViewTextBoxColumn,
+            this.logradouroFuncionarioDataGridViewTextBoxColumn,
+            this.numeroFuncionarioDataGridViewTextBoxColumn,
+            this.bairroFuncionarioDataGridViewTextBoxColumn,
+            this.complementeFuncionarioDataGridViewTextBoxColumn,
+            this.loginFuncionarioDataGridViewTextBoxColumn,
+            this.senhaFuncionarioDataGridViewTextBoxColumn});
+            this.dgGride.DataSource = this.cadFuncionarioBindingSource;
+            this.dgGride.Location = new System.Drawing.Point(6, 381);
+            this.dgGride.Name = "dgGride";
+            this.dgGride.Size = new System.Drawing.Size(725, 125);
+            this.dgGride.TabIndex = 40;
+            this.dgGride.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgGride_CellDoubleClick);
+            // 
+            // bDpizzariaDataSet
+            // 
+            this.bDpizzariaDataSet.DataSetName = "BDpizzariaDataSet";
+            this.bDpizzariaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cadFuncionarioBindingSource
+            // 
+            this.cadFuncionarioBindingSource.DataMember = "Cad_Funcionario";
+            this.cadFuncionarioBindingSource.DataSource = this.bDpizzariaDataSet;
+            // 
+            // cad_FuncionarioTableAdapter
+            // 
+            this.cad_FuncionarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // codigoFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.codigoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "codigo_Funcionario";
+            this.codigoFuncionarioDataGridViewTextBoxColumn.HeaderText = "codigo_Funcionario";
+            this.codigoFuncionarioDataGridViewTextBoxColumn.Name = "codigoFuncionarioDataGridViewTextBoxColumn";
+            this.codigoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cpfFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.cpfFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cpf_Funcionario";
+            this.cpfFuncionarioDataGridViewTextBoxColumn.HeaderText = "CPF";
+            this.cpfFuncionarioDataGridViewTextBoxColumn.Name = "cpfFuncionarioDataGridViewTextBoxColumn";
+            // 
+            // nomeFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.nomeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "nome_Funcionario";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.Name = "nomeFuncionarioDataGridViewTextBoxColumn";
+            // 
+            // telefoneFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "telefone_Funcionario";
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.Name = "telefoneFuncionarioDataGridViewTextBoxColumn";
+            // 
+            // cargoFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.cargoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cargo_Funcionario";
+            this.cargoFuncionarioDataGridViewTextBoxColumn.HeaderText = "Cargo";
+            this.cargoFuncionarioDataGridViewTextBoxColumn.Name = "cargoFuncionarioDataGridViewTextBoxColumn";
+            // 
+            // unidadeFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "unidade_Funcionario";
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Unidade";
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.Name = "unidadeFuncionarioDataGridViewTextBoxColumn";
+            // 
+            // cepFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.cepFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cep_Funcionario";
+            this.cepFuncionarioDataGridViewTextBoxColumn.HeaderText = "CEP";
+            this.cepFuncionarioDataGridViewTextBoxColumn.Name = "cepFuncionarioDataGridViewTextBoxColumn";
+            // 
+            // logradouroFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "logradouro_Funcionario";
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Logradouro";
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.Name = "logradouroFuncionarioDataGridViewTextBoxColumn";
+            // 
+            // numeroFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.numeroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "numero_Funcionario";
+            this.numeroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Numero";
+            this.numeroFuncionarioDataGridViewTextBoxColumn.Name = "numeroFuncionarioDataGridViewTextBoxColumn";
+            // 
+            // bairroFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.bairroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "bairro_Funcionario";
+            this.bairroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Bairro";
+            this.bairroFuncionarioDataGridViewTextBoxColumn.Name = "bairroFuncionarioDataGridViewTextBoxColumn";
+            // 
+            // complementeFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.complementeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "complemente_Funcionario";
+            this.complementeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Complemento";
+            this.complementeFuncionarioDataGridViewTextBoxColumn.Name = "complementeFuncionarioDataGridViewTextBoxColumn";
+            // 
+            // loginFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.loginFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "login_Funcionario";
+            this.loginFuncionarioDataGridViewTextBoxColumn.HeaderText = "login_Funcionario";
+            this.loginFuncionarioDataGridViewTextBoxColumn.Name = "loginFuncionarioDataGridViewTextBoxColumn";
+            this.loginFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // senhaFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.senhaFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "senha_Funcionario";
+            this.senhaFuncionarioDataGridViewTextBoxColumn.HeaderText = "senha_Funcionario";
+            this.senhaFuncionarioDataGridViewTextBoxColumn.Name = "senhaFuncionarioDataGridViewTextBoxColumn";
+            this.senhaFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ConfigUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 560);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.boxComplemento);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.boxBairro);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.boxNumero);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.boxLogadouro);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.boxTelefone);
-            this.Controls.Add(this.boxCEP);
-            this.Controls.Add(this.boxUnidade);
-            this.Controls.Add(this.boxCargo);
-            this.Controls.Add(this.boxNomeCompleto);
-            this.Controls.Add(this.boxCPF);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "tb_config";
+            this.MinimizeBox = false;
+            this.Name = "ConfigUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configurações de Usuário";
-            this.Load += new System.EventHandler(this.Form4_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.ConfigUser_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgGride)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadFuncionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_sair;
-        private System.Windows.Forms.Button btn_opc;
-        private System.Windows.Forms.Button btn_config;
-        private System.Windows.Forms.Button btn_relatorio;
-        private System.Windows.Forms.Button btnPedido;
-        private System.Windows.Forms.Button btn_Sabores;
-        private System.Windows.Forms.Button btn_Clientes;
-        private System.Windows.Forms.Button btn_Bebidas;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox boxCPF;
         private System.Windows.Forms.TextBox boxNomeCompleto;
         private System.Windows.Forms.TextBox boxCargo;
@@ -534,13 +577,36 @@
         private System.Windows.Forms.TextBox boxNumero;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox boxBairro;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox boxComplemento;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label Login;
+        private System.Windows.Forms.TextBox boxConfirmarSenha;
+        private System.Windows.Forms.TextBox boxSenha;
+        private System.Windows.Forms.TextBox boxLogin;
+        private System.Windows.Forms.DataGridView dgGride;
+        private BDpizzariaDataSet bDpizzariaDataSet;
+        private System.Windows.Forms.BindingSource cadFuncionarioBindingSource;
+        private BDpizzariaDataSetTableAdapters.Cad_FuncionarioTableAdapter cad_FuncionarioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpfFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefoneFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cargoFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unidadeFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cepFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn logradouroFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bairroFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn complementeFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senhaFuncionarioDataGridViewTextBoxColumn;
     }
 }

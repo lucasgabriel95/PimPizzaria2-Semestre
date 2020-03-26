@@ -15,9 +15,9 @@ namespace PizzariaPim.DAL
         Conexao con = new Conexao();
         SqlDataReader dr;
 
-        public bool verificarLogin (String login = "Lucas" ,String senha= "1234")
+        public bool verificarLogin (String login  ,String senha)
         {
-            cmd.CommandText = "select * from cad_Funcionario where login_Funcionario = @login and senha_Funcionario = @senha";
+            cmd.CommandText = "select * from Cad_Funcionario where login_Funcionario = @login and senha_Funcionario = @senha";
             cmd.Parameters.AddWithValue("@login",login);
             cmd.Parameters.AddWithValue("@senha", senha);
 

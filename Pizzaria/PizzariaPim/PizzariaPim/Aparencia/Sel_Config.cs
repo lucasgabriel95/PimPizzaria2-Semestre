@@ -10,14 +10,36 @@ using System.Windows.Forms;
 
 namespace PizzariaPim
 {
-    public partial class Selec_Config : Form
+    public partial class Sel_Config : Form
     {
-        public Selec_Config()
+        public Sel_Config()
         {
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_user_Click(object sender, EventArgs e)
+        {
+            ConfigUser cu = new ConfigUser();
+            cu.ShowDialog();
+            
+        }
+
+        private void btn_imp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_configImp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_configuser_Click(object sender, EventArgs e)
         {
 
         }

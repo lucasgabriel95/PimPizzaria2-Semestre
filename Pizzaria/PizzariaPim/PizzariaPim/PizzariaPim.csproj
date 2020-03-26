@@ -46,9 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDpizzariaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDpizzariaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAL\ComandosLogin.cs" />
     <Compile Include="DAL\Conexao.cs" />
-    <Compile Include="DAL\Controle.cs" />
+    <Compile Include="DAL\ControleFuncionario.cs" />
     <Compile Include="Aparencia\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +78,8 @@
     <Compile Include="Aparencia\Sel_Config.Designer.cs">
       <DependentUpon>Sel_Config.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAL\ComandoFuncionario.cs" />
+    <Compile Include="DAL\DadosFuncionario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Aparencia\Login.resx">
@@ -91,6 +98,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="BDpizzariaDataSet.xsc">
+      <DependentUpon>BDpizzariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDpizzariaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDpizzariaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDpizzariaDataSet.xss">
+      <DependentUpon>BDpizzariaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
