@@ -14,7 +14,7 @@ namespace PizzariaPim.DAL
         public string mensagem;
         SqlCommand cmd = new SqlCommand();
         Conexao con = new Conexao();
-        public string cadastrarFuncionario(string cpf, string nome,string telefone, string cargo, string unidadade,string cep,string logradouro,string numero,string bairro,string complemento,string login,string senha)
+        public string cadastrarFuncionario(string cpf, string nome,string telefone, string cargo, string unidade,string cep,string logradouro,string numero,string bairro,string complemento,string login,string senha)
         {
             tem = false;  
             cmd.CommandText = "insert into Cad_Funcionario (cpf_Funcionario,nome_Funcionario,telefone_Funcionario,cargo_Funcionario,unidade_Funcionario," +
@@ -24,7 +24,7 @@ namespace PizzariaPim.DAL
             cmd.Parameters.AddWithValue("@nome",nome);
             cmd.Parameters.AddWithValue("@telefone",telefone);
             cmd.Parameters.AddWithValue("@cargo",cargo);
-            cmd.Parameters.AddWithValue("@unidade",unidadade);
+            cmd.Parameters.AddWithValue("@unidade",unidade);
             cmd.Parameters.AddWithValue("@cep",cep);
             cmd.Parameters.AddWithValue("@logradouro",logradouro);
             cmd.Parameters.AddWithValue("@numero",numero);
@@ -46,6 +46,44 @@ namespace PizzariaPim.DAL
             } 
             return mensagem;
         }
+        public void Alterar (DadosFuncionario dadosFuncionario)
+        {
+            cmd.Connection = con.Conectar();
+            cmd.CommandText = "update Cad_Funcionario set cpf_Funcionario=@cpf,nome_Funcionario=@nome,telefone_Funcionario=@telefone,cargo_Funcionario=@cargo,unidade_Funcionario=@unidade," +
+                "cep_Funcionario=@cep,logradouro_Funcionario=@logradouro,numero_Funcionario=@numero,bairro_Funcionario=@bairro,complemente_Funcionario=@complemento,login_Funcionario=@login,"+
+                "senha_Funcionario=@senha where codigo_Funcionario=@codigo";
+
+            cmd.Parameters.AddWithValue("@codigo", dadosFuncionario.codigo);
+            cmd.Parameters.AddWithValue("@cpf", dadosFuncionario.cpf);
+            cmd.Parameters.AddWithValue("@nome", dadosFuncionario.nome);
+            cmd.Parameters.AddWithValue("@telefone", dadosFuncionario.telefone);
+            cmd.Parameters.AddWithValue("@cargo", dadosFuncionario.cargo);
+            cmd.Parameters.AddWithValue("@unidade", dadosFuncionario.unidade);
+            cmd.Parameters.AddWithValue("@cep", dadosFuncionario.cep);
+            cmd.Parameters.AddWithValue("@logradouro", dadosFuncionario.logradouro);
+            cmd.Parameters.AddWithValue("@numero", dadosFuncionario.numero);
+            cmd.Parameters.AddWithValue("@bairro", dadosFuncionario.bairro);
+            cmd.Parameters.AddWithValue("@complemento", dadosFuncionario.complemento);
+            cmd.Parameters.AddWithValue("@login", dadosFuncionario.login);
+            cmd.Parameters.AddWithValue("@senha", dadosFuncionario.senha);
+            
+            cmd.ExecuteNonQuery();
+            con.desconectar();
+
+            this.mensagem = "Editado com Sucesso!";           
+        }
+        public void Excluir (int codigo)
+        {
+            
+            cmd.CommandText = "delete from Cad_Funcionario where codigo_Funcionario=@codigo ";
+            cmd.Parameters.AddWithValue("codigo", codigo);
+            cmd.Connection = con.Conectar();
+            cmd.ExecuteNonQuery();
+            con.desconectar();
+
+
+        }
+
         public DadosFuncionario carregarFuncionario(int valor)
         {
             DadosFuncionario dados = new DadosFuncionario();

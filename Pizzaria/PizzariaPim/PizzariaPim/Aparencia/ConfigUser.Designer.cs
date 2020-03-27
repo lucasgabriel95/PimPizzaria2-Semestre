@@ -52,22 +52,13 @@
             this.boxBairro = new System.Windows.Forms.TextBox();
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_Excluir = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.Login = new System.Windows.Forms.Label();
-            this.boxConfirmarSenha = new System.Windows.Forms.TextBox();
-            this.boxSenha = new System.Windows.Forms.TextBox();
-            this.boxLogin = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_Incluir = new System.Windows.Forms.Button();
             this.dgGride = new System.Windows.Forms.DataGridView();
-            this.bDpizzariaDataSet = new PizzariaPim.BDpizzariaDataSet();
-            this.cadFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cad_FuncionarioTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_FuncionarioTableAdapter();
             this.codigoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,11 +72,22 @@
             this.complementeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senhaFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cadFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bDpizzariaDataSet = new PizzariaPim.BDpizzariaDataSet();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Login = new System.Windows.Forms.Label();
+            this.boxConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.boxSenha = new System.Windows.Forms.TextBox();
+            this.boxLogin = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cad_FuncionarioTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_FuncionarioTableAdapter();
+            this.boxCodigo = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadFuncionarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // boxCPF
@@ -274,15 +276,16 @@
             this.btn_Cancelar.UseVisualStyleBackColor = true;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
-            // button3
+            // btn_Excluir
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(467, 508);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Excluir";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Excluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Excluir.Location = new System.Drawing.Point(467, 508);
+            this.btn_Excluir.Name = "btn_Excluir";
+            this.btn_Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn_Excluir.TabIndex = 12;
+            this.btn_Excluir.Text = "Excluir";
+            this.btn_Excluir.UseVisualStyleBackColor = true;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
             // 
             // label11
             // 
@@ -312,6 +315,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.boxCodigo);
+            this.panel2.Controls.Add(this.btn_Incluir);
             this.panel2.Controls.Add(this.dgGride);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label7);
@@ -325,7 +330,7 @@
             this.panel2.Controls.Add(this.txt_Config);
             this.panel2.Controls.Add(this.boxComplemento);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btn_Excluir);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.btn_Cancelar);
             this.panel2.Controls.Add(this.label1);
@@ -351,6 +356,149 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(741, 560);
             this.panel2.TabIndex = 14;
+            // 
+            // btn_Incluir
+            // 
+            this.btn_Incluir.Location = new System.Drawing.Point(232, 90);
+            this.btn_Incluir.Name = "btn_Incluir";
+            this.btn_Incluir.Size = new System.Drawing.Size(75, 23);
+            this.btn_Incluir.TabIndex = 41;
+            this.btn_Incluir.Text = "Incluir";
+            this.btn_Incluir.UseVisualStyleBackColor = true;
+            this.btn_Incluir.Click += new System.EventHandler(this.btn_Incluir_Click);
+            // 
+            // dgGride
+            // 
+            this.dgGride.AllowUserToAddRows = false;
+            this.dgGride.AllowUserToDeleteRows = false;
+            this.dgGride.AllowUserToOrderColumns = true;
+            this.dgGride.AutoGenerateColumns = false;
+            this.dgGride.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgGride.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoFuncionarioDataGridViewTextBoxColumn,
+            this.cpfFuncionarioDataGridViewTextBoxColumn,
+            this.nomeFuncionarioDataGridViewTextBoxColumn,
+            this.telefoneFuncionarioDataGridViewTextBoxColumn,
+            this.cargoFuncionarioDataGridViewTextBoxColumn,
+            this.unidadeFuncionarioDataGridViewTextBoxColumn,
+            this.cepFuncionarioDataGridViewTextBoxColumn,
+            this.logradouroFuncionarioDataGridViewTextBoxColumn,
+            this.numeroFuncionarioDataGridViewTextBoxColumn,
+            this.bairroFuncionarioDataGridViewTextBoxColumn,
+            this.complementeFuncionarioDataGridViewTextBoxColumn,
+            this.loginFuncionarioDataGridViewTextBoxColumn,
+            this.senhaFuncionarioDataGridViewTextBoxColumn});
+            this.dgGride.DataSource = this.cadFuncionarioBindingSource;
+            this.dgGride.Location = new System.Drawing.Point(6, 381);
+            this.dgGride.Name = "dgGride";
+            this.dgGride.ReadOnly = true;
+            this.dgGride.Size = new System.Drawing.Size(732, 125);
+            this.dgGride.TabIndex = 40;
+            this.dgGride.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgGride_CellDoubleClick);
+            // 
+            // codigoFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.codigoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "codigo_Funcionario";
+            this.codigoFuncionarioDataGridViewTextBoxColumn.HeaderText = "codigo_Funcionario";
+            this.codigoFuncionarioDataGridViewTextBoxColumn.Name = "codigoFuncionarioDataGridViewTextBoxColumn";
+            this.codigoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cpfFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.cpfFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cpf_Funcionario";
+            this.cpfFuncionarioDataGridViewTextBoxColumn.HeaderText = "CPF";
+            this.cpfFuncionarioDataGridViewTextBoxColumn.Name = "cpfFuncionarioDataGridViewTextBoxColumn";
+            this.cpfFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.nomeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "nome_Funcionario";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.Name = "nomeFuncionarioDataGridViewTextBoxColumn";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefoneFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "telefone_Funcionario";
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.Name = "telefoneFuncionarioDataGridViewTextBoxColumn";
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cargoFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.cargoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cargo_Funcionario";
+            this.cargoFuncionarioDataGridViewTextBoxColumn.HeaderText = "Cargo";
+            this.cargoFuncionarioDataGridViewTextBoxColumn.Name = "cargoFuncionarioDataGridViewTextBoxColumn";
+            this.cargoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // unidadeFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "unidade_Funcionario";
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Unidade";
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.Name = "unidadeFuncionarioDataGridViewTextBoxColumn";
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cepFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.cepFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cep_Funcionario";
+            this.cepFuncionarioDataGridViewTextBoxColumn.HeaderText = "CEP";
+            this.cepFuncionarioDataGridViewTextBoxColumn.Name = "cepFuncionarioDataGridViewTextBoxColumn";
+            this.cepFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // logradouroFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "logradouro_Funcionario";
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Logradouro";
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.Name = "logradouroFuncionarioDataGridViewTextBoxColumn";
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numeroFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.numeroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "numero_Funcionario";
+            this.numeroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Numero";
+            this.numeroFuncionarioDataGridViewTextBoxColumn.Name = "numeroFuncionarioDataGridViewTextBoxColumn";
+            this.numeroFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bairroFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.bairroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "bairro_Funcionario";
+            this.bairroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Bairro";
+            this.bairroFuncionarioDataGridViewTextBoxColumn.Name = "bairroFuncionarioDataGridViewTextBoxColumn";
+            this.bairroFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // complementeFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.complementeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "complemente_Funcionario";
+            this.complementeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Complemento";
+            this.complementeFuncionarioDataGridViewTextBoxColumn.Name = "complementeFuncionarioDataGridViewTextBoxColumn";
+            this.complementeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // loginFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.loginFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "login_Funcionario";
+            this.loginFuncionarioDataGridViewTextBoxColumn.HeaderText = "login_Funcionario";
+            this.loginFuncionarioDataGridViewTextBoxColumn.Name = "loginFuncionarioDataGridViewTextBoxColumn";
+            this.loginFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.loginFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // senhaFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.senhaFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "senha_Funcionario";
+            this.senhaFuncionarioDataGridViewTextBoxColumn.HeaderText = "senha_Funcionario";
+            this.senhaFuncionarioDataGridViewTextBoxColumn.Name = "senhaFuncionarioDataGridViewTextBoxColumn";
+            this.senhaFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.senhaFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cadFuncionarioBindingSource
+            // 
+            this.cadFuncionarioBindingSource.DataMember = "Cad_Funcionario";
+            this.cadFuncionarioBindingSource.DataSource = this.bDpizzariaDataSet;
+            // 
+            // bDpizzariaDataSet
+            // 
+            this.bDpizzariaDataSet.DataSetName = "BDpizzariaDataSet";
+            this.bDpizzariaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label15
             // 
@@ -412,126 +560,17 @@
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
             // 
-            // dgGride
-            // 
-            this.dgGride.AutoGenerateColumns = false;
-            this.dgGride.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgGride.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoFuncionarioDataGridViewTextBoxColumn,
-            this.cpfFuncionarioDataGridViewTextBoxColumn,
-            this.nomeFuncionarioDataGridViewTextBoxColumn,
-            this.telefoneFuncionarioDataGridViewTextBoxColumn,
-            this.cargoFuncionarioDataGridViewTextBoxColumn,
-            this.unidadeFuncionarioDataGridViewTextBoxColumn,
-            this.cepFuncionarioDataGridViewTextBoxColumn,
-            this.logradouroFuncionarioDataGridViewTextBoxColumn,
-            this.numeroFuncionarioDataGridViewTextBoxColumn,
-            this.bairroFuncionarioDataGridViewTextBoxColumn,
-            this.complementeFuncionarioDataGridViewTextBoxColumn,
-            this.loginFuncionarioDataGridViewTextBoxColumn,
-            this.senhaFuncionarioDataGridViewTextBoxColumn});
-            this.dgGride.DataSource = this.cadFuncionarioBindingSource;
-            this.dgGride.Location = new System.Drawing.Point(6, 381);
-            this.dgGride.Name = "dgGride";
-            this.dgGride.Size = new System.Drawing.Size(725, 125);
-            this.dgGride.TabIndex = 40;
-            this.dgGride.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgGride_CellDoubleClick);
-            // 
-            // bDpizzariaDataSet
-            // 
-            this.bDpizzariaDataSet.DataSetName = "BDpizzariaDataSet";
-            this.bDpizzariaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cadFuncionarioBindingSource
-            // 
-            this.cadFuncionarioBindingSource.DataMember = "Cad_Funcionario";
-            this.cadFuncionarioBindingSource.DataSource = this.bDpizzariaDataSet;
-            // 
             // cad_FuncionarioTableAdapter
             // 
             this.cad_FuncionarioTableAdapter.ClearBeforeFill = true;
             // 
-            // codigoFuncionarioDataGridViewTextBoxColumn
+            // boxCodigo
             // 
-            this.codigoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "codigo_Funcionario";
-            this.codigoFuncionarioDataGridViewTextBoxColumn.HeaderText = "codigo_Funcionario";
-            this.codigoFuncionarioDataGridViewTextBoxColumn.Name = "codigoFuncionarioDataGridViewTextBoxColumn";
-            this.codigoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoFuncionarioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cpfFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.cpfFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cpf_Funcionario";
-            this.cpfFuncionarioDataGridViewTextBoxColumn.HeaderText = "CPF";
-            this.cpfFuncionarioDataGridViewTextBoxColumn.Name = "cpfFuncionarioDataGridViewTextBoxColumn";
-            // 
-            // nomeFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.nomeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "nome_Funcionario";
-            this.nomeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeFuncionarioDataGridViewTextBoxColumn.Name = "nomeFuncionarioDataGridViewTextBoxColumn";
-            // 
-            // telefoneFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.telefoneFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "telefone_Funcionario";
-            this.telefoneFuncionarioDataGridViewTextBoxColumn.HeaderText = "Telefone";
-            this.telefoneFuncionarioDataGridViewTextBoxColumn.Name = "telefoneFuncionarioDataGridViewTextBoxColumn";
-            // 
-            // cargoFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.cargoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cargo_Funcionario";
-            this.cargoFuncionarioDataGridViewTextBoxColumn.HeaderText = "Cargo";
-            this.cargoFuncionarioDataGridViewTextBoxColumn.Name = "cargoFuncionarioDataGridViewTextBoxColumn";
-            // 
-            // unidadeFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.unidadeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "unidade_Funcionario";
-            this.unidadeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Unidade";
-            this.unidadeFuncionarioDataGridViewTextBoxColumn.Name = "unidadeFuncionarioDataGridViewTextBoxColumn";
-            // 
-            // cepFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.cepFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cep_Funcionario";
-            this.cepFuncionarioDataGridViewTextBoxColumn.HeaderText = "CEP";
-            this.cepFuncionarioDataGridViewTextBoxColumn.Name = "cepFuncionarioDataGridViewTextBoxColumn";
-            // 
-            // logradouroFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.logradouroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "logradouro_Funcionario";
-            this.logradouroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Logradouro";
-            this.logradouroFuncionarioDataGridViewTextBoxColumn.Name = "logradouroFuncionarioDataGridViewTextBoxColumn";
-            // 
-            // numeroFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.numeroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "numero_Funcionario";
-            this.numeroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Numero";
-            this.numeroFuncionarioDataGridViewTextBoxColumn.Name = "numeroFuncionarioDataGridViewTextBoxColumn";
-            // 
-            // bairroFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.bairroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "bairro_Funcionario";
-            this.bairroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Bairro";
-            this.bairroFuncionarioDataGridViewTextBoxColumn.Name = "bairroFuncionarioDataGridViewTextBoxColumn";
-            // 
-            // complementeFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.complementeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "complemente_Funcionario";
-            this.complementeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Complemento";
-            this.complementeFuncionarioDataGridViewTextBoxColumn.Name = "complementeFuncionarioDataGridViewTextBoxColumn";
-            // 
-            // loginFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.loginFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "login_Funcionario";
-            this.loginFuncionarioDataGridViewTextBoxColumn.HeaderText = "login_Funcionario";
-            this.loginFuncionarioDataGridViewTextBoxColumn.Name = "loginFuncionarioDataGridViewTextBoxColumn";
-            this.loginFuncionarioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // senhaFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.senhaFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "senha_Funcionario";
-            this.senhaFuncionarioDataGridViewTextBoxColumn.HeaderText = "senha_Funcionario";
-            this.senhaFuncionarioDataGridViewTextBoxColumn.Name = "senhaFuncionarioDataGridViewTextBoxColumn";
-            this.senhaFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            this.boxCodigo.Location = new System.Drawing.Point(170, 55);
+            this.boxCodigo.Name = "boxCodigo";
+            this.boxCodigo.Size = new System.Drawing.Size(26, 20);
+            this.boxCodigo.TabIndex = 42;
+            this.boxCodigo.Visible = false;
             // 
             // ConfigUser
             // 
@@ -548,10 +587,10 @@
             this.Load += new System.EventHandler(this.ConfigUser_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadFuncionarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -579,7 +618,7 @@
         private System.Windows.Forms.TextBox boxBairro;
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Cancelar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox boxComplemento;
@@ -608,5 +647,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn complementeFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn senhaFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_Incluir;
+        private System.Windows.Forms.TextBox boxCodigo;
     }
 }
