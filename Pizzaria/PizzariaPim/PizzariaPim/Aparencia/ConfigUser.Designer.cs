@@ -57,6 +57,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.boxCodigo = new System.Windows.Forms.TextBox();
             this.btn_Incluir = new System.Windows.Forms.Button();
             this.dgGride = new System.Windows.Forms.DataGridView();
             this.codigoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,7 +83,6 @@
             this.boxLogin = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cad_FuncionarioTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_FuncionarioTableAdapter();
-            this.boxCodigo = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadFuncionarioBindingSource)).BeginInit();
@@ -357,6 +357,14 @@
             this.panel2.Size = new System.Drawing.Size(741, 560);
             this.panel2.TabIndex = 14;
             // 
+            // boxCodigo
+            // 
+            this.boxCodigo.Location = new System.Drawing.Point(3, 50);
+            this.boxCodigo.Name = "boxCodigo";
+            this.boxCodigo.Size = new System.Drawing.Size(26, 20);
+            this.boxCodigo.TabIndex = 42;
+            this.boxCodigo.Visible = false;
+            // 
             // btn_Incluir
             // 
             this.btn_Incluir.Location = new System.Drawing.Point(232, 90);
@@ -563,14 +571,6 @@
             // cad_FuncionarioTableAdapter
             // 
             this.cad_FuncionarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // boxCodigo
-            // 
-            this.boxCodigo.Location = new System.Drawing.Point(170, 55);
-            this.boxCodigo.Name = "boxCodigo";
-            this.boxCodigo.Size = new System.Drawing.Size(26, 20);
-            this.boxCodigo.TabIndex = 42;
-            this.boxCodigo.Visible = false;
             // 
             // ConfigUser
             // 

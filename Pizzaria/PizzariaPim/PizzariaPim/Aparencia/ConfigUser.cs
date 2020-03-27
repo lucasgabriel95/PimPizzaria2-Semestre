@@ -145,62 +145,77 @@ namespace PizzariaPim
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            DialogResult mensagemConfirmacao;
 
-            if(salvarEditar == "novo")
+            if (boxCPF.Text != "" && boxNomeCompleto.Text !="" && boxTelefone.Text != ""&& boxCargo.Text!=""&& boxUnidade.Text!= ""&& boxCEP.Text!="" && boxLogadouro.Text!=""&& boxNumero.Text!=""&& boxBairro.Text!="" && boxComplemento.Text!=""&& boxLogin.Text!=""&& boxSenha.Text!=""&&boxConfirmarSenha.Text!="")
             {
-                mensagemConfirmacao = MessageBox.Show("Deseja Cadastrar Funcionario ?", "Aviso", MessageBoxButtons.YesNo);
-            }
-            else
-            {
-                mensagemConfirmacao = MessageBox.Show("Deseja Alterar Funcionario ?", "Aviso", MessageBoxButtons.YesNo);
-            }
-            if (mensagemConfirmacao.ToString() == "Yes")
-            {                
-
-                if (this.salvarEditar == "novo")
+                if(boxSenha.Text == boxConfirmarSenha.Text)
                 {
-                    ControleFuncionario controle = new ControleFuncionario();
-                    string mensagem = controle.cadastrarFuncionario(boxCPF.Text, boxNomeCompleto.Text, boxTelefone.Text,
-                        boxCargo.Text, boxUnidade.Text, boxCEP.Text, boxLogadouro.Text, boxNumero.Text, boxBairro.Text,
-                        boxComplemento.Text, boxLogin.Text, boxSenha.Text);
-                    if (controle.tem)
+                    DialogResult mensagemConfirmacao;
+
+                    if (salvarEditar == "novo")
                     {
-                        MessageBox.Show(mensagem, "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        mensagemConfirmacao = MessageBox.Show("Deseja Cadastrar Funcionario ?", "Aviso", MessageBoxButtons.YesNo);
                     }
                     else
                     {
-                        MessageBox.Show(controle.mensagem);// messagem de erro. 
+                        mensagemConfirmacao = MessageBox.Show("Deseja Alterar Funcionario ?", "Aviso", MessageBoxButtons.YesNo);
                     }
-                    AlteraBotoes(2);
-                    LimparCampos();
-                    alteraBotoes = "";
+                    if (mensagemConfirmacao.ToString() == "Yes")
+                    {
+
+                        if (this.salvarEditar == "novo")
+                        {
+                            ControleFuncionario controle = new ControleFuncionario();
+                            string mensagem = controle.cadastrarFuncionario(boxCPF.Text, boxNomeCompleto.Text, boxTelefone.Text,
+                                boxCargo.Text, boxUnidade.Text, boxCEP.Text, boxLogadouro.Text, boxNumero.Text, boxBairro.Text,
+                                boxComplemento.Text, boxLogin.Text, boxSenha.Text);
+                            if (controle.tem)
+                            {
+                                MessageBox.Show(mensagem, "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show(controle.mensagem);// messagem de erro. 
+                            }
+                            AlteraBotoes(2);
+                            LimparCampos();
+                            alteraBotoes = "";
+                        }
+                        else
+                        {
+                            DadosFuncionario dadosFuncionario = new DadosFuncionario();
+                            dadosFuncionario.cpf = boxCPF.Text;
+                            dadosFuncionario.nome = boxNomeCompleto.Text;
+                            dadosFuncionario.telefone = boxTelefone.Text;
+                            dadosFuncionario.cargo = boxCargo.Text;
+                            dadosFuncionario.unidade = boxUnidade.Text;
+                            dadosFuncionario.cep = boxCEP.Text;
+                            dadosFuncionario.logradouro = boxLogadouro.Text;
+                            dadosFuncionario.numero = boxNumero.Text;
+                            dadosFuncionario.bairro = boxBairro.Text;
+                            dadosFuncionario.complemento = boxComplemento.Text;
+                            dadosFuncionario.login = boxLogin.Text;
+                            dadosFuncionario.senha = boxSenha.Text;
+
+                            dadosFuncionario.codigo = Convert.ToInt32(boxCodigo.Text);
+                            ComandoFuncionario comandoFuncionario = new ComandoFuncionario();
+                            comandoFuncionario.Alterar(dadosFuncionario);
+                            LimparCampos();
+                            AlteraBotoes(2);
+                        }
+                    }
                 }
                 else
                 {
-                    DadosFuncionario dadosFuncionario = new DadosFuncionario();
-                    dadosFuncionario.cpf = boxCPF.Text;
-                    dadosFuncionario.nome = boxNomeCompleto.Text;
-                    dadosFuncionario.telefone = boxTelefone.Text;
-                    dadosFuncionario.cargo = boxCargo.Text;
-                    dadosFuncionario.unidade = boxUnidade.Text;
-                    dadosFuncionario.cep = boxCEP.Text;
-                    dadosFuncionario.logradouro = boxLogadouro.Text;
-                    dadosFuncionario.numero = boxNumero.Text;
-                    dadosFuncionario.bairro = boxBairro.Text;
-                    dadosFuncionario.complemento = boxComplemento.Text;
-                    dadosFuncionario.login = boxLogin.Text;
-                    dadosFuncionario.senha = boxSenha.Text;
+                    MessageBox.Show("Senha não são iguais", "Senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    dadosFuncionario.codigo = Convert.ToInt32(boxCodigo.Text);
-                    ComandoFuncionario comandoFuncionario = new ComandoFuncionario();
-                    comandoFuncionario.Alterar(dadosFuncionario);
-                    LimparCampos();
-                    AlteraBotoes(2);
-
-                }
-                
-            } 
+                }               
+            }
+            else
+            {
+                MessageBox.Show("Oscampos não podem ficar em branco", "Campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void ConfigUser_Load(object sender, EventArgs e)
