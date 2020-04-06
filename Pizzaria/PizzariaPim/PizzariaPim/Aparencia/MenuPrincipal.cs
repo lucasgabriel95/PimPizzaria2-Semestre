@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace PizzariaPim
 {
@@ -19,6 +20,10 @@ namespace PizzariaPim
             Login ln = new Login();
             ln.Hide();
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleasCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void btn_config_Click(object sender, EventArgs e)
         {
@@ -37,6 +42,27 @@ namespace PizzariaPim
         private void btn_sair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pnlMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleasCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

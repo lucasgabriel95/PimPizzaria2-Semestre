@@ -117,10 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_minimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAATBJREFUaEPt
+        mkFKA1EQBecexnXObhDcSLyUSvQC2r37i3IhFccndkFt6/dnBiaQ3oZhGIZhiOe2vC/fy48we6aH8lhe
+        hb7sS0mHJfla9qyafrJ0QKKnUpP4Gn/lW6mhcLIaiiaroWiyGoomq6FoshqKJquhaLIaiiaroWiyGoom
+        q6FoshqKJquhaLIaiiaroWiyGoomq6FoshqKJquhaLIaiiaroWiyGoomq6FoshqKJquhaLIaiiaroWiy
+        Goomq6Ho6mN5U/40h/Jc0gyrGoqu9iB70f//0gyrGoqu/rsL92u2x6X7sk8lzbCqoWiyGoomq6FoshqK
+        Jqv5S0stl1LTS18UT/Su1PSGWy990QFJPpdX+zz2N7CXvnoPig77TXumfrJ7/gAahmEYhuHbbNsn6qMO
+        uaEItPEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btn_close.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAxhJREFUeF7t
+        nbuO1EAURB1BCOI3gICEHwA+DwSIx88AOUIigf0MxDMEwa2g1Raq3Z3uvtU2uI50kt3ZqXZdr+ehGXsx
+        xhhjjDHGGGOMMaaB2+GT8GP4I/z9n4ttxLY+Dm+Fm3E1fBH+CtlCjyC2/Xl4JZwKyn8TskUd0dfh1CG8
+        DNlCjuyzcAo45h/5sHOeP8OboRw84LIF2GV5FMo5C1m4XZYPoZzvIQu3y/ItlMOCbVUOC7VVOSzUVuWw
+        UFuVw0JtVQ4LtVU5LNRW5bBQW5XDQkf8Ej4I365+pvZ9eC/8tPpZlnJYaK8o/24IroUzhoDyb4TgTpg9
+        BDkstMd1+QX1ENblF7KHIIeFtsrKL6iGwMovZA5BDgtt8aLyC9lDuKj8QtYQ5LDQFu+Hp3A9fBey+2gR
+        94H7OgWsjd1Hi3JYaIun7I2F0f+EmVlFOSy01RnFbFE+lMNCe1QWtFX5UA4L7VVR1JblQzksdMTMwrYu
+        H8phoaNmFLeH8qEcFprhSIF7KR/KYaFZ9hS5p/KhHBaaacsLJ9yu5bYZL+wuUw4LzbZlrz6FGXt+UQ4L
+        VZg1hJnlQzksVOXoEGaXD+WwUKW9Q9iifCiHhaptHcJW5UM5LFStB7CChSr1IegvWKhKPwgTWKjC0fIL
+        s4cgh4Vmm1V+YeYQ5LDQTP1WxCWw0Cxb9vyyV/f8DcvOUg4LzXCkyD0NQQ4LHTWjwL0MQQ4LHTGzuD0M
+        QQ4L7VVR2NZDkMNCe1QWteUQ5LDQVmcUtNUQ5LDQFmcWs8UQ5LDQFv3h3EFYaIv+ePogLLRVf0FjABba
+        o7+i1AkL7XU9BHX5xfUQssuHcljoiJ9DPPjNeKeyiCxkIpv9fkQ5LNRW5bBQW5XDQm1VDgu1VTks1Fbl
+        sFBblcNCbVUOC7VVOT5x6/l+DeX41MXnO+XUxbhyBAu3y/IwlIPLduBU7WwBR3ba6esBLtvBFnFkn4bT
+        wOU6cNkOtpAj+iqcfh0ZBOKyHUc+HGHbsedPL38Njnu4cgSeARzhKSq2EduKbZ52zDfGGGOMMcYYY4wx
+        /zrL8gcQ5TBE/P4sXwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="cadFuncionarioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>168, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <metadata name="bDpizzariaDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAEJFJREFUeF7t
@@ -197,15 +230,6 @@
         9ocEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACFGzHiv2X8cbZREiIKAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="cadFuncionarioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>168, 17</value>
-  </metadata>
-  <metadata name="bDpizzariaDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="bDpizzariaDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="cad_FuncionarioTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>381, 17</value>
   </metadata>

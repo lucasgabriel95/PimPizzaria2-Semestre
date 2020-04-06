@@ -41,9 +41,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btn_minimize = new System.Windows.Forms.PictureBox();
+            this.btn_close = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -192,10 +197,41 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.Location = new System.Drawing.Point(209, 0);
+            this.pnlMenu.Controls.Add(this.btn_minimize);
+            this.pnlMenu.Controls.Add(this.btn_close);
+            this.pnlMenu.Location = new System.Drawing.Point(209, 3);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(542, 559);
+            this.pnlMenu.Size = new System.Drawing.Size(554, 556);
             this.pnlMenu.TabIndex = 3;
+            this.pnlMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
+            // 
+            // btn_minimize
+            // 
+            this.btn_minimize.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_minimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimize.Image")));
+            this.btn_minimize.Location = new System.Drawing.Point(503, 3);
+            this.btn_minimize.Name = "btn_minimize";
+            this.btn_minimize.Size = new System.Drawing.Size(24, 27);
+            this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_minimize.TabIndex = 27;
+            this.btn_minimize.TabStop = false;
+            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
+            this.btn_close.Location = new System.Drawing.Point(527, 3);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(24, 27);
+            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_close.TabIndex = 26;
+            this.btn_close.TabStop = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // MenuPrincipal
             // 
@@ -204,6 +240,7 @@
             this.ClientSize = new System.Drawing.Size(763, 571);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MenuPrincipal";
@@ -213,6 +250,9 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,15 +261,17 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnPedido;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.PictureBox btn_minimize;
+        private System.Windows.Forms.PictureBox btn_close;
+        private System.Windows.Forms.Button btn_sair;
         private System.Windows.Forms.Button btn_opc;
         private System.Windows.Forms.Button btn_config;
         private System.Windows.Forms.Button btn_relatorio;
+        private System.Windows.Forms.Button btnPedido;
         private System.Windows.Forms.Button btn_Sabores;
         private System.Windows.Forms.Button btn_Clientes;
         private System.Windows.Forms.Button btn_Bebidas;
-        private System.Windows.Forms.Button btn_sair;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel pnlMenu;
     }
 }
