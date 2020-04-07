@@ -83,6 +83,12 @@
     </Compile>
     <Compile Include="DAL\ComandoFuncionario.cs" />
     <Compile Include="DAL\DadosFuncionario.cs" />
+    <Compile Include="Aparencia\Bebida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aparencia\Bebida.Designer.cs">
+      <DependentUpon>Bebida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Aparencia\Login.resx">
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aparencia\Sel_Config.resx">
       <DependentUpon>Sel_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aparencia\Bebida.resx">
+      <DependentUpon>Bebida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

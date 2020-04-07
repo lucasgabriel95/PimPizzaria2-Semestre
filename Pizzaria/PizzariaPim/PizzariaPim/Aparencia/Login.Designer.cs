@@ -77,7 +77,7 @@
             this.txbLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbLogin.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txbLogin.Location = new System.Drawing.Point(281, 139);
+            this.txbLogin.Location = new System.Drawing.Point(281, 145);
             this.txbLogin.Name = "txbLogin";
             this.txbLogin.Size = new System.Drawing.Size(276, 23);
             this.txbLogin.TabIndex = 1;

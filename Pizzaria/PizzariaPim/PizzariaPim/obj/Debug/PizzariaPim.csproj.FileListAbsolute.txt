@@ -86,3 +86,4 @@ C:\Users\Abner\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\Pizza
 C:\Users\Abner\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\Abner\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\Abner\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.CopyComplete
+C:\Users\Abner\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.FormBebida.resources

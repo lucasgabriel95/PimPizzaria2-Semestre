@@ -64,5 +64,27 @@ namespace PizzariaPim
             ReleasCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btn_config_Click_1(object sender, EventArgs e)
+        {
+            ConfigUser telaconfig = new ConfigUser();
+            telaconfig.Show();
+        }
+
+        private void btn_Bebidas_Click(object sender, EventArgs e)
+        {
+            FormBebida telabebida = new FormBebida();
+            telabebida.Show();
+        }
+
+        private void pnlMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

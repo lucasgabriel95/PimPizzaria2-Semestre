@@ -57,6 +57,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_minimize = new System.Windows.Forms.PictureBox();
+            this.btn_close = new System.Windows.Forms.PictureBox();
             this.boxCodigo = new System.Windows.Forms.TextBox();
             this.btn_Incluir = new System.Windows.Forms.Button();
             this.dgGride = new System.Windows.Forms.DataGridView();
@@ -83,15 +85,13 @@
             this.boxLogin = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cad_FuncionarioTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_FuncionarioTableAdapter();
-            this.btn_minimize = new System.Windows.Forms.PictureBox();
-            this.btn_close = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadFuncionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.SuspendLayout();
             // 
             // boxCPF
@@ -363,6 +363,34 @@
             this.panel2.Size = new System.Drawing.Size(741, 560);
             this.panel2.TabIndex = 14;
             // 
+            // btn_minimize
+            // 
+            this.btn_minimize.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_minimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimize.Image")));
+            this.btn_minimize.Location = new System.Drawing.Point(690, 3);
+            this.btn_minimize.Name = "btn_minimize";
+            this.btn_minimize.Size = new System.Drawing.Size(24, 27);
+            this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_minimize.TabIndex = 44;
+            this.btn_minimize.TabStop = false;
+            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
+            this.btn_close.Location = new System.Drawing.Point(714, 3);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(24, 27);
+            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_close.TabIndex = 43;
+            this.btn_close.TabStop = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // boxCodigo
             // 
             this.boxCodigo.Location = new System.Drawing.Point(3, 50);
@@ -578,32 +606,6 @@
             // 
             this.cad_FuncionarioTableAdapter.ClearBeforeFill = true;
             // 
-            // btn_minimize
-            // 
-            this.btn_minimize.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_minimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimize.Image")));
-            this.btn_minimize.Location = new System.Drawing.Point(690, 3);
-            this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.Size = new System.Drawing.Size(24, 27);
-            this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_minimize.TabIndex = 44;
-            this.btn_minimize.TabStop = false;
-            // 
-            // btn_close
-            // 
-            this.btn_close.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(714, 3);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(24, 27);
-            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_close.TabIndex = 43;
-            this.btn_close.TabStop = false;
-            // 
             // ConfigUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,12 +622,12 @@
             this.Load += new System.EventHandler(this.ConfigUser_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadFuncionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.ResumeLayout(false);
 
         }
