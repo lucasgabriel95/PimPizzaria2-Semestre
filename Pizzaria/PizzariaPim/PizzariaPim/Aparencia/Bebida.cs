@@ -66,5 +66,17 @@ namespace PizzariaPim
             MenuPrincipal RetornaMenu = new MenuPrincipal();
             RetornaMenu.Show();
         }
+
+        private void panel1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleasCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleasCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }
