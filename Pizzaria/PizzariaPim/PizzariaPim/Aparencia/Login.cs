@@ -44,16 +44,6 @@ namespace PizzariaPim
             
         }
 
-        private void lineShape2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void txbLogin_Enter(object sender, EventArgs e)
         {
             if(txbLogin.Text == "LOGIN") {
@@ -74,21 +64,6 @@ namespace PizzariaPim
                 txbLogin.Text = "LOGIN";
                 txbLogin.ForeColor = Color.Black;
             }
-        }
-
-        private void txbSenha_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbLogin_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_minimize_Click(object sender, EventArgs e)
@@ -129,7 +104,7 @@ namespace PizzariaPim
             if (txbSenha.Text == "")
                 txbSenha.Text = "SENHA";
             txbSenha.ForeColor = Color.Black;
-            txbSenha.UseSystemPasswordChar = false;
+            txbSenha.UseSystemPasswordChar = true;
         }
     }
 }

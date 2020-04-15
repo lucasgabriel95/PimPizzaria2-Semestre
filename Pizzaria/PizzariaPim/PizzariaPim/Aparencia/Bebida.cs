@@ -78,5 +78,65 @@ namespace PizzariaPim
             ReleasCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void CBTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CBTipo.Size = new System.Drawing.Size(100, 100);
+        }
+
+        private void txbRefrigerante_MouseEnter(object sender, EventArgs e)
+        {
+            if (txbRefrigerante.Text == "Refrigerante")
+            {
+                txbRefrigerante.Text = "";
+                txbRefrigerante.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txbRefrigerante_MouseLeave(object sender, EventArgs e)
+        {
+            if (txbRefrigerante.Text == "")
+            {
+                txbRefrigerante.Text = "Refrigerante";
+                txbRefrigerante.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txbQtde_MouseEnter(object sender, EventArgs e)
+        {
+            if (txbQtde.Text == "Qtde")
+            {
+                txbQtde.Text = "";
+                txbQtde.ForeColor = Color.DimGray;
+
+            }
+        }
+
+        private void txbQtde_MouseLeave(object sender, EventArgs e)
+        {
+            if(txbQtde.Text == "")
+            {
+                txbQtde.Text = "Qtde";
+                txbQtde.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txbValor_MouseEnter(object sender, EventArgs e)
+        {
+            if(txbValor.Text == "Valor")
+            {
+                txbValor.Text = "";
+                txbValor.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txbValor_MouseLeave(object sender, EventArgs e)
+        {
+            if(txbValor.Text == "")
+            {
+                txbValor.Text = "Valor";
+                txbValor.ForeColor = Color.DimGray;
+            }
+        }
     }
 }

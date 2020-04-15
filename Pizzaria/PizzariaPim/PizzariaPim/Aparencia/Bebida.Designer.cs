@@ -52,21 +52,20 @@
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.txbRefrigerante = new System.Windows.Forms.TextBox();
             this.txbValor = new System.Windows.Forms.TextBox();
             this.txbQtde = new System.Windows.Forms.TextBox();
-            this.txbTipoRefrigerante = new System.Windows.Forms.TextBox();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.LabelBebidas = new System.Windows.Forms.Label();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.CBTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.panel2.SuspendLayout();
@@ -89,7 +88,7 @@
             this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_minimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimize.Image")));
-            this.btn_minimize.Location = new System.Drawing.Point(708, -2);
+            this.btn_minimize.Location = new System.Drawing.Point(708, 0);
             this.btn_minimize.Name = "btn_minimize";
             this.btn_minimize.Size = new System.Drawing.Size(24, 27);
             this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,7 +102,7 @@
             this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(733, -2);
+            this.btn_close.Location = new System.Drawing.Point(733, 0);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(24, 27);
             this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -418,74 +417,89 @@
             this.shapeContainer1.TabIndex = 34;
             this.shapeContainer1.TabStop = false;
             // 
+            // lineShape4
+            // 
+            this.lineShape4.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape4.BorderWidth = 2;
+            this.lineShape4.Enabled = false;
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 510;
+            this.lineShape4.X2 = 640;
+            this.lineShape4.Y1 = 141;
+            this.lineShape4.Y2 = 141;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape3.BorderWidth = 2;
+            this.lineShape3.Enabled = false;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 314;
+            this.lineShape3.X2 = 514;
+            this.lineShape3.Y1 = 175;
+            this.lineShape3.Y2 = 175;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape2.BorderWidth = 2;
+            this.lineShape2.Enabled = false;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 229;
+            this.lineShape2.X2 = 301;
+            this.lineShape2.Y1 = 175;
+            this.lineShape2.Y2 = 175;
+            // 
             // lineShape1
             // 
+            this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape1.BorderWidth = 2;
+            this.lineShape1.Enabled = false;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 229;
-            this.lineShape1.X2 = 497;
-            this.lineShape1.Y1 = 135;
-            this.lineShape1.Y2 = 135;
+            this.lineShape1.X1 = 230;
+            this.lineShape1.X2 = 498;
+            this.lineShape1.Y1 = 141;
+            this.lineShape1.Y2 = 141;
             // 
             // txbRefrigerante
             // 
             this.txbRefrigerante.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbRefrigerante.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbRefrigerante.ForeColor = System.Drawing.Color.DimGray;
             this.txbRefrigerante.Location = new System.Drawing.Point(230, 120);
             this.txbRefrigerante.MaxLength = 100;
             this.txbRefrigerante.Name = "txbRefrigerante";
-            this.txbRefrigerante.Size = new System.Drawing.Size(272, 13);
+            this.txbRefrigerante.Size = new System.Drawing.Size(272, 20);
             this.txbRefrigerante.TabIndex = 1;
             this.txbRefrigerante.Text = "Refrigerante";
+            this.txbRefrigerante.MouseEnter += new System.EventHandler(this.txbRefrigerante_MouseEnter);
+            this.txbRefrigerante.MouseLeave += new System.EventHandler(this.txbRefrigerante_MouseLeave);
             // 
             // txbValor
             // 
             this.txbValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbValor.Location = new System.Drawing.Point(438, 153);
+            this.txbValor.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbValor.ForeColor = System.Drawing.Color.DimGray;
+            this.txbValor.Location = new System.Drawing.Point(314, 154);
             this.txbValor.Name = "txbValor";
-            this.txbValor.Size = new System.Drawing.Size(202, 13);
+            this.txbValor.Size = new System.Drawing.Size(202, 20);
             this.txbValor.TabIndex = 4;
             this.txbValor.Text = "Valor";
+            this.txbValor.MouseEnter += new System.EventHandler(this.txbValor_MouseEnter);
+            this.txbValor.MouseLeave += new System.EventHandler(this.txbValor_MouseLeave);
             // 
             // txbQtde
             // 
             this.txbQtde.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbQtde.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbQtde.ForeColor = System.Drawing.Color.DimGray;
             this.txbQtde.Location = new System.Drawing.Point(230, 153);
             this.txbQtde.Name = "txbQtde";
-            this.txbQtde.Size = new System.Drawing.Size(202, 13);
+            this.txbQtde.Size = new System.Drawing.Size(74, 20);
             this.txbQtde.TabIndex = 3;
             this.txbQtde.Text = "Qtde";
-            // 
-            // txbTipoRefrigerante
-            // 
-            this.txbTipoRefrigerante.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbTipoRefrigerante.Location = new System.Drawing.Point(508, 120);
-            this.txbTipoRefrigerante.Name = "txbTipoRefrigerante";
-            this.txbTipoRefrigerante.Size = new System.Drawing.Size(132, 13);
-            this.txbTipoRefrigerante.TabIndex = 2;
-            this.txbTipoRefrigerante.Text = "Tipo";
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 228;
-            this.lineShape2.X2 = 426;
-            this.lineShape2.Y1 = 169;
-            this.lineShape2.Y2 = 169;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 439;
-            this.lineShape3.X2 = 641;
-            this.lineShape3.Y1 = 169;
-            this.lineShape3.Y2 = 169;
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 509;
-            this.lineShape4.X2 = 640;
-            this.lineShape4.Y1 = 135;
-            this.lineShape4.Y2 = 135;
+            this.txbQtde.MouseEnter += new System.EventHandler(this.txbQtde_MouseEnter);
+            this.txbQtde.MouseLeave += new System.EventHandler(this.txbQtde_MouseLeave);
             // 
             // LabelBebidas
             // 
@@ -499,7 +513,7 @@
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(228, 185);
+            this.btnAdicionar.Location = new System.Drawing.Point(229, 185);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
             this.btnAdicionar.TabIndex = 36;
@@ -514,55 +528,65 @@
             this.dataGridView1.Size = new System.Drawing.Size(474, 282);
             this.dataGridView1.TabIndex = 37;
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(627, 512);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 38;
-            this.button8.Text = "Adicionar";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(546, 512);
+            this.button9.Location = new System.Drawing.Point(628, 512);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 39;
-            this.button9.Text = "Adicionar";
+            this.button9.Text = "Excluir";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(384, 512);
+            this.button10.Location = new System.Drawing.Point(466, 512);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 23);
             this.button10.TabIndex = 41;
-            this.button10.Text = "Adicionar";
+            this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(465, 512);
+            this.button11.Location = new System.Drawing.Point(547, 512);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 23);
             this.button11.TabIndex = 40;
-            this.button11.Text = "Adicionar";
+            this.button11.Text = "Cancelar";
             this.button11.UseVisualStyleBackColor = true;
+            // 
+            // CBTipo
+            // 
+            this.CBTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CBTipo.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBTipo.ForeColor = System.Drawing.Color.DimGray;
+            this.CBTipo.FormattingEnabled = true;
+            this.CBTipo.Items.AddRange(new object[] {
+            "3 Litros",
+            "2 Litros",
+            "1,5 Litros",
+            "1,0 Litro",
+            "600 ML",
+            "450 ML",
+            "150 ML"});
+            this.CBTipo.Location = new System.Drawing.Point(510, 113);
+            this.CBTipo.Name = "CBTipo";
+            this.CBTipo.Size = new System.Drawing.Size(130, 27);
+            this.CBTipo.TabIndex = 2;
+            this.CBTipo.Text = "Tipo";
             // 
             // FormBebida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 573);
+            this.Controls.Add(this.CBTipo);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.LabelBebidas);
-            this.Controls.Add(this.txbTipoRefrigerante);
             this.Controls.Add(this.txbQtde);
             this.Controls.Add(this.txbValor);
             this.Controls.Add(this.txbRefrigerante);
@@ -628,13 +652,12 @@
         private System.Windows.Forms.TextBox txbRefrigerante;
         private System.Windows.Forms.TextBox txbValor;
         private System.Windows.Forms.TextBox txbQtde;
-        private System.Windows.Forms.TextBox txbTipoRefrigerante;
         private System.Windows.Forms.Label LabelBebidas;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.ComboBox CBTipo;
     }
 }

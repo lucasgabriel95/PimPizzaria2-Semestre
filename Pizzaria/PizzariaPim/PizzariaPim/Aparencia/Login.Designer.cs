@@ -82,7 +82,6 @@
             this.txbLogin.Size = new System.Drawing.Size(276, 23);
             this.txbLogin.TabIndex = 1;
             this.txbLogin.Text = "LOGIN";
-            this.txbLogin.TextChanged += new System.EventHandler(this.txbLogin_TextChanged);
             this.txbLogin.Enter += new System.EventHandler(this.txbLogin_Enter);
             this.txbLogin.Leave += new System.EventHandler(this.txbLogin_Leave);
             // 
@@ -131,11 +130,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(9, 206);
+            this.label1.Location = new System.Drawing.Point(12, 207);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 29);
+            this.label1.Size = new System.Drawing.Size(172, 19);
             this.label1.TabIndex = 19;
             this.label1.Text = "AQUI VOCÊ COME BEM!";
             // 
@@ -161,7 +160,6 @@
             this.lineShape2.X2 = 556;
             this.lineShape2.Y1 = 207;
             this.lineShape2.Y2 = 207;
-            this.lineShape2.Click += new System.EventHandler(this.lineShape2_Click);
             // 
             // lineShape1
             // 
@@ -185,7 +183,6 @@
             this.label3.Size = new System.Drawing.Size(123, 39);
             this.label3.TabIndex = 22;
             this.label3.Text = "LOGIN";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btn_close
             // 
@@ -277,7 +274,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.LogoLogin)).EndInit();
             this.panel1.ResumeLayout(false);

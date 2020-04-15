@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.PainelMenu = new System.Windows.Forms.Panel();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.SelMenuOpc = new System.Windows.Forms.PictureBox();
             this.SelMenuConfig = new System.Windows.Forms.PictureBox();
             this.SelMenuRelatorio = new System.Windows.Forms.PictureBox();
@@ -51,7 +52,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_minimize = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.PictureBox();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.PainelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuOpc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuConfig)).BeginInit();
@@ -95,6 +95,27 @@
             this.PainelMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PainelMenu.Size = new System.Drawing.Size(238, 469);
             this.PainelMenu.TabIndex = 1;
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnExit.FlatAppearance.BorderSize = 0;
+            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            this.BtnExit.Location = new System.Drawing.Point(81, 346);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(102, 49);
+            this.BtnExit.TabIndex = 41;
+            this.BtnExit.Text = "SAIR";
+            this.BtnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // SelMenuOpc
             // 
@@ -168,7 +189,7 @@
             this.btn_opc.FlatAppearance.BorderSize = 0;
             this.btn_opc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_opc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_opc.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_opc.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_opc.ForeColor = System.Drawing.Color.Transparent;
             this.btn_opc.Location = new System.Drawing.Point(64, 271);
             this.btn_opc.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
@@ -189,7 +210,7 @@
             this.btnPedido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedido.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedido.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedido.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPedido.Location = new System.Drawing.Point(64, 36);
             this.btnPedido.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
@@ -209,7 +230,7 @@
             this.btn_Clientes.FlatAppearance.BorderSize = 0;
             this.btn_Clientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Clientes.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Clientes.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Clientes.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_Clientes.Location = new System.Drawing.Point(64, 75);
             this.btn_Clientes.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
@@ -229,7 +250,7 @@
             this.btn_config.FlatAppearance.BorderSize = 0;
             this.btn_config.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_config.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_config.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_config.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_config.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_config.Location = new System.Drawing.Point(64, 231);
             this.btn_config.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
@@ -250,7 +271,7 @@
             this.btn_Sabores.FlatAppearance.BorderSize = 0;
             this.btn_Sabores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_Sabores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sabores.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sabores.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sabores.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_Sabores.Location = new System.Drawing.Point(64, 153);
             this.btn_Sabores.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
@@ -270,7 +291,7 @@
             this.btn_relatorio.FlatAppearance.BorderSize = 0;
             this.btn_relatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_relatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_relatorio.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_relatorio.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_relatorio.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_relatorio.Location = new System.Drawing.Point(64, 192);
             this.btn_relatorio.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
@@ -290,7 +311,7 @@
             this.btn_Bebidas.FlatAppearance.BorderSize = 0;
             this.btn_Bebidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_Bebidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Bebidas.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Bebidas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Bebidas.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_Bebidas.Location = new System.Drawing.Point(64, 114);
             this.btn_Bebidas.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
@@ -356,7 +377,7 @@
             this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_minimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimize.Image")));
-            this.btn_minimize.Location = new System.Drawing.Point(519, 0);
+            this.btn_minimize.Location = new System.Drawing.Point(518, 0);
             this.btn_minimize.Name = "btn_minimize";
             this.btn_minimize.Size = new System.Drawing.Size(24, 27);
             this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -370,34 +391,13 @@
             this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(543, 0);
+            this.btn_close.Location = new System.Drawing.Point(542, 0);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(24, 27);
             this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_close.TabIndex = 26;
             this.btn_close.TabStop = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
-            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnExit.FlatAppearance.BorderSize = 0;
-            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
-            this.BtnExit.Location = new System.Drawing.Point(81, 346);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(102, 49);
-            this.BtnExit.TabIndex = 41;
-            this.BtnExit.Text = "SAIR";
-            this.BtnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.BtnExit.UseVisualStyleBackColor = true;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // MenuPrincipal
             // 
