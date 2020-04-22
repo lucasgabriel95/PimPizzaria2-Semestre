@@ -57,54 +57,72 @@
     <Compile Include="DAL\ComandosLogin.cs" />
     <Compile Include="DAL\Conexao.cs" />
     <Compile Include="DAL\ControleFuncionario.cs" />
-    <Compile Include="Aparencia\Login.cs">
+    <Compile Include="Aparencia\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aparencia\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Aparencia\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aparencia\MenuPrincipal.cs">
+    <Compile Include="Aparencia\FormMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aparencia\MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <Compile Include="Aparencia\FormMenuPrincipal.Designer.cs">
+      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aparencia\ConfigUser.cs">
+    <Compile Include="Aparencia\FormConfigUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aparencia\ConfigUser.Designer.cs">
-      <DependentUpon>ConfigUser.cs</DependentUpon>
+    <Compile Include="Aparencia\FormConfigUser.Designer.cs">
+      <DependentUpon>FormConfigUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aparencia\Sel_Config.cs">
+    <Compile Include="Aparencia\FormSelConfig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aparencia\Sel_Config.Designer.cs">
-      <DependentUpon>Sel_Config.cs</DependentUpon>
+    <Compile Include="Aparencia\FormSelConfig.Designer.cs">
+      <DependentUpon>FormSelConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\ComandoFuncionario.cs" />
     <Compile Include="DAL\DadosFuncionario.cs" />
-    <Compile Include="Aparencia\Bebida.cs">
+    <Compile Include="Aparencia\FormBebida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aparencia\Bebida.Designer.cs">
-      <DependentUpon>Bebida.cs</DependentUpon>
+    <Compile Include="Aparencia\FormBebida.Designer.cs">
+      <DependentUpon>FormBebida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aparencia\FormPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aparencia\FormPedido.Designer.cs">
+      <DependentUpon>FormPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Aparencia\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Aparencia\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aparencia\MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Aparencia\FormMenuPrincipal.resx">
+      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aparencia\ConfigUser.resx">
-      <DependentUpon>ConfigUser.cs</DependentUpon>
+    <EmbeddedResource Include="Aparencia\FormConfigUser.resx">
+      <DependentUpon>FormConfigUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aparencia\Sel_Config.resx">
-      <DependentUpon>Sel_Config.cs</DependentUpon>
+    <EmbeddedResource Include="Aparencia\FormSelConfig.resx">
+      <DependentUpon>FormSelConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aparencia\Bebida.resx">
-      <DependentUpon>Bebida.cs</DependentUpon>
+    <EmbeddedResource Include="Aparencia\FormBebida.resx">
+      <DependentUpon>FormBebida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aparencia\FormPedido.resx">
+      <DependentUpon>FormPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

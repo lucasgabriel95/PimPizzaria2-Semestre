@@ -120,3 +120,5 @@ C:\Users\AbnerNB\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\Piz
 C:\Users\AbnerNB\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.CopyComplete
 C:\Users\AbnerNB\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.exe
 C:\Users\AbnerNB\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.pdb
+C:\Users\AbnerNB\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Form1.resources
+C:\Users\AbnerNB\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.FormPedido.resources
