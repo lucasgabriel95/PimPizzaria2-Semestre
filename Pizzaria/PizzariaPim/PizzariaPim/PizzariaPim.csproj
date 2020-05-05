@@ -49,79 +49,111 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDpizzariaDataSet.cs">
+      <DependentUpon>BDpizzariaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BDpizzariaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BDpizzariaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DAL\ComandosLogin.cs" />
-    <Compile Include="DAL\Conexao.cs" />
-    <Compile Include="DAL\ControleFuncionario.cs" />
-    <Compile Include="Aparencia\FormLogin.cs">
+    <Compile Include="Control\ControleBebidas.cs" />
+    <Compile Include="Control\ControleClientes.cs" />
+    <Compile Include="Control\ControleSabores.cs" />
+    <Compile Include="Geral\ComandosLogin.cs" />
+    <Compile Include="Geral\Conexao.cs" />
+    <Compile Include="Control\ControleFuncionario.cs" />
+    <Compile Include="Model\Bebidas\ComandosBebidas.cs" />
+    <Compile Include="Model\Bebidas\DadosBebidas.cs" />
+    <Compile Include="Model\Clientes\ComandosClientes.cs" />
+    <Compile Include="Model\Clientes\DadosClientes.cs" />
+    <Compile Include="Model\Sabores\ComandosSabores.cs" />
+    <Compile Include="Model\Sabores\DadosSabores.cs" />
+    <Compile Include="Model\Vendas\ComandosPedidos.cs" />
+    <Compile Include="Model\Vendas\DadosVendas.cs" />
+    <Compile Include="View\FormBebida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aparencia\FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Aparencia\FormMenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aparencia\FormMenuPrincipal.Designer.cs">
-      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Aparencia\FormConfigUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aparencia\FormConfigUser.Designer.cs">
-      <DependentUpon>FormConfigUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Aparencia\FormSelConfig.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aparencia\FormSelConfig.Designer.cs">
-      <DependentUpon>FormSelConfig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\ComandoFuncionario.cs" />
-    <Compile Include="DAL\DadosFuncionario.cs" />
-    <Compile Include="Aparencia\FormBebida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aparencia\FormBebida.Designer.cs">
+    <Compile Include="View\FormBebida.Designer.cs">
       <DependentUpon>FormBebida.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="View\FormCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aparencia\FormPedido.cs">
+    <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aparencia\FormPedido.Designer.cs">
+    <Compile Include="View\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormMenuPrincipal.Designer.cs">
+      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormConfigUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormConfigUser.Designer.cs">
+      <DependentUpon>FormConfigUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSabores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSabores.Designer.cs">
+      <DependentUpon>FormSabores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSatisfacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSatisfacao.Designer.cs">
+      <DependentUpon>FormSatisfacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSelConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSelConfig.Designer.cs">
+      <DependentUpon>FormSelConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Funcionario\ComandoFuncionario.cs" />
+    <Compile Include="Model\Funcionario\DadosFuncionario.cs" />
+    <Compile Include="View\FormPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPedido.Designer.cs">
       <DependentUpon>FormPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Aparencia\FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Aparencia\FormMenuPrincipal.resx">
-      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Aparencia\FormConfigUser.resx">
-      <DependentUpon>FormConfigUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Aparencia\FormSelConfig.resx">
-      <DependentUpon>FormSelConfig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Aparencia\FormBebida.resx">
+    <EmbeddedResource Include="View\FormBebida.resx">
       <DependentUpon>FormBebida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aparencia\FormPedido.resx">
+    <EmbeddedResource Include="View\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormMenuPrincipal.resx">
+      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormConfigUser.resx">
+      <DependentUpon>FormConfigUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSabores.resx">
+      <DependentUpon>FormSabores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSatisfacao.resx">
+      <DependentUpon>FormSatisfacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSelConfig.resx">
+      <DependentUpon>FormSelConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPedido.resx">
       <DependentUpon>FormPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -202,6 +234,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

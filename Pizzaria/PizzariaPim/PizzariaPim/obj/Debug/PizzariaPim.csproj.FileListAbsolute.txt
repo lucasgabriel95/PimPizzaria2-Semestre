@@ -57,7 +57,6 @@ J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPi
 J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.GenerateResource.Cache
 J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Form2.resources
 J:\ABNER\Visual C$\Projeto\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.CadastroUsuario.resources
-C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csprojAssemblyReference.cache
 C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Properties.Resources.resources
 C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.GenerateResource.cache
 C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.exe
@@ -67,7 +66,6 @@ C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\Piz
 C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.pdb
 C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.MenuPrincipal.resources
 C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.ConfigUser.resources
-C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Sel_Config.resources
 C:\Users\lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Login.resources
 C:\Users\Lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.CoreCompileInputs.cache
 C:\Users\Abner\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\bin\Debug\PizzariaPim.exe.config
@@ -122,3 +120,11 @@ C:\Users\AbnerNB\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\Piz
 C:\Users\AbnerNB\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.pdb
 C:\Users\AbnerNB\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.Form1.resources
 C:\Users\AbnerNB\Desktop\PROJETOS\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.FormPedido.resources
+C:\Users\Lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.FormPedido.resources
+C:\Users\Lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csproj.CopyComplete
+C:\Users\Lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.FormSelConfig.resources
+C:\Users\Lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.View.FormSabores.resources
+C:\Users\Lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.View.FormSatisfacao.resources
+C:\Users\Lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.View.FormBebida.resources
+C:\Users\Lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.csprojAssemblyReference.cache
+C:\Users\Lucas\Documents\Projetos\PimPizzaria2-Semestre\Pizzaria\PizzariaPim\PizzariaPim\obj\Debug\PizzariaPim.FormCliente.resources
