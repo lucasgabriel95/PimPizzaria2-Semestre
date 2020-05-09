@@ -29,7 +29,7 @@ namespace PizzariaPim.Control
             ComandosClientes comandos = new ComandosClientes();
             comandos.Excluir(codigo);
         }
-        public void LocalizarBebida(String valor)
+        public void Localizar(String valor)
         {
             ComandosClientes comandos = new ComandosClientes();
             comandos.localizar(valor);

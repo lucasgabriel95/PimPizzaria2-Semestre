@@ -57,26 +57,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDpizzariaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Control\ControleBebidas.cs" />
+    <Compile Include="Control\ControleProdutos.cs" />
     <Compile Include="Control\ControleClientes.cs" />
-    <Compile Include="Control\ControleSabores.cs" />
+    <Compile Include="Control\ControleVendas.cs" />
     <Compile Include="Geral\ComandosLogin.cs" />
     <Compile Include="Geral\Conexao.cs" />
     <Compile Include="Control\ControleFuncionario.cs" />
-    <Compile Include="Model\Bebidas\ComandosBebidas.cs" />
-    <Compile Include="Model\Bebidas\DadosBebidas.cs" />
+    <Compile Include="Model\Podutos\ComandosProdutos.cs" />
+    <Compile Include="Model\Podutos\DadosProdutos.cs" />
     <Compile Include="Model\Clientes\ComandosClientes.cs" />
     <Compile Include="Model\Clientes\DadosClientes.cs" />
-    <Compile Include="Model\Sabores\ComandosSabores.cs" />
-    <Compile Include="Model\Sabores\DadosSabores.cs" />
-    <Compile Include="Model\Vendas\ComandosPedidos.cs" />
-    <Compile Include="Model\Vendas\DadosVendas.cs" />
-    <Compile Include="View\FormBebida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormBebida.Designer.cs">
-      <DependentUpon>FormBebida.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Model\Vendas\Vendas\ComandosCadVenda.cs" />
+    <Compile Include="Model\Vendas\Vendas\DadosCadVenda.cs" />
     <Compile Include="View\FormCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,11 +93,11 @@
     <Compile Include="View\FormConfigUser.Designer.cs">
       <DependentUpon>FormConfigUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormSabores.cs">
+    <Compile Include="View\FormProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormSabores.Designer.cs">
-      <DependentUpon>FormSabores.cs</DependentUpon>
+    <Compile Include="View\FormProdutos.Designer.cs">
+      <DependentUpon>FormProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormSatisfacao.cs">
       <SubType>Form</SubType>
@@ -129,9 +121,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\FormBebida.resx">
-      <DependentUpon>FormBebida.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,8 +133,8 @@
     <EmbeddedResource Include="View\FormConfigUser.resx">
       <DependentUpon>FormConfigUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormSabores.resx">
-      <DependentUpon>FormSabores.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormProdutos.resx">
+      <DependentUpon>FormProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormSatisfacao.resx">
       <DependentUpon>FormSatisfacao.cs</DependentUpon>

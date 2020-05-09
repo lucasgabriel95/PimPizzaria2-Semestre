@@ -206,8 +206,7 @@ namespace PizzariaPim
 
         private void FormCliente_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'bDpizzariaDataSet.Cad_Cliente'. Você pode movê-la ou removê-la conforme necessário.
-            this.cad_ClienteTableAdapter.Fill(this.bDpizzariaDataSet.Cad_Cliente);
+           
 
         }
         private void boxCEP_KeyPress(object sender, KeyPressEventArgs e)
@@ -243,6 +242,11 @@ namespace PizzariaPim
         private void boxNomeCompleto_TextChanged(object sender, EventArgs e)
         {
             Localizar();
+        }
+
+        private void btn_close_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

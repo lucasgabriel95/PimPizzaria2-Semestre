@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using PizzariaPim.View;
+using PizzariaPim.Model.Vendas.Vendas;
 
 namespace PizzariaPim
 {
@@ -90,7 +91,7 @@ namespace PizzariaPim
         private void btn_Bebidas_Click(object sender, EventArgs e)
         {
            
-            AbrirFormulario(new FormBebida());
+            AbrirFormulario(new FormProdutos());
         }
 
 
@@ -99,27 +100,12 @@ namespace PizzariaPim
             Application.Exit();
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleasCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.MinimumSize = this.Size;
-            this.MaximumSize = this.Size;
-        }
+      
 
         private void btnPedido_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormPedido());     
+            FormPedido form = new FormPedido();
+            form.ShowDialog();
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
@@ -137,13 +123,7 @@ namespace PizzariaPim
             ReleasCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.TopMost = false;
-        }
-
+       
         private void PainelLogo_Paint(object sender, PaintEventArgs e)
         {
 
@@ -156,7 +136,7 @@ namespace PizzariaPim
 
         private void btn_Sabores_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormSabores());
+            
         }
 
         private void btn_relatorio_Click(object sender, EventArgs e)

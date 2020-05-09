@@ -69,7 +69,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cad_ClienteTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_ClienteTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -83,6 +82,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btn_Excluir);
@@ -185,7 +185,7 @@
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.Controls.Add(this.btn_close);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(-1, -1);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(742, 31);
             this.panel3.TabIndex = 55;
@@ -202,6 +202,7 @@
             this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_close.TabIndex = 54;
             this.btn_close.TabStop = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click_1);
             // 
             // btn_Excluir
             // 
@@ -445,10 +446,6 @@
             this.label5.TabIndex = 47;
             this.label5.Text = "ENDEREÇO";
             // 
-            // cad_ClienteTableAdapter
-            // 
-            this.cad_ClienteTableAdapter.ClearBeforeFill = true;
-            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,7 +503,6 @@
         private System.Windows.Forms.PictureBox btn_close;
         private BDpizzariaDataSet bDpizzariaDataSet;
         private System.Windows.Forms.BindingSource cadClienteBindingSource;
-        private BDpizzariaDataSetTableAdapters.Cad_ClienteTableAdapter cad_ClienteTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpfcnpjClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeClienteDataGridViewTextBoxColumn;
