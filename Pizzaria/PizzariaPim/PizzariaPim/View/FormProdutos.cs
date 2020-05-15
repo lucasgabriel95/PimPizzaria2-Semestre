@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +20,10 @@ namespace PizzariaPim.View
             InitializeComponent();
             AlterarBotoes(2);
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleasCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         int codigo;
         public string salvarEditar;
 
@@ -43,7 +48,7 @@ namespace PizzariaPim.View
         {
             if (1 == op)
             {
-                txbCodigo.Enabled = true;
+               
                 txbDescricao.Enabled = true;
                 txbQuantidade.Enabled = true;
                 txbValor.Enabled = true;
@@ -51,7 +56,7 @@ namespace PizzariaPim.View
             }
             if (2 == op)
             {
-                txbCodigo.Enabled = false;
+                
                 txbDescricao.Enabled = false;
                 txbQuantidade.Enabled = false;
                 txbValor.Enabled = false;
@@ -71,11 +76,10 @@ namespace PizzariaPim.View
             if (salvarEditar == "Incluir")
             {
 
-
                 if (txbNome.Text != "" && txbDescricao.Text != "" && txbValor.Text != "" && txbQuantidade.Text != "" && cbCategoria.Text != "")
                 {
                     DialogResult mensagem;
-                    mensagem = MessageBox.Show("Deseja cadastrar bebida ?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    mensagem = MessageBox.Show("Deseja cadastrar Produto ?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (mensagem.ToString() == "Yes")
                     {
@@ -90,7 +94,7 @@ namespace PizzariaPim.View
                         }
                         ControleProdutos controle = new ControleProdutos();
                         controle.Cadastrar(txbNome.Text, txbDescricao.Text, Convert.ToDouble(txbValor.Text), Convert.ToInt32(txbQuantidade.Text),Categoria);
-                        MessageBox.Show("Bebida cadastrada com sucesso !!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Produto cadastrada com sucesso !!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         limpar();
                         AlterarBotoes(2);
                         Localizar();
@@ -103,30 +107,34 @@ namespace PizzariaPim.View
             }
             else
             {
-                DialogResult mensagem;
-                mensagem = MessageBox.Show("Deseja Alterar bebida ?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (mensagem.ToString() == "Yes")
+                if (txbCodigo.Text != "")
                 {
-                    DadosProdutos dados = new DadosProdutos();
-                    dados.Codigo = Convert.ToInt32(txbCodigo.Text);
-                    dados.Nome = txbNome.Text;
-                    dados.Descricao = txbDescricao.Text;
-                    dados.Quantidade = Convert.ToInt32(txbQuantidade.Text);
-                    dados.Valor = Convert.ToDouble(txbValor.Text);
-                    if (dados.Categoria == 2)
+                    DialogResult mensagem;
+                    mensagem = MessageBox.Show("Deseja Alterar Produto ?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (mensagem.ToString() == "Yes")
                     {
-                        cbCategoria.Text = "Pizza";
+                        DadosProdutos dados = new DadosProdutos();
+                        dados.Codigo = Convert.ToInt32(txbCodigo.Text);
+                        dados.Nome = txbNome.Text;
+                        dados.Descricao = txbDescricao.Text;
+                        dados.Quantidade = Convert.ToInt32(txbQuantidade.Text);
+                        dados.Valor = Convert.ToDouble(txbValor.Text);
+                        if (dados.Categoria == 2)
+                        {
+                            cbCategoria.Text = "Pizza";
+                        }
+                        else
+                        {
+                            cbCategoria.Text = "Bebida";
+                        }
+                        ControleProdutos controle = new ControleProdutos();
+                        controle.AlterarBebidas(dados);
+                        MessageBox.Show("Bebida Alterada com sucesso !!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpar();
+                        AlterarBotoes(2);
                     }
-                    else
-                    {
-                        cbCategoria.Text = "Bebida";
-                    }
-                    ControleProdutos controle = new ControleProdutos();
-                    controle.AlterarBebidas(dados);
-                    MessageBox.Show("Bebida Alterada com sucesso !!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpar();
-                    AlterarBotoes(2);
+                
 
                 }
             }
@@ -147,11 +155,7 @@ namespace PizzariaPim.View
                     AlterarBotoes(2);
                     Localizar();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Selecione uma bebida na tabela para excluir !!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }         
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
@@ -170,22 +174,7 @@ namespace PizzariaPim.View
 
         private void dgGride_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex >= 0)
-            {
-                if (e.RowIndex >= 0)
-                {
-                    codigo = Convert.ToInt32(dgGride.Rows[e.RowIndex].Cells[0].Value);
-                }
-            }
-            ComandosProdutos comando = new ComandosProdutos();
-            DadosProdutos dados = comando.Carregar(codigo);
-            txbCodigo.Text = dados.Codigo.ToString();
-            txbNome.Text = dados.Nome;
-            txbDescricao.Text = dados.Descricao;
-            txbQuantidade.Text = dados.Quantidade.ToString();
-            txbValor.Text = dados.Valor.ToString();
-            salvarEditar = "Alterar";
-            AlterarBotoes(1);
+           
         }
 
         private void brnIncluir_Click(object sender, EventArgs e)
@@ -215,22 +204,66 @@ namespace PizzariaPim.View
             }
         }
 
-        private void txbQuantidade_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbNome_TextChanged(object sender, EventArgs e)
-        {
-            Localizar();
-        }
-
-        private void FormProdutos_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleasCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleasCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void txbQuantidade_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txbValor_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void txbValor_KeyPress_2(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void dgGride_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex >= 0)
+            {
+                if (e.RowIndex >= 0)
+                {
+                    codigo = Convert.ToInt32(dgGride.Rows[e.RowIndex].Cells[0].Value);
+                }
+            }
+            ComandosProdutos comando = new ComandosProdutos();
+            DadosProdutos dados = comando.Carregar(codigo);
+            txbCodigo.Text = dados.Codigo.ToString();
+            txbNome.Text = dados.Nome;
+            txbDescricao.Text = dados.Descricao;
+            txbQuantidade.Text = dados.Quantidade.ToString();
+            txbValor.Text = dados.Valor.ToString();
+            salvarEditar = "Alterar";
+            AlterarBotoes(1);
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

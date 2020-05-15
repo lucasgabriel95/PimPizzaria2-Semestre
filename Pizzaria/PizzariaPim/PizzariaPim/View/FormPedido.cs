@@ -1,6 +1,7 @@
 ﻿using PizzariaPim.Control;
 using PizzariaPim.DAL;
 using PizzariaPim.Model.Bebidas;
+using PizzariaPim.Model.Pedidos;
 using PizzariaPim.Model.Vendas;
 using PizzariaPim.Model.Vendas.Vendas;
 using PizzariaPim.View;
@@ -34,6 +35,7 @@ namespace PizzariaPim
         public double Total;
         public double contadorMais = 0;
         public double ContadorMenos = 500;
+        
         public void Maximizar()
         {
             this.WindowState = FormWindowState.Maximized;
@@ -151,17 +153,17 @@ namespace PizzariaPim
         {
 
         }
-        int v = 1;
+        int ControleIncluirNull = 1;
         private void btnIncluir_Click(object sender, EventArgs e)
         {
             
             if (lblCodigoCliente.Text != "0"  && lblCodigoProduto.Text != "0" && lblQuantidade.Text != "0" && txbDescricaoProduto.Text != "")
             {
                 ComandosCadVenda comandos = new ComandosCadVenda();
-                if (v  == 1)
+                if (ControleIncluirNull == 1)
                 {
                     comandos.IncluirClienteNull(Convert.ToInt32(lblCodigoCliente.Text));
-                    v = 2;
+                    ControleIncluirNull = 2;
                 }                
                 ControleVendas controle = new ControleVendas();
                 controle.CadatrarItens(Convert.ToInt32(lblCodigoProduto.Text), Convert.ToInt32(lblCodigoVenda.Text), Convert.ToInt32(lblQuantidade.Text), Convert.ToDouble(lblValorUnitario.Text));
@@ -270,12 +272,7 @@ namespace PizzariaPim
             
             ControleVendas controle = new ControleVendas();
             controle.Excluir(codigo);
-        }
-        
-        private void btnFinalizarPedido_Click(object sender, EventArgs e)
-        {
-           
-        }
+        }        
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
@@ -314,13 +311,31 @@ namespace PizzariaPim
                 {
                     codigo = Convert.ToInt32(dgrideCliente.Rows[e.RowIndex].Cells[0].Value);
                 }
-            }
-            
+            }            
             ComandosClientes cf = new ComandosClientes();
             DadosClientes dadosClientes = cf.carregar(codigo);   
             lblCodigoCliente.Text = dadosClientes.codigo.ToString();
             lblNomeDocliente.Text = "- " + dadosClientes.nome;
-            
+            ComandosElogioReclamacoes comandos = new ComandosElogioReclamacoes();
+            comandos.ConsultaUmtimaCompraCliente(Convert.ToInt32 (lblCodigoCliente.Text));
+            if (comandos.DataMaxima == "")
+            {
+
+            }
+            else
+            {
+                DialogResult mensagemConfirmacao;
+                mensagemConfirmacao = MessageBox.Show("A ultima Compra do "+lblNomeDocliente.Text+" foi no dia "+ comandos.DataMaxima +", deseja cadastrar um elogio ou reclamação ?","AVISO",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if (mensagemConfirmacao.ToString() == "Yes")
+                {
+                                     
+                    FormSatisfacao form = new FormSatisfacao();   
+                    form.ShowDialog();
+                    
+                }
+               
+            }
+
         }
 
         private void txbDesconto_TextChanged(object sender, EventArgs e)
@@ -355,6 +370,7 @@ namespace PizzariaPim
        
         private void btnFinalizarPedido_Click_1(object sender, EventArgs e)
         {
+            ControleIncluirNull = 1;
             if (lblSubTotal.Text != "0,00")
             {
                 DialogResult mensagemConfirmacao;
@@ -369,13 +385,16 @@ namespace PizzariaPim
                     dados.ValorPago = Convert.ToDouble(lblSubTotal.Text);
                     dados.CodigoCliente = Convert.ToInt32(lblCodigoCliente.Text);
                     dados.Status = "Ativo";
-                    dados.DataTime = Convert.ToString(lblData.Text);
+                    
+                    dados.obs = txbObs.Text;
+                    dados.DataTime = Convert.ToString(DateTime.Now.ToString("yyyy/MM/dd HH:mm:dd"));
                     ControleVendas controle = new ControleVendas();
                     controle.Alterar(dados);
                     MessageBox.Show("Pedido Realizado Com Sucesso !!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimparVenda();       
                     comandos.UpDateInicializacao();
                     Inicializacao();
+
                 }
             }
             else
@@ -384,13 +403,9 @@ namespace PizzariaPim
             }    
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblData.Text = DateTime.Now.ToString("");
-        }
-
         private void btn_close_Click(object sender, EventArgs e)
         {
+            ControleIncluirNull = 1;
             DialogResult mensagemConfirmacao;
             if (lblSubTotal.Text != "0,00")
             {
@@ -405,7 +420,7 @@ namespace PizzariaPim
                     dados.ValorPago = Convert.ToDouble(lblSubTotal.Text);
                     dados.CodigoCliente = Convert.ToInt32(lblCodigoCliente.Text);
                     dados.Status = "Cancelado";
-                    dados.DataTime = Convert.ToString(lblData.Text);
+                    dados.DataTime = Convert.ToString(DateTime.Now.ToString("yyyy/MM/dd HH:mm:dd"));
                     ControleVendas controle = new ControleVendas();
                     controle.Alterar(dados);
                     Inicializacao();
@@ -422,6 +437,7 @@ namespace PizzariaPim
 
         private void btnCancelarPedido_Click(object sender, EventArgs e)
         {
+            ControleIncluirNull = 1;
             DialogResult mensagemConfirmacao;
             if (lblSubTotal.Text != "0,00")
             {
@@ -436,7 +452,7 @@ namespace PizzariaPim
                     dados.ValorPago = Convert.ToDouble(lblSubTotal.Text);
                     dados.CodigoCliente = Convert.ToInt32(lblCodigoCliente.Text);
                     dados.Status = "Cancelado";
-                    dados.DataTime = Convert.ToString(lblData.Text);
+                    dados.DataTime = Convert.ToString(DateTime.Now.ToString("yyyy/MM/dd HH:mm:dd"));
                     ControleVendas controle = new ControleVendas();
                     controle.Alterar(dados);
                     Inicializacao();
@@ -462,6 +478,11 @@ namespace PizzariaPim
         {
             FormProdutos prdoutos = new FormProdutos();
             prdoutos.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblData.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
     }
 }

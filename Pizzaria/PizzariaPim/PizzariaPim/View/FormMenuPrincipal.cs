@@ -22,11 +22,9 @@ namespace PizzariaPim
             InitializeComponent();
             Login ln = new Login();
             ln.Hide();
-
-            
-
-
+            AbrirFormulario(new FormHome());
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleasCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -90,8 +88,10 @@ namespace PizzariaPim
         
         private void btn_Bebidas_Click(object sender, EventArgs e)
         {
-           
-            AbrirFormulario(new FormProdutos());
+
+            FormProdutos form = new FormProdutos();
+            form.ShowDialog();
+
         }
 
 
@@ -104,8 +104,7 @@ namespace PizzariaPim
 
         private void btnPedido_Click(object sender, EventArgs e)
         {
-            FormPedido form = new FormPedido();
-            form.ShowDialog();
+            AbrirFormulario(new FormSelPedido());
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
@@ -122,6 +121,9 @@ namespace PizzariaPim
         {
             ReleasCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+            this.WindowState = FormWindowState.Normal;
+            btnRestaura.Visible = false;
+            btnMaximizar.Visible = true;
         }
        
         private void PainelLogo_Paint(object sender, PaintEventArgs e)
@@ -131,7 +133,8 @@ namespace PizzariaPim
 
         private void btn_Clientes_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormCliente());
+            FormCliente form = new FormCliente();
+            form.ShowDialog();
         }
 
         private void btn_Sabores_Click(object sender, EventArgs e)
@@ -141,12 +144,43 @@ namespace PizzariaPim
 
         private void btn_relatorio_Click(object sender, EventArgs e)
         {
-
+            FormRelatorios form = new FormRelatorios();
+            form.ShowDialog();
         }
 
         private void btn_opc_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormSatisfacao());
+            FormSatisfacao form = new FormSatisfacao();
+            form.ShowDialog();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnRestaura.Visible = true;
+            btnMaximizar.Visible = false;
+        }
+
+        private void btnRestaura_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestaura.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizaAgenda_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormHome());
         }
     }
 }

@@ -272,5 +272,28 @@ namespace PizzariaPim
             ReleasCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void boxNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void boxCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            
+        }
+
+        private void boxCPF_TextChanged_1(object sender, EventArgs e)
+        {
+            Localizar();
+        }
     }
 }

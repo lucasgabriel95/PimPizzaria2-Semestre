@@ -38,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,10 +64,15 @@
     <Compile Include="Geral\ComandosLogin.cs" />
     <Compile Include="Geral\Conexao.cs" />
     <Compile Include="Control\ControleFuncionario.cs" />
+    <Compile Include="Geral\Formatar Dados\FormatarValores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Pedidos\ComandosElogioReclamacoes.cs" />
     <Compile Include="Model\Podutos\ComandosProdutos.cs" />
     <Compile Include="Model\Podutos\DadosProdutos.cs" />
     <Compile Include="Model\Clientes\ComandosClientes.cs" />
     <Compile Include="Model\Clientes\DadosClientes.cs" />
+    <Compile Include="Model\Relatorios\ComandosRelatorios.cs" />
     <Compile Include="Model\Vendas\Vendas\ComandosCadVenda.cs" />
     <Compile Include="Model\Vendas\Vendas\DadosCadVenda.cs" />
     <Compile Include="View\FormCliente.cs">
@@ -74,6 +80,18 @@
     </Compile>
     <Compile Include="View\FormCliente.Designer.cs">
       <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormControlePedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormControlePedidos.Designer.cs">
+      <DependentUpon>FormControlePedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
@@ -99,6 +117,12 @@
     <Compile Include="View\FormProdutos.Designer.cs">
       <DependentUpon>FormProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRelatorios.Designer.cs">
+      <DependentUpon>FormRelatorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormSatisfacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,8 +145,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FormSelPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSelPedido.Designer.cs">
+      <DependentUpon>FormSelPedido.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormControlePedidos.resx">
+      <DependentUpon>FormControlePedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -136,6 +172,12 @@
     <EmbeddedResource Include="View\FormProdutos.resx">
       <DependentUpon>FormProdutos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRelatorios.dje-NE.resx">
+      <DependentUpon>FormRelatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRelatorios.resx">
+      <DependentUpon>FormRelatorios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormSatisfacao.resx">
       <DependentUpon>FormSatisfacao.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +190,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSelPedido.resx">
+      <DependentUpon>FormSelPedido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BDpizzariaDataSet.xsc">
       <DependentUpon>BDpizzariaDataSet.xsd</DependentUpon>

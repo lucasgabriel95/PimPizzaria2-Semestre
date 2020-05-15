@@ -15,21 +15,27 @@ namespace PizzariaPim.Model.Vendas.Vendas
                 this.Desconto = 0;
                 this.ValorPago = 0;
                 this.CodigoCliente = 0;
-                this.DataTime = "";
                 this.Status = "";
+                this.obs = "";
+                this.ElogioReclamacao = "";
+                this.DataTime = "";
+                
             
 
             }
 
-            public DadosCadVenda(int codigo, double valor, double desconto, double valorPago, int codigoPessoa,String Status,String DataTime)
+            public DadosCadVenda(int codigo, double valor, double desconto, double valorPago, int codigoPessoa,String Status,String obs ,String ElogioReclamacao, String DataTime)
             {
                 this.Codigo = codigo;
                 this.Valor = valor;
                 this.Desconto = desconto;
                 this.ValorPago = valorPago;
                 this.CodigoCliente = codigoPessoa;
-                this.DataTime = DataTime;
                 this.Status = Status;
+                this.obs = obs;
+                this.ElogioReclamacao = ElogioReclamacao;
+                this.DataTime = DataTime;
+                
 
         }
             int codigo_Bebidas;
@@ -44,6 +50,10 @@ namespace PizzariaPim.Model.Vendas.Vendas
             public int CodigoCliente { get { return this.Codigo_Cliente; } set { this.Codigo_Cliente = value; } }
             String Status_Venda;
             public String Status { get { return this.Status_Venda; } set { this.Status_Venda = value; } }
+            String obs_Venda;
+            public String obs { get { return this.obs_Venda; } set { this.obs_Venda = value; } }
+            String ElogioReclamacao_VEnda;
+            public String ElogioReclamacao { get { return this.ElogioReclamacao_VEnda; } set { this.ElogioReclamacao_VEnda = value; } }
         String Data_Time;
             public String DataTime { get { return this.Data_Time; } set { this.Data_Time = value; } }
 

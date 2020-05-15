@@ -17,7 +17,8 @@ namespace PizzariaPim.Model.Bebidas
             this.Quantidade = 0;
             this.Categoria = 0;
         }
-        public DadosProdutos(int codigo,String nome,String descricao,int Categoria, int quantidade,double valor)
+        public DadosProdutos(int codigo,String nome,String descricao,int Categoria,  
+            int quantidade,double valor) 
         {
             this.Codigo = codigo;
             this.Nome = nome;

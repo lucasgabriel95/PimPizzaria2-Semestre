@@ -38,6 +38,7 @@ namespace PizzariaPim
             boxNumero.Clear();
             boxBairro.Clear();
             boxComplemento.Clear();
+            boxCodigo.Clear();
             
         }
         public void AlteraBotoes(int op)
@@ -118,6 +119,7 @@ namespace PizzariaPim
                 }
                 else
                 {
+                    
                     DialogResult mensagemConfirmacao;
                     mensagemConfirmacao = MessageBox.Show("Deseja Alterar Cliente ?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (mensagemConfirmacao.ToString() == "Yes")
@@ -138,25 +140,25 @@ namespace PizzariaPim
                         AlteraBotoes(2);
                     }
                 }   
-            }
-            else
-            {
-                MessageBox.Show("Oscampos não podem ficar em branco!!", "Campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }            
         }       
         private void btn_Excluir_Click(object sender, EventArgs e)
-        {            
-            DialogResult mensagemConfirmacao;
-            mensagemConfirmacao = MessageBox.Show("Deseja Excluir Cliente ?", "Aviso", MessageBoxButtons.YesNo);
-            if (mensagemConfirmacao.ToString() == "Yes")
+        {
+            if (boxCodigo.Text != "")
             {
-                ControleClientes controle = new ControleClientes();
-                controle.Excluir(codigo);
-                MessageBox.Show("Cadastro Excluido com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AlteraBotoes(2);
-                LimparCampos();
-                Localizar();
+                DialogResult mensagemConfirmacao;
+                mensagemConfirmacao = MessageBox.Show("Deseja Excluir Cliente ?", "AVISO", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if (mensagemConfirmacao.ToString() == "Yes")
+                {
+                    ControleClientes controle = new ControleClientes();
+                    controle.Excluir(codigo);
+                    MessageBox.Show("Cadastro Excluido com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AlteraBotoes(2);
+                    LimparCampos();
+                    Localizar();
+                }
             }
+            
         }
         private void btn_close_Click(object sender, EventArgs e)
         {
@@ -245,6 +247,23 @@ namespace PizzariaPim
         }
 
         private void btn_close_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel3_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleasCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void label3_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleasCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

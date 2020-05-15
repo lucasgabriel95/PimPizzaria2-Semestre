@@ -30,15 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigUser));
-            this.boxCPF = new System.Windows.Forms.TextBox();
             this.boxNomeCompleto = new System.Windows.Forms.TextBox();
-            this.boxCEP = new System.Windows.Forms.TextBox();
-            this.boxTelefone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_Config = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.boxLogadouro = new System.Windows.Forms.TextBox();
@@ -49,18 +45,18 @@
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.btn_Excluir = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_close = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnFechar = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.boxUnidade = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.boxCargo = new System.Windows.Forms.TextBox();
             this.boxLogin = new System.Windows.Forms.TextBox();
             this.boxSenha = new System.Windows.Forms.TextBox();
@@ -71,65 +67,44 @@
             this.boxCodigo = new System.Windows.Forms.TextBox();
             this.btn_Incluir = new System.Windows.Forms.Button();
             this.dgGride = new System.Windows.Forms.DataGridView();
+            this.codigoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpfFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefoneFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cepFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logradouroFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bairroFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.complementeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senhaFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cadFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bDpizzariaDataSet = new PizzariaPim.BDpizzariaDataSet();
             this.cad_FuncionarioTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_FuncionarioTableAdapter();
-         //   this.bDpizzariaDataSet1 = new PizzariaPim.BDpizzariaDataSet1();
             this.cadBebidasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-          //  this.cad_BebidasTableAdapter = new PizzariaPim.BDpizzariaDataSet1TableAdapters.Cad_BebidasTableAdapter();
-            this.senhaFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.complementeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bairroFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logradouroFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cepFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidadeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefoneFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpfFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxCPF = new System.Windows.Forms.MaskedTextBox();
+            this.boxTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.boxCEP = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadFuncionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).BeginInit();
-          //  ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadBebidasBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // boxCPF
-            // 
-            this.boxCPF.Location = new System.Drawing.Point(17, 58);
-            this.boxCPF.Name = "boxCPF";
-            this.boxCPF.Size = new System.Drawing.Size(167, 20);
-            this.boxCPF.TabIndex = 0;
-            this.boxCPF.TextChanged += new System.EventHandler(this.boxCPF_TextChanged);
             // 
             // boxNomeCompleto
             // 
             this.boxNomeCompleto.Location = new System.Drawing.Point(17, 102);
             this.boxNomeCompleto.Name = "boxNomeCompleto";
             this.boxNomeCompleto.Size = new System.Drawing.Size(294, 20);
-            this.boxNomeCompleto.TabIndex = 1;
-            // 
-            // boxCEP
-            // 
-            this.boxCEP.Location = new System.Drawing.Point(19, 20);
-            this.boxCEP.Name = "boxCEP";
-            this.boxCEP.Size = new System.Drawing.Size(167, 20);
-            this.boxCEP.TabIndex = 5;
-            // 
-            // boxTelefone
-            // 
-            this.boxTelefone.Location = new System.Drawing.Point(17, 141);
-            this.boxTelefone.Name = "boxTelefone";
-            this.boxTelefone.Size = new System.Drawing.Size(167, 20);
-            this.boxTelefone.TabIndex = 2;
+            this.boxNomeCompleto.TabIndex = 3;
             // 
             // label1
             // 
@@ -168,15 +143,6 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "TELEFONE";
             // 
-            // txt_Config
-            // 
-            this.txt_Config.AutoSize = true;
-            this.txt_Config.Location = new System.Drawing.Point(121, 26);
-            this.txt_Config.Name = "txt_Config";
-            this.txt_Config.Size = new System.Drawing.Size(134, 13);
-            this.txt_Config.TabIndex = 16;
-            this.txt_Config.Text = "MENU CONFIGURAÇÕES";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -200,7 +166,7 @@
             this.boxLogadouro.Location = new System.Drawing.Point(192, 21);
             this.boxLogadouro.Name = "boxLogadouro";
             this.boxLogadouro.Size = new System.Drawing.Size(167, 20);
-            this.boxLogadouro.TabIndex = 6;
+            this.boxLogadouro.TabIndex = 11;
             // 
             // label9
             // 
@@ -216,7 +182,8 @@
             this.boxNumero.Location = new System.Drawing.Point(379, 20);
             this.boxNumero.Name = "boxNumero";
             this.boxNumero.Size = new System.Drawing.Size(73, 20);
-            this.boxNumero.TabIndex = 7;
+            this.boxNumero.TabIndex = 12;
+            this.boxNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxNumero_KeyPress);
             // 
             // label10
             // 
@@ -232,50 +199,55 @@
             this.boxBairro.Location = new System.Drawing.Point(18, 64);
             this.boxBairro.Name = "boxBairro";
             this.boxBairro.Size = new System.Drawing.Size(168, 20);
-            this.boxBairro.TabIndex = 8;
+            this.boxBairro.TabIndex = 13;
             // 
             // btn_Salvar
             // 
+            this.btn_Salvar.BackColor = System.Drawing.Color.Black;
             this.btn_Salvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salvar.FlatAppearance.BorderSize = 0;
+            this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salvar.ForeColor = System.Drawing.Color.White;
             this.btn_Salvar.Location = new System.Drawing.Point(257, 533);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Salvar.TabIndex = 10;
+            this.btn_Salvar.TabIndex = 15;
             this.btn_Salvar.Text = "Salvar";
-            this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.UseVisualStyleBackColor = false;
             this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.BackColor = System.Drawing.Color.Black;
             this.btn_Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
             this.btn_Cancelar.Location = new System.Drawing.Point(338, 533);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Cancelar.TabIndex = 11;
+            this.btn_Cancelar.TabIndex = 16;
             this.btn_Cancelar.Text = "Cancelar";
-            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Excluir
             // 
+            this.btn_Excluir.BackColor = System.Drawing.Color.Black;
             this.btn_Excluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Excluir.FlatAppearance.BorderSize = 0;
+            this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Excluir.ForeColor = System.Drawing.Color.White;
             this.btn_Excluir.Location = new System.Drawing.Point(419, 533);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn_Excluir.TabIndex = 12;
+            this.btn_Excluir.TabIndex = 17;
             this.btn_Excluir.Text = "Excluir";
-            this.btn_Excluir.UseVisualStyleBackColor = true;
+            this.btn_Excluir.UseVisualStyleBackColor = false;
             this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(161, 41);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 13);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "USUÁRIO";
             // 
             // label12
             // 
@@ -291,15 +263,12 @@
             this.boxComplemento.Location = new System.Drawing.Point(192, 64);
             this.boxComplemento.Name = "boxComplemento";
             this.boxComplemento.Size = new System.Drawing.Size(167, 20);
-            this.boxComplemento.TabIndex = 9;
+            this.boxComplemento.TabIndex = 14;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btn_close);
-            this.panel2.Controls.Add(this.txt_Config);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel1);
@@ -314,46 +283,49 @@
             this.panel2.Size = new System.Drawing.Size(758, 573);
             this.panel2.TabIndex = 14;
             // 
-            // btn_close
-            // 
-            this.btn_close.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(723, 3);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(26, 27);
-            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_close.TabIndex = 43;
-            this.btn_close.TabStop = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(7, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 62);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 30;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.btnFechar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(756, 23);
+            this.panel3.Size = new System.Drawing.Size(756, 28);
             this.panel3.TabIndex = 47;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(8, 6);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(223, 16);
+            this.label11.TabIndex = 74;
+            this.label11.Text = "COFIGURAÇÃO DE USUÁRIOS";
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(732, 4);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnFechar.TabIndex = 73;
+            this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.boxCEP);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.boxLogadouro);
-            this.panel4.Controls.Add(this.boxCEP);
             this.panel4.Controls.Add(this.boxNumero);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label12);
@@ -368,9 +340,12 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.boxTelefone);
+            this.panel1.Controls.Add(this.boxCPF);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.boxUnidade);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.boxCargo);
             this.panel1.Controls.Add(this.boxLogin);
             this.panel1.Controls.Add(this.boxSenha);
@@ -379,13 +354,11 @@
             this.panel1.Controls.Add(this.Login);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.boxCPF);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.boxCodigo);
             this.panel1.Controls.Add(this.btn_Incluir);
             this.panel1.Controls.Add(this.boxNomeCompleto);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.boxTelefone);
             this.panel1.Location = new System.Drawing.Point(9, 69);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(734, 180);
@@ -414,21 +387,31 @@
             this.boxUnidade.Location = new System.Drawing.Point(430, 63);
             this.boxUnidade.Name = "boxUnidade";
             this.boxUnidade.Size = new System.Drawing.Size(206, 20);
-            this.boxUnidade.TabIndex = 44;
+            this.boxUnidade.TabIndex = 6;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(239, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(72, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
             // 
             // boxCargo
             // 
             this.boxCargo.Location = new System.Drawing.Point(430, 26);
             this.boxCargo.Name = "boxCargo";
             this.boxCargo.Size = new System.Drawing.Size(206, 20);
-            this.boxCargo.TabIndex = 43;
+            this.boxCargo.TabIndex = 5;
             // 
             // boxLogin
             // 
             this.boxLogin.Location = new System.Drawing.Point(430, 100);
             this.boxLogin.Name = "boxLogin";
             this.boxLogin.Size = new System.Drawing.Size(100, 20);
-            this.boxLogin.TabIndex = 47;
+            this.boxLogin.TabIndex = 7;
             // 
             // boxSenha
             // 
@@ -436,7 +419,7 @@
             this.boxSenha.Name = "boxSenha";
             this.boxSenha.PasswordChar = '*';
             this.boxSenha.Size = new System.Drawing.Size(100, 20);
-            this.boxSenha.TabIndex = 48;
+            this.boxSenha.TabIndex = 8;
             // 
             // boxConfirmarSenha
             // 
@@ -444,7 +427,7 @@
             this.boxConfirmarSenha.Name = "boxConfirmarSenha";
             this.boxConfirmarSenha.PasswordChar = '*';
             this.boxConfirmarSenha.Size = new System.Drawing.Size(100, 20);
-            this.boxConfirmarSenha.TabIndex = 49;
+            this.boxConfirmarSenha.TabIndex = 9;
             // 
             // label15
             // 
@@ -483,12 +466,17 @@
             // 
             // btn_Incluir
             // 
+            this.btn_Incluir.BackColor = System.Drawing.Color.Black;
+            this.btn_Incluir.FlatAppearance.BorderSize = 0;
+            this.btn_Incluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_Incluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Incluir.ForeColor = System.Drawing.Color.White;
             this.btn_Incluir.Location = new System.Drawing.Point(109, 6);
             this.btn_Incluir.Name = "btn_Incluir";
             this.btn_Incluir.Size = new System.Drawing.Size(75, 23);
-            this.btn_Incluir.TabIndex = 41;
+            this.btn_Incluir.TabIndex = 2;
             this.btn_Incluir.Text = "Incluir";
-            this.btn_Incluir.UseVisualStyleBackColor = true;
+            this.btn_Incluir.UseVisualStyleBackColor = false;
             this.btn_Incluir.Click += new System.EventHandler(this.btn_Incluir_Click);
             // 
             // dgGride
@@ -520,6 +508,100 @@
             this.dgGride.TabIndex = 40;
             this.dgGride.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgGride_CellDoubleClick);
             // 
+            // codigoFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.codigoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "codigo_Funcionario";
+            this.codigoFuncionarioDataGridViewTextBoxColumn.HeaderText = "codigo_Funcionario";
+            this.codigoFuncionarioDataGridViewTextBoxColumn.Name = "codigoFuncionarioDataGridViewTextBoxColumn";
+            this.codigoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cpfFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.cpfFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cpf_Funcionario";
+            this.cpfFuncionarioDataGridViewTextBoxColumn.HeaderText = "CPF";
+            this.cpfFuncionarioDataGridViewTextBoxColumn.Name = "cpfFuncionarioDataGridViewTextBoxColumn";
+            this.cpfFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.nomeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "nome_Funcionario";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.Name = "nomeFuncionarioDataGridViewTextBoxColumn";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefoneFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "telefone_Funcionario";
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.Name = "telefoneFuncionarioDataGridViewTextBoxColumn";
+            this.telefoneFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cargoFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.cargoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cargo_Funcionario";
+            this.cargoFuncionarioDataGridViewTextBoxColumn.HeaderText = "Cargo";
+            this.cargoFuncionarioDataGridViewTextBoxColumn.Name = "cargoFuncionarioDataGridViewTextBoxColumn";
+            this.cargoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // unidadeFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "unidade_Funcionario";
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Unidade";
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.Name = "unidadeFuncionarioDataGridViewTextBoxColumn";
+            this.unidadeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cepFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.cepFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cep_Funcionario";
+            this.cepFuncionarioDataGridViewTextBoxColumn.HeaderText = "CEP";
+            this.cepFuncionarioDataGridViewTextBoxColumn.Name = "cepFuncionarioDataGridViewTextBoxColumn";
+            this.cepFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // logradouroFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "logradouro_Funcionario";
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Logradouro";
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.Name = "logradouroFuncionarioDataGridViewTextBoxColumn";
+            this.logradouroFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numeroFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.numeroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "numero_Funcionario";
+            this.numeroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Numero";
+            this.numeroFuncionarioDataGridViewTextBoxColumn.Name = "numeroFuncionarioDataGridViewTextBoxColumn";
+            this.numeroFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bairroFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.bairroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "bairro_Funcionario";
+            this.bairroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Bairro";
+            this.bairroFuncionarioDataGridViewTextBoxColumn.Name = "bairroFuncionarioDataGridViewTextBoxColumn";
+            this.bairroFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // complementeFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.complementeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "complemente_Funcionario";
+            this.complementeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Complemento";
+            this.complementeFuncionarioDataGridViewTextBoxColumn.Name = "complementeFuncionarioDataGridViewTextBoxColumn";
+            this.complementeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // loginFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.loginFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "login_Funcionario";
+            this.loginFuncionarioDataGridViewTextBoxColumn.HeaderText = "login_Funcionario";
+            this.loginFuncionarioDataGridViewTextBoxColumn.Name = "loginFuncionarioDataGridViewTextBoxColumn";
+            this.loginFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.loginFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // senhaFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.senhaFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "senha_Funcionario";
+            this.senhaFuncionarioDataGridViewTextBoxColumn.HeaderText = "senha_Funcionario";
+            this.senhaFuncionarioDataGridViewTextBoxColumn.Name = "senhaFuncionarioDataGridViewTextBoxColumn";
+            this.senhaFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.senhaFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            // 
             // cadFuncionarioBindingSource
             // 
             this.cadFuncionarioBindingSource.DataMember = "Cad_Funcionario";
@@ -534,113 +616,35 @@
             // 
             this.cad_FuncionarioTableAdapter.ClearBeforeFill = true;
             // 
-            // bDpizzariaDataSet1
-            // 
-          //  this.bDpizzariaDataSet1.DataSetName = "BDpizzariaDataSet1";
-         //   this.bDpizzariaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cadBebidasBindingSource
             // 
             this.cadBebidasBindingSource.DataMember = "Cad_Bebidas";
-//this.cadBebidasBindingSource.DataSource = this.bDpizzariaDataSet1;
             // 
-            // cad_BebidasTableAdapter
+            // boxCPF
             // 
-          //  this.cad_BebidasTableAdapter.ClearBeforeFill = true;
+            this.boxCPF.Location = new System.Drawing.Point(17, 63);
+            this.boxCPF.Mask = "999.999.999-99";
+            this.boxCPF.Name = "boxCPF";
+            this.boxCPF.Size = new System.Drawing.Size(100, 20);
+            this.boxCPF.TabIndex = 34;
+            this.boxCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.boxCPF_MaskInputRejected);
+            this.boxCPF.TextChanged += new System.EventHandler(this.boxCPF_TextChanged_1);
             // 
-            // senhaFuncionarioDataGridViewTextBoxColumn
+            // boxTelefone
             // 
-            this.senhaFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "senha_Funcionario";
-            this.senhaFuncionarioDataGridViewTextBoxColumn.HeaderText = "senha_Funcionario";
-            this.senhaFuncionarioDataGridViewTextBoxColumn.Name = "senhaFuncionarioDataGridViewTextBoxColumn";
-            this.senhaFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.senhaFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            this.boxTelefone.Location = new System.Drawing.Point(17, 141);
+            this.boxTelefone.Mask = "(99)99999-9999";
+            this.boxTelefone.Name = "boxTelefone";
+            this.boxTelefone.Size = new System.Drawing.Size(100, 20);
+            this.boxTelefone.TabIndex = 34;
             // 
-            // loginFuncionarioDataGridViewTextBoxColumn
+            // boxCEP
             // 
-            this.loginFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "login_Funcionario";
-            this.loginFuncionarioDataGridViewTextBoxColumn.HeaderText = "login_Funcionario";
-            this.loginFuncionarioDataGridViewTextBoxColumn.Name = "loginFuncionarioDataGridViewTextBoxColumn";
-            this.loginFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.loginFuncionarioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // complementeFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.complementeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "complemente_Funcionario";
-            this.complementeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Complemento";
-            this.complementeFuncionarioDataGridViewTextBoxColumn.Name = "complementeFuncionarioDataGridViewTextBoxColumn";
-            this.complementeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bairroFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.bairroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "bairro_Funcionario";
-            this.bairroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Bairro";
-            this.bairroFuncionarioDataGridViewTextBoxColumn.Name = "bairroFuncionarioDataGridViewTextBoxColumn";
-            this.bairroFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numeroFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.numeroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "numero_Funcionario";
-            this.numeroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Numero";
-            this.numeroFuncionarioDataGridViewTextBoxColumn.Name = "numeroFuncionarioDataGridViewTextBoxColumn";
-            this.numeroFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // logradouroFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.logradouroFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "logradouro_Funcionario";
-            this.logradouroFuncionarioDataGridViewTextBoxColumn.HeaderText = "Logradouro";
-            this.logradouroFuncionarioDataGridViewTextBoxColumn.Name = "logradouroFuncionarioDataGridViewTextBoxColumn";
-            this.logradouroFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cepFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.cepFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cep_Funcionario";
-            this.cepFuncionarioDataGridViewTextBoxColumn.HeaderText = "CEP";
-            this.cepFuncionarioDataGridViewTextBoxColumn.Name = "cepFuncionarioDataGridViewTextBoxColumn";
-            this.cepFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // unidadeFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.unidadeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "unidade_Funcionario";
-            this.unidadeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Unidade";
-            this.unidadeFuncionarioDataGridViewTextBoxColumn.Name = "unidadeFuncionarioDataGridViewTextBoxColumn";
-            this.unidadeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cargoFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.cargoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cargo_Funcionario";
-            this.cargoFuncionarioDataGridViewTextBoxColumn.HeaderText = "Cargo";
-            this.cargoFuncionarioDataGridViewTextBoxColumn.Name = "cargoFuncionarioDataGridViewTextBoxColumn";
-            this.cargoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefoneFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.telefoneFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "telefone_Funcionario";
-            this.telefoneFuncionarioDataGridViewTextBoxColumn.HeaderText = "Telefone";
-            this.telefoneFuncionarioDataGridViewTextBoxColumn.Name = "telefoneFuncionarioDataGridViewTextBoxColumn";
-            this.telefoneFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.nomeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "nome_Funcionario";
-            this.nomeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeFuncionarioDataGridViewTextBoxColumn.Name = "nomeFuncionarioDataGridViewTextBoxColumn";
-            this.nomeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cpfFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.cpfFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "cpf_Funcionario";
-            this.cpfFuncionarioDataGridViewTextBoxColumn.HeaderText = "CPF";
-            this.cpfFuncionarioDataGridViewTextBoxColumn.Name = "cpfFuncionarioDataGridViewTextBoxColumn";
-            this.cpfFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codigoFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.codigoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "codigo_Funcionario";
-            this.codigoFuncionarioDataGridViewTextBoxColumn.HeaderText = "codigo_Funcionario";
-            this.codigoFuncionarioDataGridViewTextBoxColumn.Name = "codigoFuncionarioDataGridViewTextBoxColumn";
-            this.codigoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoFuncionarioDataGridViewTextBoxColumn.Visible = false;
+            this.boxCEP.Location = new System.Drawing.Point(18, 20);
+            this.boxCEP.Mask = "99999-999";
+            this.boxCEP.Name = "boxCEP";
+            this.boxCEP.Size = new System.Drawing.Size(166, 20);
+            this.boxCEP.TabIndex = 34;
             // 
             // ConfigUser
             // 
@@ -658,31 +662,28 @@
             this.Load += new System.EventHandler(this.ConfigUser_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadFuncionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).EndInit();
-      //      ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadBebidasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox boxCPF;
         private System.Windows.Forms.TextBox boxNomeCompleto;
-        private System.Windows.Forms.TextBox boxCEP;
-        private System.Windows.Forms.TextBox boxTelefone;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label txt_Config;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox boxLogadouro;
@@ -693,7 +694,6 @@
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Button btn_Excluir;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox boxComplemento;
         private System.Windows.Forms.Panel panel2;
@@ -704,7 +704,6 @@
         private BDpizzariaDataSetTableAdapters.Cad_FuncionarioTableAdapter cad_FuncionarioTableAdapter;
         private System.Windows.Forms.Button btn_Incluir;
         private System.Windows.Forms.TextBox boxCodigo;
-        private System.Windows.Forms.PictureBox btn_close;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
@@ -734,5 +733,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn complementeFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn senhaFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox btnFechar;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.MaskedTextBox boxCPF;
+        private System.Windows.Forms.MaskedTextBox boxCEP;
+        private System.Windows.Forms.MaskedTextBox boxTelefone;
     }
 }

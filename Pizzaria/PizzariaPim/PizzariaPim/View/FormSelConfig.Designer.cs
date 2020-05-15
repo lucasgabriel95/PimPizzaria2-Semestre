@@ -45,9 +45,10 @@
             // 
             this.txt_configuser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_configuser.AutoSize = true;
-            this.txt_configuser.Location = new System.Drawing.Point(274, 223);
+            this.txt_configuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_configuser.Location = new System.Drawing.Point(273, 223);
             this.txt_configuser.Name = "txt_configuser";
-            this.txt_configuser.Size = new System.Drawing.Size(56, 13);
+            this.txt_configuser.Size = new System.Drawing.Size(63, 13);
             this.txt_configuser.TabIndex = 8;
             this.txt_configuser.Text = "USUÁRIO";
             this.txt_configuser.Click += new System.EventHandler(this.txt_configuser_Click);
@@ -56,9 +57,10 @@
             // 
             this.txt_configImp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_configImp.AutoSize = true;
-            this.txt_configImp.Location = new System.Drawing.Point(397, 223);
+            this.txt_configImp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_configImp.Location = new System.Drawing.Point(390, 223);
             this.txt_configImp.Name = "txt_configImp";
-            this.txt_configImp.Size = new System.Drawing.Size(78, 13);
+            this.txt_configImp.Size = new System.Drawing.Size(88, 13);
             this.txt_configImp.TabIndex = 9;
             this.txt_configImp.Text = "IMPRESSORA";
             this.txt_configImp.Click += new System.EventHandler(this.txt_configImp_Click);
@@ -90,6 +92,7 @@
             // 
             // panelll
             // 
+            this.panelll.BackColor = System.Drawing.Color.White;
             this.panelll.Controls.Add(this.btn_user);
             this.panelll.Controls.Add(this.label2);
             this.panelll.Controls.Add(this.btn_imp);
@@ -126,9 +129,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 36);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(93, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 13);
+            this.label1.Size = new System.Drawing.Size(358, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "CENTRAL DE CONFIGURAÇÕES";
             // 

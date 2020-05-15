@@ -99,12 +99,24 @@ namespace PizzariaPim
             }
         }
 
-        private void txbSenha_MouseLeave(object sender, EventArgs e)
+        private void txbSenha_Leave(object sender, EventArgs e)
         {
             if (txbSenha.Text == "")
+            {
                 txbSenha.Text = "SENHA";
-            txbSenha.ForeColor = Color.Black;
-            txbSenha.UseSystemPasswordChar = true;
+                txbSenha.ForeColor = Color.Black;
+                txbSenha.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizaAgenda_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

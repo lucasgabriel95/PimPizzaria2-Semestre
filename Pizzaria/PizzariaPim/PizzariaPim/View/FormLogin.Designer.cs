@@ -40,15 +40,16 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.PictureBox();
-            this.btn_minimize = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.EsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.txbSenha = new System.Windows.Forms.TextBox();
+            this.btnMinimizaAgenda = new System.Windows.Forms.PictureBox();
+            this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.LogoLogin)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizaAgenda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // credits
@@ -184,43 +185,6 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "LOGIN";
             // 
-            // btn_close
-            // 
-            this.btn_close.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(625, 3);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(24, 27);
-            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_close.TabIndex = 23;
-            this.btn_close.TabStop = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // btn_minimize
-            // 
-            this.btn_minimize.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_minimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimize.Image")));
-            this.btn_minimize.Location = new System.Drawing.Point(605, 3);
-            this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.Size = new System.Drawing.Size(24, 27);
-            this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_minimize.TabIndex = 24;
-            this.btn_minimize.TabStop = false;
-            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel2.Location = new System.Drawing.Point(198, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(452, 33);
-            this.panel2.TabIndex = 25;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            // 
             // EsqueceuSenha
             // 
             this.EsqueceuSenha.AutoSize = true;
@@ -243,8 +207,45 @@
             this.txbSenha.Size = new System.Drawing.Size(276, 23);
             this.txbSenha.TabIndex = 2;
             this.txbSenha.Text = "SENHA";
-            this.txbSenha.MouseEnter += new System.EventHandler(this.txbSenha_MouseEnter);
-            this.txbSenha.MouseLeave += new System.EventHandler(this.txbSenha_MouseLeave);
+            this.txbSenha.Enter += new System.EventHandler(this.txbSenha_MouseEnter);
+            this.txbSenha.Leave += new System.EventHandler(this.txbSenha_Leave);
+            // 
+            // btnMinimizaAgenda
+            // 
+            this.btnMinimizaAgenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizaAgenda.BackColor = System.Drawing.Color.Black;
+            this.btnMinimizaAgenda.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizaAgenda.Image")));
+            this.btnMinimizaAgenda.Location = new System.Drawing.Point(407, 5);
+            this.btnMinimizaAgenda.Name = "btnMinimizaAgenda";
+            this.btnMinimizaAgenda.Size = new System.Drawing.Size(18, 18);
+            this.btnMinimizaAgenda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizaAgenda.TabIndex = 27;
+            this.btnMinimizaAgenda.TabStop = false;
+            this.btnMinimizaAgenda.Click += new System.EventHandler(this.btnMinimizaAgenda_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.Black;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(431, 5);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnFechar.TabIndex = 26;
+            this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel2.Controls.Add(this.btnMinimizaAgenda);
+            this.panel2.Controls.Add(this.btnFechar);
+            this.panel2.Location = new System.Drawing.Point(198, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(452, 28);
+            this.panel2.TabIndex = 25;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // Login
             // 
@@ -254,8 +255,6 @@
             this.ClientSize = new System.Drawing.Size(651, 360);
             this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.EsqueceuSenha);
-            this.Controls.Add(this.btn_minimize);
-            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.credits);
@@ -278,8 +277,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoLogin)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizaAgenda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,12 +296,12 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox btn_close;
-        private System.Windows.Forms.PictureBox btn_minimize;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.LinkLabel EsqueceuSenha;
         private System.Windows.Forms.TextBox txbSenha;
+        private System.Windows.Forms.PictureBox btnMinimizaAgenda;
+        private System.Windows.Forms.PictureBox btnFechar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

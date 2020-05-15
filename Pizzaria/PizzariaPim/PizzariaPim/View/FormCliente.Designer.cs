@@ -41,7 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.boxTelefone = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_close = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btn_Excluir = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.btn_Salvar = new System.Windows.Forms.Button();
@@ -69,19 +69,20 @@
             this.label10 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnFechar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
@@ -91,6 +92,7 @@
             this.panel1.Controls.Add(this.dgGride);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(742, 534);
@@ -141,6 +143,7 @@
             // 
             // boxCodigo
             // 
+            this.boxCodigo.Enabled = false;
             this.boxCodigo.Location = new System.Drawing.Point(15, 6);
             this.boxCodigo.Name = "boxCodigo";
             this.boxCodigo.Size = new System.Drawing.Size(26, 20);
@@ -148,12 +151,17 @@
             // 
             // btn_Incluir
             // 
+            this.btn_Incluir.BackColor = System.Drawing.Color.Black;
+            this.btn_Incluir.FlatAppearance.BorderSize = 0;
+            this.btn_Incluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_Incluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Incluir.ForeColor = System.Drawing.Color.White;
             this.btn_Incluir.Location = new System.Drawing.Point(236, 55);
             this.btn_Incluir.Name = "btn_Incluir";
             this.btn_Incluir.Size = new System.Drawing.Size(75, 23);
             this.btn_Incluir.TabIndex = 41;
             this.btn_Incluir.Text = "Incluir";
-            this.btn_Incluir.UseVisualStyleBackColor = true;
+            this.btn_Incluir.UseVisualStyleBackColor = false;
             this.btn_Incluir.Click += new System.EventHandler(this.btn_Incluir_Click_1);
             // 
             // boxNomeCompleto
@@ -183,58 +191,74 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.Controls.Add(this.btn_close);
-            this.panel3.Location = new System.Drawing.Point(-1, -1);
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.btnFechar);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(742, 31);
+            this.panel3.Size = new System.Drawing.Size(740, 28);
             this.panel3.TabIndex = 55;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown_1);
             // 
-            // btn_close
+            // label3
             // 
-            this.btn_close.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(706, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(26, 27);
-            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_close.TabIndex = 54;
-            this.btn_close.TabStop = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click_1);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(7, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 16);
+            this.label3.TabIndex = 71;
+            this.label3.Text = "CLIENTES ";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label3_MouseDown);
             // 
             // btn_Excluir
             // 
+            this.btn_Excluir.BackColor = System.Drawing.Color.Black;
             this.btn_Excluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Excluir.FlatAppearance.BorderSize = 0;
+            this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Excluir.ForeColor = System.Drawing.Color.White;
             this.btn_Excluir.Location = new System.Drawing.Point(411, 499);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(75, 23);
             this.btn_Excluir.TabIndex = 53;
             this.btn_Excluir.Text = "Excluir";
-            this.btn_Excluir.UseVisualStyleBackColor = true;
+            this.btn_Excluir.UseVisualStyleBackColor = false;
             this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.BackColor = System.Drawing.Color.Black;
             this.btn_Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
             this.btn_Cancelar.Location = new System.Drawing.Point(330, 499);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(75, 23);
             this.btn_Cancelar.TabIndex = 52;
             this.btn_Cancelar.Text = "Cancelar";
-            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Salvar
             // 
+            this.btn_Salvar.BackColor = System.Drawing.Color.Black;
             this.btn_Salvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salvar.FlatAppearance.BorderSize = 0;
+            this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salvar.ForeColor = System.Drawing.Color.White;
             this.btn_Salvar.Location = new System.Drawing.Point(249, 499);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(75, 23);
             this.btn_Salvar.TabIndex = 51;
             this.btn_Salvar.Text = "Salvar";
-            this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.UseVisualStyleBackColor = false;
             this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
             // dgGride
@@ -446,6 +470,19 @@
             this.label5.TabIndex = 47;
             this.label5.Text = "ENDEREÇO";
             // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(715, 4);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnFechar.TabIndex = 72;
+            this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,6 +491,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCliente";
             this.Load += new System.EventHandler(this.FormCliente_Load);
             this.panel1.ResumeLayout(false);
@@ -461,12 +499,13 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -500,7 +539,6 @@
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.DataGridView dgGride;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox btn_close;
         private BDpizzariaDataSet bDpizzariaDataSet;
         private System.Windows.Forms.BindingSource cadClienteBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoClienteDataGridViewTextBoxColumn;
@@ -512,5 +550,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bairroClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn complementeClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox btnFechar;
     }
 }
