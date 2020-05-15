@@ -16,10 +16,6 @@ namespace PizzariaPim.Model.Vendas.Vendas
 
         public int CodigoVenda ;
         public int codigoItem;
-        public String DataMaxima;
-        public String CodigoVendaFinalizada;
-        
-
         public void  Inicializacao()
         {           
             cmd.Connection = con.Conectar();

@@ -47,7 +47,7 @@ namespace PizzariaPim
             if (op == 1)
             {
                 boxCPF.Enabled = true;
-                boxNomeCompleto.Enabled = true;
+               
                 boxTelefone.Enabled = true;
                 boxCargo.Enabled = true;
                 boxUnidade.Enabled = true;
@@ -62,7 +62,8 @@ namespace PizzariaPim
             }
             if (op == 2)
             {
-                boxNomeCompleto.Enabled = false;
+                boxCPF.Enabled = false;
+              
                 boxTelefone.Enabled = false;
                 boxCargo.Enabled = false;
                 boxUnidade.Enabled = false;
@@ -85,7 +86,7 @@ namespace PizzariaPim
         public void Localizar ()
         {
             ComandoFuncionario cf = new ComandoFuncionario();
-            dgGride.DataSource = cf.localizarFuncionario(boxCPF.Text);
+            dgGride.DataSource = cf.localizarFuncionario(boxNomeCompleto.Text);
         }
         private void boxCPF_TextChanged(object sender, EventArgs e)
         {
@@ -129,7 +130,7 @@ namespace PizzariaPim
 
             if (alteraBotoes == "incluir")
             {                
-                mensagem = MessageBox.Show("Deseja Cancelar o cadastro ?", "Aviso", MessageBoxButtons.YesNo);                
+                mensagem = MessageBox.Show("Deseja Cancelar o cadastro ?", "Aviso", MessageBoxButtons.YesNo,MessageBoxIcon.Question);                
 
                 if (mensagem.ToString() == "Yes")
                 {
@@ -154,7 +155,7 @@ namespace PizzariaPim
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
 
-            if (boxCPF.Text != "" && boxNomeCompleto.Text !="" && boxTelefone.Text != ""&& boxCargo.Text!=""&& boxUnidade.Text!= ""&& boxCEP.Text!="" && boxLogadouro.Text!=""&& boxNumero.Text!=""&& boxBairro.Text!="" && boxComplemento.Text!=""&& boxLogin.Text!=""&& boxSenha.Text!=""&&boxConfirmarSenha.Text!="")
+            if (boxCPF.Text != "" && boxNomeCompleto.Text !="" && boxTelefone.Text != ""&& boxCargo.Text!=""&& boxUnidade.Text!= ""&& boxCEP.Text!="" && boxLogadouro.Text!=""&& boxNumero.Text!=""&& boxBairro.Text!="" && boxComplemento.Text!=""&& boxLogin.Text!=""&& boxSenha.Text!="")
             {
                 if(boxSenha.Text == boxConfirmarSenha.Text)
                 {
@@ -292,6 +293,11 @@ namespace PizzariaPim
         }
 
         private void boxCPF_TextChanged_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void boxNomeCompleto_TextChanged(object sender, EventArgs e)
         {
             Localizar();
         }

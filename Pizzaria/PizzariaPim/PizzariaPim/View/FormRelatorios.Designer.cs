@@ -548,7 +548,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoItemDataGridViewTextBoxColumn;
+     
         private System.Windows.Forms.ComboBox cbSatisfacao;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.Button btnBuscar;

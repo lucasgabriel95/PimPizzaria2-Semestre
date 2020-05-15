@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.boxCPF = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.boxCodigo = new System.Windows.Forms.TextBox();
             this.btn_Incluir = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.boxTelefone = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnFechar = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Excluir = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
@@ -69,15 +69,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.boxCPF = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,15 +123,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "CPF";
             // 
-            // boxCPF
-            // 
-            this.boxCPF.Location = new System.Drawing.Point(17, 58);
-            this.boxCPF.Name = "boxCPF";
-            this.boxCPF.Size = new System.Drawing.Size(167, 20);
-            this.boxCPF.TabIndex = 0;
-            this.boxCPF.TextChanged += new System.EventHandler(this.boxCPF_TextChanged);
-            this.boxCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxCPF_KeyPress);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -156,7 +147,7 @@
             this.btn_Incluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_Incluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Incluir.ForeColor = System.Drawing.Color.White;
-            this.btn_Incluir.Location = new System.Drawing.Point(236, 55);
+            this.btn_Incluir.Location = new System.Drawing.Point(236, 56);
             this.btn_Incluir.Name = "btn_Incluir";
             this.btn_Incluir.Size = new System.Drawing.Size(75, 23);
             this.btn_Incluir.TabIndex = 41;
@@ -200,6 +191,19 @@
             this.panel3.Size = new System.Drawing.Size(740, 28);
             this.panel3.TabIndex = 55;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown_1);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(715, 4);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnFechar.TabIndex = 72;
+            this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // label3
             // 
@@ -470,18 +474,14 @@
             this.label5.TabIndex = 47;
             this.label5.Text = "ENDEREÇO";
             // 
-            // btnFechar
+            // boxCPF
             // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
-            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(715, 4);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(18, 18);
-            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnFechar.TabIndex = 72;
-            this.btnFechar.TabStop = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.boxCPF.Location = new System.Drawing.Point(17, 58);
+            this.boxCPF.Name = "boxCPF";
+            this.boxCPF.Size = new System.Drawing.Size(167, 20);
+            this.boxCPF.TabIndex = 0;
+            this.boxCPF.TextChanged += new System.EventHandler(this.boxCPF_TextChanged);
+            this.boxCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxCPF_KeyPress);
             // 
             // FormCliente
             // 
@@ -500,12 +500,12 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,7 +526,6 @@
         private System.Windows.Forms.TextBox boxComplemento;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox boxCPF;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox boxCodigo;
         private System.Windows.Forms.Button btn_Incluir;
@@ -552,5 +551,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn complementeClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnFechar;
+        private System.Windows.Forms.TextBox boxCPF;
     }
 }

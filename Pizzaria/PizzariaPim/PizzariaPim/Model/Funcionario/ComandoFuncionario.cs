@@ -113,7 +113,7 @@ namespace PizzariaPim.DAL
         public DataTable localizarFuncionario (String valor)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from Cad_Funcionario where cpf_Funcionario like '%" +
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Cad_Funcionario where nome_Funcionario like '%" +
                valor + "%'", con.Conectar());
             da.Fill(tabela);
             con.desconectar();

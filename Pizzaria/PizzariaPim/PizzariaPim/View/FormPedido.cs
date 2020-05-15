@@ -484,5 +484,18 @@ namespace PizzariaPim
         {
             lblData.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
+
+        private void txbDesconto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

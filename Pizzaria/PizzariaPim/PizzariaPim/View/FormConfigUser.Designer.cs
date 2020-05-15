@@ -105,6 +105,7 @@
             this.boxNomeCompleto.Name = "boxNomeCompleto";
             this.boxNomeCompleto.Size = new System.Drawing.Size(294, 20);
             this.boxNomeCompleto.TabIndex = 3;
+            this.boxNomeCompleto.TextChanged += new System.EventHandler(this.boxNomeCompleto_TextChanged);
             // 
             // label1
             // 

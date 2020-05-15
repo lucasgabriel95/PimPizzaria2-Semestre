@@ -11,7 +11,7 @@ namespace PizzariaPim.Control
 {
     class ControleProdutos
     {
-        public bool tem;
+       
         public String menssage;
         public String Cadastrar(String nome, String descricao, double valor, int quantidade, int Categoria)
         {
