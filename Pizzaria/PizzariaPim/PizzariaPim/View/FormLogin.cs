@@ -24,15 +24,19 @@ namespace PizzariaPim
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             ControleFuncionario controle = new ControleFuncionario();
             controle.acessar(txbLogin.Text, txbSenha.Text);
             if (controle.tem)
             {
-                MessageBox.Show("Logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Logado com sucesso!!", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ComandoFuncionario comando = new ComandoFuncionario();
+                DadosFuncionario dados = comando.carregarFuncionario2(txbLogin.Text);
+
                 MenuPrincipal Menu = new MenuPrincipal();
+                Menu.CarregarDadosFuncionario(dados.nome,dados.cargo);
                 Menu.Show();
                 Login ln = new Login();
                 this.Hide(); 
@@ -40,8 +44,7 @@ namespace PizzariaPim
             else
             {
                 MessageBox.Show("Login não econtrado, verifique login e senha", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+            }            
         }
 
         private void txbLogin_Enter(object sender, EventArgs e)

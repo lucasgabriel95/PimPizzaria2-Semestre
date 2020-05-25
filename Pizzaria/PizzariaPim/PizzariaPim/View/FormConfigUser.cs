@@ -29,9 +29,7 @@ namespace PizzariaPim
         {
             boxCPF.Clear();
             boxNomeCompleto.Clear();
-            boxTelefone.Clear();
-            boxCargo.Clear();
-            boxUnidade.Clear();
+            boxTelefone.Clear();  
             boxCEP.Clear();
             boxLogadouro.Clear();
             boxNumero.Clear();
@@ -49,8 +47,8 @@ namespace PizzariaPim
                 boxCPF.Enabled = true;
                
                 boxTelefone.Enabled = true;
-                boxCargo.Enabled = true;
-                boxUnidade.Enabled = true;
+                cbCargo.Enabled = true;
+                cbUnidade.Enabled = true;
                 boxCEP.Enabled = true;
                 boxLogadouro.Enabled = true;
                 boxNumero.Enabled = true;
@@ -65,8 +63,8 @@ namespace PizzariaPim
                 boxCPF.Enabled = false;
               
                 boxTelefone.Enabled = false;
-                boxCargo.Enabled = false;
-                boxUnidade.Enabled = false;
+                cbCargo.Enabled = false;
+                cbUnidade.Enabled = false;
                 boxCEP.Enabled = false;
                 boxLogadouro.Enabled = false;
                 boxNumero.Enabled = false;
@@ -110,8 +108,8 @@ namespace PizzariaPim
             boxCPF.Text = dadosFuncionario.cpf;
             boxNomeCompleto.Text = dadosFuncionario.nome;
             boxTelefone.Text = dadosFuncionario.telefone;
-            boxCargo.Text = dadosFuncionario.cargo;
-            boxUnidade.Text = dadosFuncionario.unidade;
+            cbCargo.Text = dadosFuncionario.cargo;
+            cbUnidade.Text = dadosFuncionario.unidade;
             boxCEP.Text = dadosFuncionario.cep;
             boxLogadouro.Text = dadosFuncionario.logradouro;
             boxNumero.Text = dadosFuncionario.numero;
@@ -155,7 +153,7 @@ namespace PizzariaPim
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
 
-            if (boxCPF.Text != "" && boxNomeCompleto.Text !="" && boxTelefone.Text != ""&& boxCargo.Text!=""&& boxUnidade.Text!= ""&& boxCEP.Text!="" && boxLogadouro.Text!=""&& boxNumero.Text!=""&& boxBairro.Text!="" && boxComplemento.Text!=""&& boxLogin.Text!=""&& boxSenha.Text!="")
+            if (boxCPF.Text != "" && boxNomeCompleto.Text !="" && boxTelefone.Text != ""&& cbCargo.Text!=""&& cbUnidade.Text!= ""&& boxCEP.Text!="" && boxLogadouro.Text!=""&& boxNumero.Text!=""&& boxBairro.Text!="" && boxComplemento.Text!=""&& boxLogin.Text!=""&& boxSenha.Text!="")
             {
                 if(boxSenha.Text == boxConfirmarSenha.Text)
                 {
@@ -163,11 +161,11 @@ namespace PizzariaPim
 
                     if (salvarEditar == "novo")
                     {
-                        mensagemConfirmacao = MessageBox.Show("Deseja Cadastrar Funcionario ?", "Aviso", MessageBoxButtons.YesNo);
+                        mensagemConfirmacao = MessageBox.Show("Deseja Cadastrar Funcionario ?", "Aviso", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                     }
                     else
                     {
-                        mensagemConfirmacao = MessageBox.Show("Deseja Alterar Funcionario ?", "Aviso", MessageBoxButtons.YesNo);
+                        mensagemConfirmacao = MessageBox.Show("Deseja Alterar Funcionario ?", "Aviso", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                     }
                     if (mensagemConfirmacao.ToString() == "Yes")
                     {
@@ -176,7 +174,7 @@ namespace PizzariaPim
                         {
                             ControleFuncionario controle = new ControleFuncionario();
                             string mensagem = controle.cadastrarFuncionario(boxCPF.Text, boxNomeCompleto.Text, boxTelefone.Text,
-                                boxCargo.Text, boxUnidade.Text, boxCEP.Text, boxLogadouro.Text, boxNumero.Text, boxBairro.Text,
+                                cbCargo.Text, cbUnidade.Text, boxCEP.Text, boxLogadouro.Text, boxNumero.Text, boxBairro.Text,
                                 boxComplemento.Text, boxLogin.Text, boxSenha.Text);
                             if (controle.tem)
                             {
@@ -196,8 +194,8 @@ namespace PizzariaPim
                             dadosFuncionario.cpf = boxCPF.Text;
                             dadosFuncionario.nome = boxNomeCompleto.Text;
                             dadosFuncionario.telefone = boxTelefone.Text;
-                            dadosFuncionario.cargo = boxCargo.Text;
-                            dadosFuncionario.unidade = boxUnidade.Text;
+                            dadosFuncionario.cargo = cbCargo.Text;
+                            dadosFuncionario.unidade = cbUnidade.Text;
                             dadosFuncionario.cep = boxCEP.Text;
                             dadosFuncionario.logradouro = boxLogadouro.Text;
                             dadosFuncionario.numero = boxNumero.Text;
@@ -236,6 +234,7 @@ namespace PizzariaPim
 
         private void btn_Incluir_Click(object sender, EventArgs e)
         {
+            LimparCampos();
             AlteraBotoes(1);
             alteraBotoes = "incluir";
             salvarEditar = "novo";
@@ -245,7 +244,7 @@ namespace PizzariaPim
         {
             DialogResult mensagemConfirmacao;
 
-            mensagemConfirmacao = MessageBox.Show("Deseja Excluir Funcionario ?", "Aviso", MessageBoxButtons.YesNo);
+            mensagemConfirmacao = MessageBox.Show("Deseja Excluir Funcionario ?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (mensagemConfirmacao.ToString() == "Yes")
             {

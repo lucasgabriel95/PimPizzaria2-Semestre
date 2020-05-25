@@ -23,6 +23,19 @@ namespace PizzariaPim
             Login ln = new Login();
             ln.Hide();
             AbrirFormulario(new FormHome());
+            
+        }       
+        public void CarregarDadosFuncionario (String Nome, String Cargo)
+        {
+            lblNomeFuncionario.Text = "Bem-Vindo-" + Nome;
+
+            if (Cargo == "Balconista")
+            {
+                btn_relatorio.Visible = false;
+                btn_config.Visible = false;
+                SelMenuRelatorio.Visible = false;
+                SelMenuConfig.Visible = false;
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

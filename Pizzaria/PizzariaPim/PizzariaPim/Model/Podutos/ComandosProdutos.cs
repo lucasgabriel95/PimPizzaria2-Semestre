@@ -82,10 +82,10 @@ namespace PizzariaPim.Model.Bebidas
             con.desconectar();
             return dados;
         }
-        public DataTable LocalizarDescricao (String valor)
+        public DataTable LocalizarDescricao (String NomeProduto,String Categoria)
         { 
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from Cad_Produtos where Nome_Produto like '%" + valor + "%'",con.Conectar());
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Cad_Produtos where Nome_Produto like '%"+ NomeProduto + "%' and codigo_Categoria like '%"+ Categoria + "%'",con.Conectar());
             da.Fill(tabela);
             con.desconectar();
             return tabela;

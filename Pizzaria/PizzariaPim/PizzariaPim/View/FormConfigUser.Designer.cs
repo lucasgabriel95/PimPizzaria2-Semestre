@@ -52,12 +52,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.boxCEP = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbUnidade = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbCargo = new System.Windows.Forms.ComboBox();
+            this.boxTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.boxCPF = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.boxUnidade = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.boxCargo = new System.Windows.Forms.TextBox();
             this.boxLogin = new System.Windows.Forms.TextBox();
             this.boxSenha = new System.Windows.Forms.TextBox();
             this.boxConfirmarSenha = new System.Windows.Forms.TextBox();
@@ -84,9 +87,6 @@
             this.bDpizzariaDataSet = new PizzariaPim.BDpizzariaDataSet();
             this.cad_FuncionarioTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_FuncionarioTableAdapter();
             this.cadBebidasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.boxCPF = new System.Windows.Forms.MaskedTextBox();
-            this.boxTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.boxCEP = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -167,7 +167,7 @@
             this.boxLogadouro.Location = new System.Drawing.Point(192, 21);
             this.boxLogadouro.Name = "boxLogadouro";
             this.boxLogadouro.Size = new System.Drawing.Size(167, 20);
-            this.boxLogadouro.TabIndex = 11;
+            this.boxLogadouro.TabIndex = 6;
             // 
             // label9
             // 
@@ -183,7 +183,7 @@
             this.boxNumero.Location = new System.Drawing.Point(379, 20);
             this.boxNumero.Name = "boxNumero";
             this.boxNumero.Size = new System.Drawing.Size(73, 20);
-            this.boxNumero.TabIndex = 12;
+            this.boxNumero.TabIndex = 7;
             this.boxNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxNumero_KeyPress);
             // 
             // label10
@@ -200,7 +200,7 @@
             this.boxBairro.Location = new System.Drawing.Point(18, 64);
             this.boxBairro.Name = "boxBairro";
             this.boxBairro.Size = new System.Drawing.Size(168, 20);
-            this.boxBairro.TabIndex = 13;
+            this.boxBairro.TabIndex = 8;
             // 
             // btn_Salvar
             // 
@@ -264,7 +264,7 @@
             this.boxComplemento.Location = new System.Drawing.Point(192, 64);
             this.boxComplemento.Name = "boxComplemento";
             this.boxComplemento.Size = new System.Drawing.Size(167, 20);
-            this.boxComplemento.TabIndex = 14;
+            this.boxComplemento.TabIndex = 9;
             // 
             // panel2
             // 
@@ -338,16 +338,24 @@
             this.panel4.Size = new System.Drawing.Size(734, 100);
             this.panel4.TabIndex = 46;
             // 
+            // boxCEP
+            // 
+            this.boxCEP.Location = new System.Drawing.Point(18, 20);
+            this.boxCEP.Mask = "99999-999";
+            this.boxCEP.Name = "boxCEP";
+            this.boxCEP.Size = new System.Drawing.Size(166, 20);
+            this.boxCEP.TabIndex = 5;
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbUnidade);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.cbCargo);
             this.panel1.Controls.Add(this.boxTelefone);
             this.panel1.Controls.Add(this.boxCPF);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.boxUnidade);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.boxCargo);
             this.panel1.Controls.Add(this.boxLogin);
             this.panel1.Controls.Add(this.boxSenha);
             this.panel1.Controls.Add(this.boxConfirmarSenha);
@@ -365,30 +373,69 @@
             this.panel1.Size = new System.Drawing.Size(734, 180);
             this.panel1.TabIndex = 44;
             // 
+            // cbUnidade
+            // 
+            this.cbUnidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUnidade.FormattingEnabled = true;
+            this.cbUnidade.Items.AddRange(new object[] {
+            "Loja 1",
+            "Loja 2",
+            "Loja 3",
+            "Loja 4",
+            "Loja 5",
+            "Loja 6"});
+            this.cbUnidade.Location = new System.Drawing.Point(430, 63);
+            this.cbUnidade.Name = "cbUnidade";
+            this.cbUnidade.Size = new System.Drawing.Size(121, 21);
+            this.cbUnidade.TabIndex = 11;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(431, 15);
+            this.label3.Location = new System.Drawing.Point(427, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 45;
             this.label3.Text = "CARGO";
             // 
+            // cbCargo
+            // 
+            this.cbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCargo.FormattingEnabled = true;
+            this.cbCargo.Items.AddRange(new object[] {
+            "Administrador",
+            "Balconista"});
+            this.cbCargo.Location = new System.Drawing.Point(430, 25);
+            this.cbCargo.Name = "cbCargo";
+            this.cbCargo.Size = new System.Drawing.Size(121, 21);
+            this.cbCargo.TabIndex = 10;
+            // 
+            // boxTelefone
+            // 
+            this.boxTelefone.Location = new System.Drawing.Point(17, 141);
+            this.boxTelefone.Mask = "(99)99999-9999";
+            this.boxTelefone.Name = "boxTelefone";
+            this.boxTelefone.Size = new System.Drawing.Size(100, 20);
+            this.boxTelefone.TabIndex = 4;
+            // 
+            // boxCPF
+            // 
+            this.boxCPF.Location = new System.Drawing.Point(17, 63);
+            this.boxCPF.Mask = "999.999.999-99";
+            this.boxCPF.Name = "boxCPF";
+            this.boxCPF.Size = new System.Drawing.Size(100, 20);
+            this.boxCPF.TabIndex = 2;
+            this.boxCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.boxCPF_MaskInputRejected);
+            this.boxCPF.TextChanged += new System.EventHandler(this.boxCPF_TextChanged_1);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(431, 49);
+            this.label4.Location = new System.Drawing.Point(427, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 13);
             this.label4.TabIndex = 46;
             this.label4.Text = "UNIDADE DE TRABALHO";
-            // 
-            // boxUnidade
-            // 
-            this.boxUnidade.Location = new System.Drawing.Point(430, 63);
-            this.boxUnidade.Name = "boxUnidade";
-            this.boxUnidade.Size = new System.Drawing.Size(206, 20);
-            this.boxUnidade.TabIndex = 6;
             // 
             // pictureBox2
             // 
@@ -400,19 +447,12 @@
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
             // 
-            // boxCargo
-            // 
-            this.boxCargo.Location = new System.Drawing.Point(430, 26);
-            this.boxCargo.Name = "boxCargo";
-            this.boxCargo.Size = new System.Drawing.Size(206, 20);
-            this.boxCargo.TabIndex = 5;
-            // 
             // boxLogin
             // 
             this.boxLogin.Location = new System.Drawing.Point(430, 100);
             this.boxLogin.Name = "boxLogin";
             this.boxLogin.Size = new System.Drawing.Size(100, 20);
-            this.boxLogin.TabIndex = 7;
+            this.boxLogin.TabIndex = 12;
             // 
             // boxSenha
             // 
@@ -420,7 +460,7 @@
             this.boxSenha.Name = "boxSenha";
             this.boxSenha.PasswordChar = '*';
             this.boxSenha.Size = new System.Drawing.Size(100, 20);
-            this.boxSenha.TabIndex = 8;
+            this.boxSenha.TabIndex = 13;
             // 
             // boxConfirmarSenha
             // 
@@ -428,7 +468,7 @@
             this.boxConfirmarSenha.Name = "boxConfirmarSenha";
             this.boxConfirmarSenha.PasswordChar = '*';
             this.boxConfirmarSenha.Size = new System.Drawing.Size(100, 20);
-            this.boxConfirmarSenha.TabIndex = 9;
+            this.boxConfirmarSenha.TabIndex = 14;
             // 
             // label15
             // 
@@ -442,7 +482,7 @@
             // Login
             // 
             this.Login.AutoSize = true;
-            this.Login.Location = new System.Drawing.Point(431, 84);
+            this.Login.Location = new System.Drawing.Point(427, 84);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(33, 13);
             this.Login.TabIndex = 50;
@@ -475,7 +515,7 @@
             this.btn_Incluir.Location = new System.Drawing.Point(109, 6);
             this.btn_Incluir.Name = "btn_Incluir";
             this.btn_Incluir.Size = new System.Drawing.Size(75, 23);
-            this.btn_Incluir.TabIndex = 2;
+            this.btn_Incluir.TabIndex = 1;
             this.btn_Incluir.Text = "Incluir";
             this.btn_Incluir.UseVisualStyleBackColor = false;
             this.btn_Incluir.Click += new System.EventHandler(this.btn_Incluir_Click);
@@ -621,32 +661,6 @@
             // 
             this.cadBebidasBindingSource.DataMember = "Cad_Bebidas";
             // 
-            // boxCPF
-            // 
-            this.boxCPF.Location = new System.Drawing.Point(17, 63);
-            this.boxCPF.Mask = "999.999.999-99";
-            this.boxCPF.Name = "boxCPF";
-            this.boxCPF.Size = new System.Drawing.Size(100, 20);
-            this.boxCPF.TabIndex = 34;
-            this.boxCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.boxCPF_MaskInputRejected);
-            this.boxCPF.TextChanged += new System.EventHandler(this.boxCPF_TextChanged_1);
-            // 
-            // boxTelefone
-            // 
-            this.boxTelefone.Location = new System.Drawing.Point(17, 141);
-            this.boxTelefone.Mask = "(99)99999-9999";
-            this.boxTelefone.Name = "boxTelefone";
-            this.boxTelefone.Size = new System.Drawing.Size(100, 20);
-            this.boxTelefone.TabIndex = 34;
-            // 
-            // boxCEP
-            // 
-            this.boxCEP.Location = new System.Drawing.Point(18, 20);
-            this.boxCEP.Mask = "99999-999";
-            this.boxCEP.Name = "boxCEP";
-            this.boxCEP.Size = new System.Drawing.Size(166, 20);
-            this.boxCEP.TabIndex = 34;
-            // 
             // ConfigUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -709,8 +723,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox boxUnidade;
-        private System.Windows.Forms.TextBox boxCargo;
         private System.Windows.Forms.TextBox boxLogin;
         private System.Windows.Forms.TextBox boxSenha;
         private System.Windows.Forms.TextBox boxConfirmarSenha;
@@ -739,5 +751,7 @@
         private System.Windows.Forms.MaskedTextBox boxCPF;
         private System.Windows.Forms.MaskedTextBox boxCEP;
         private System.Windows.Forms.MaskedTextBox boxTelefone;
+        private System.Windows.Forms.ComboBox cbCargo;
+        private System.Windows.Forms.ComboBox cbUnidade;
     }
 }

@@ -128,7 +128,7 @@
             this.cbPesquisaCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPesquisaCategoria.FormattingEnabled = true;
             this.cbPesquisaCategoria.Items.AddRange(new object[] {
-            "Ativo",
+            "Cozinha",
             "Entrega",
             "Concluido",
             "Cancelado",
@@ -147,7 +147,7 @@
             "Entrega",
             "Concluido",
             "Cancelado"});
-            this.cbAlterarStatus.Location = new System.Drawing.Point(503, 69);
+            this.cbAlterarStatus.Location = new System.Drawing.Point(503, 68);
             this.cbAlterarStatus.Name = "cbAlterarStatus";
             this.cbAlterarStatus.Size = new System.Drawing.Size(121, 21);
             this.cbAlterarStatus.TabIndex = 1;

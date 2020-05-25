@@ -36,12 +36,24 @@ namespace PizzariaPim.View
             txbValor.Clear();
             cbCategoria.Text = "";
         }
-
+        String Categoria;
         public void Localizar()
         {
+           if (cbCategoria.Text == "Bebidas")
+           {
+                Categoria = "1";
+           }
+           else if (cbCategoria.Text == "Pizzas")
+           {
+                Categoria = "2";
+           }
+           else
+           {
+                Categoria = "";
+           }
+            
             ComandosProdutos cf = new ComandosProdutos();
-            dgGride.DataSource = cf.LocalizarDescricao(txbNome.Text);
-            dgGride.DataSource = cf.LocalizarCategoria(txbNome.Text);
+            dgGride.DataSource = cf.LocalizarDescricao(txbNome.Text,Categoria);            
         }
 
         public void AlterarBotoes(int op)
@@ -52,7 +64,7 @@ namespace PizzariaPim.View
                 txbDescricao.Enabled = true;
                 txbQuantidade.Enabled = true;
                 txbValor.Enabled = true;
-                cbCategoria.Enabled = true;
+               
             }
             if (2 == op)
             {
@@ -60,7 +72,7 @@ namespace PizzariaPim.View
                 txbDescricao.Enabled = false;
                 txbQuantidade.Enabled = false;
                 txbValor.Enabled = false;
-                cbCategoria.Enabled = false;
+                
             }
         }
         private void FormProdutos_Load_1(object sender, EventArgs e)
@@ -170,45 +182,13 @@ namespace PizzariaPim.View
             {
                 this.Close();
             }
-        }
-
-        private void dgGride_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
+        }       
 
         private void brnIncluir_Click(object sender, EventArgs e)
         {
             AlterarBotoes(1);
             salvarEditar = "Incluir";
-        }
-
-        private void txbDescricao_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbQuantidade_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txbValor_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44)
-            {
-                e.Handled = true;
-            }
-        }
-
-
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        }      
 
         private void label7_MouseDown(object sender, MouseEventArgs e)
         {
@@ -266,6 +246,16 @@ namespace PizzariaPim.View
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txbValor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbNome_TextChanged(object sender, EventArgs e)
+        {
+            Localizar();
         }
     }
 }

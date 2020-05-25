@@ -35,6 +35,7 @@ namespace PizzariaPim
         public double Total;
         public double contadorMais = 0;
         public double ContadorMenos = 500;
+        String Categoria;
         
         public void Maximizar()
         {
@@ -84,25 +85,21 @@ namespace PizzariaPim
         }
         public void localizarProduto ()
         {
-            ComandosProdutos comandos = new ComandosProdutos();
-
-            if (cbCategoria.Text == "Pizzas")
-            {                
-                dgGride.DataSource = comandos.LocalizarCategoria("2");
-                if (txbDescricao.Text != "")
-                {
-                    dgGride.DataSource = comandos.LocalizarDescricao(txbDescricao.Text);
-                }
+            if (cbCategoria.Text == "Bebidas")
+            {
+                Categoria = "1";
             }
-            else 
-            {               
-                dgGride.DataSource = comandos.LocalizarCategoria("1");
-                if (txbDescricao.Text != "")
-                {
-                    dgGride.DataSource = comandos.LocalizarDescricao(txbDescricao.Text);
-                }
-            }        
-            
+            else if (cbCategoria.Text == "Pizzas")
+            {
+                Categoria = "2";
+            }
+            else
+            {
+                Categoria = "";
+            }
+
+            ComandosProdutos cf = new ComandosProdutos();
+            dgGride.DataSource = cf.LocalizarDescricao(txbDescricao.Text, Categoria);
         }
 
         private void FormPedido_Load(object sender, EventArgs e)
@@ -327,17 +324,12 @@ namespace PizzariaPim
                 DialogResult mensagemConfirmacao;
                 mensagemConfirmacao = MessageBox.Show("A ultima Compra do "+lblNomeDocliente.Text+" foi no dia "+ comandos.DataMaxima +", deseja cadastrar um elogio ou reclamação ?","AVISO",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                 if (mensagemConfirmacao.ToString() == "Yes")
-                {
-                                     
+                {                                     
                     FormSatisfacao form = new FormSatisfacao();   
-                    form.ShowDialog();
-                    
+                    form.ShowDialog();                    
                 }
-               
             }
-
         }
-
         private void txbDesconto_TextChanged(object sender, EventArgs e)
         {
           
@@ -384,7 +376,7 @@ namespace PizzariaPim
                     dados.Desconto = Convert.ToDouble(txbDesconto.Text);
                     dados.ValorPago = Convert.ToDouble(lblSubTotal.Text);
                     dados.CodigoCliente = Convert.ToInt32(lblCodigoCliente.Text);
-                    dados.Status = "Ativo";
+                    dados.Status = "Cozinha";
                     
                     dados.obs = txbObs.Text;
                     dados.DataTime = Convert.ToString(DateTime.Now.ToString("yyyy/MM/dd HH:mm:dd"));

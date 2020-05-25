@@ -121,5 +121,33 @@ namespace PizzariaPim.DAL
         }
 
 
+        public DadosFuncionario carregarFuncionario2(String valor)
+        {
+            DadosFuncionario dados = new DadosFuncionario();
+            cmd.Connection = con.Conectar();
+            cmd.CommandText = "select * from Cad_Funcionario where login_Funcionario = '" + valor+ "'";
+            SqlDataReader registro = cmd.ExecuteReader();
+            if (registro.HasRows)
+            {
+                registro.Read();
+                dados.codigo = Convert.ToInt32(registro["codigo_Funcionario"]);
+                dados.cpf = Convert.ToString(registro["cpf_Funcionario"]);
+                dados.nome = Convert.ToString(registro["nome_Funcionario"]);
+                dados.telefone = Convert.ToString(registro["telefone_Funcionario"]);
+                dados.cargo = Convert.ToString(registro["cargo_Funcionario"]);
+                dados.unidade = Convert.ToString(registro["unidade_Funcionario"]);
+                dados.cep = Convert.ToString(registro["cep_Funcionario"]);
+                dados.logradouro = Convert.ToString(registro["logradouro_Funcionario"]);
+                dados.numero = Convert.ToString(registro["numero_Funcionario"]);
+                dados.bairro = Convert.ToString(registro["bairro_Funcionario"]);
+                dados.complemento = Convert.ToString(registro["complemente_Funcionario"]);
+                dados.login = Convert.ToString(registro["login_Funcionario"]);
+                dados.senha = Convert.ToString(registro["senha_Funcionario"]);
+            }
+            con.desconectar();
+            return dados;
+        }
+
+
     }
 }

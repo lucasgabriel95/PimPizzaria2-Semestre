@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.boxCPF = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.boxCodigo = new System.Windows.Forms.TextBox();
             this.btn_Incluir = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.boxCPF = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -122,6 +122,15 @@
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "CPF";
+            // 
+            // boxCPF
+            // 
+            this.boxCPF.Location = new System.Drawing.Point(17, 58);
+            this.boxCPF.Name = "boxCPF";
+            this.boxCPF.Size = new System.Drawing.Size(167, 20);
+            this.boxCPF.TabIndex = 0;
+            this.boxCPF.TextChanged += new System.EventHandler(this.boxCPF_TextChanged);
+            this.boxCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxCPF_KeyPress);
             // 
             // label2
             // 
@@ -473,15 +482,6 @@
             this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 47;
             this.label5.Text = "ENDEREÇO";
-            // 
-            // boxCPF
-            // 
-            this.boxCPF.Location = new System.Drawing.Point(17, 58);
-            this.boxCPF.Name = "boxCPF";
-            this.boxCPF.Size = new System.Drawing.Size(167, 20);
-            this.boxCPF.TabIndex = 0;
-            this.boxCPF.TextChanged += new System.EventHandler(this.boxCPF_TextChanged);
-            this.boxCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxCPF_KeyPress);
             // 
             // FormCliente
             // 

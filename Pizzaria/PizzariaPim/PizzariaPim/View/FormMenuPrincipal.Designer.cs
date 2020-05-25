@@ -31,10 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.LogoPizzaHot = new System.Windows.Forms.PictureBox();
             this.PainelMenu = new System.Windows.Forms.Panel();
+            this.lblNomeFuncionario = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnInicio = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.SelMenuOpc = new System.Windows.Forms.PictureBox();
             this.SelMenuConfig = new System.Windows.Forms.PictureBox();
-            this.SelMenuRelatorio = new System.Windows.Forms.PictureBox();
             this.SelMenuBebidas = new System.Windows.Forms.PictureBox();
             this.SelMenuClientes = new System.Windows.Forms.PictureBox();
             this.SelMenuPedido = new System.Windows.Forms.PictureBox();
@@ -42,7 +44,6 @@
             this.btnPedido = new System.Windows.Forms.Button();
             this.btn_Clientes = new System.Windows.Forms.Button();
             this.btn_config = new System.Windows.Forms.Button();
-            this.btn_relatorio = new System.Windows.Forms.Button();
             this.btn_Bebidas = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PainelLogo = new System.Windows.Forms.Panel();
@@ -56,13 +57,13 @@
             this.btnRestaura = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnInicio = new System.Windows.Forms.Button();
+            this.SelMenuRelatorio = new System.Windows.Forms.PictureBox();
+            this.btn_relatorio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPizzaHot)).BeginInit();
             this.PainelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuOpc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuConfig)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SelMenuRelatorio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuBebidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuPedido)).BeginInit();
@@ -73,7 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SelMenuRelatorio)).BeginInit();
             this.SuspendLayout();
             // 
             // LogoPizzaHot
@@ -94,13 +95,15 @@
             this.PainelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PainelMenu.BackgroundImage")));
             this.PainelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PainelMenu.CausesValidation = false;
+            this.PainelMenu.Controls.Add(this.SelMenuRelatorio);
+            this.PainelMenu.Controls.Add(this.btn_relatorio);
+            this.PainelMenu.Controls.Add(this.lblNomeFuncionario);
             this.PainelMenu.Controls.Add(this.pictureBox1);
             this.PainelMenu.Controls.Add(this.btnInicio);
             this.PainelMenu.Controls.Add(this.LogoPizzaHot);
             this.PainelMenu.Controls.Add(this.BtnExit);
             this.PainelMenu.Controls.Add(this.SelMenuOpc);
             this.PainelMenu.Controls.Add(this.SelMenuConfig);
-            this.PainelMenu.Controls.Add(this.SelMenuRelatorio);
             this.PainelMenu.Controls.Add(this.SelMenuBebidas);
             this.PainelMenu.Controls.Add(this.SelMenuClientes);
             this.PainelMenu.Controls.Add(this.SelMenuPedido);
@@ -108,7 +111,6 @@
             this.PainelMenu.Controls.Add(this.btnPedido);
             this.PainelMenu.Controls.Add(this.btn_Clientes);
             this.PainelMenu.Controls.Add(this.btn_config);
-            this.PainelMenu.Controls.Add(this.btn_relatorio);
             this.PainelMenu.Controls.Add(this.btn_Bebidas);
             this.PainelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PainelMenu.Location = new System.Drawing.Point(0, 0);
@@ -116,6 +118,49 @@
             this.PainelMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PainelMenu.Size = new System.Drawing.Size(233, 646);
             this.PainelMenu.TabIndex = 1;
+            // 
+            // lblNomeFuncionario
+            // 
+            this.lblNomeFuncionario.AutoSize = true;
+            this.lblNomeFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeFuncionario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNomeFuncionario.Location = new System.Drawing.Point(8, 141);
+            this.lblNomeFuncionario.Name = "lblNomeFuncionario";
+            this.lblNomeFuncionario.Size = new System.Drawing.Size(122, 15);
+            this.lblNomeFuncionario.TabIndex = 44;
+            this.lblNomeFuncionario.Text = "Nome do funcionario";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Firebrick;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 178);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(6, 20);
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnInicio.Location = new System.Drawing.Point(27, 169);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(142, 40);
+            this.btnInicio.TabIndex = 42;
+            this.btnInicio.Text = "INÍCIO";
+            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // BtnExit
             // 
@@ -143,7 +188,7 @@
             // SelMenuOpc
             // 
             this.SelMenuOpc.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuOpc.Location = new System.Drawing.Point(23, 384);
+            this.SelMenuOpc.Location = new System.Drawing.Point(23, 349);
             this.SelMenuOpc.Name = "SelMenuOpc";
             this.SelMenuOpc.Size = new System.Drawing.Size(6, 20);
             this.SelMenuOpc.TabIndex = 39;
@@ -152,25 +197,16 @@
             // SelMenuConfig
             // 
             this.SelMenuConfig.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuConfig.Location = new System.Drawing.Point(23, 420);
+            this.SelMenuConfig.Location = new System.Drawing.Point(23, 435);
             this.SelMenuConfig.Name = "SelMenuConfig";
             this.SelMenuConfig.Size = new System.Drawing.Size(6, 20);
             this.SelMenuConfig.TabIndex = 38;
             this.SelMenuConfig.TabStop = false;
             // 
-            // SelMenuRelatorio
-            // 
-            this.SelMenuRelatorio.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuRelatorio.Location = new System.Drawing.Point(23, 348);
-            this.SelMenuRelatorio.Name = "SelMenuRelatorio";
-            this.SelMenuRelatorio.Size = new System.Drawing.Size(6, 20);
-            this.SelMenuRelatorio.TabIndex = 37;
-            this.SelMenuRelatorio.TabStop = false;
-            // 
             // SelMenuBebidas
             // 
             this.SelMenuBebidas.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuBebidas.Location = new System.Drawing.Point(23, 313);
+            this.SelMenuBebidas.Location = new System.Drawing.Point(23, 302);
             this.SelMenuBebidas.Name = "SelMenuBebidas";
             this.SelMenuBebidas.Size = new System.Drawing.Size(6, 20);
             this.SelMenuBebidas.TabIndex = 35;
@@ -179,7 +215,7 @@
             // SelMenuClientes
             // 
             this.SelMenuClientes.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuClientes.Location = new System.Drawing.Point(23, 274);
+            this.SelMenuClientes.Location = new System.Drawing.Point(23, 263);
             this.SelMenuClientes.Name = "SelMenuClientes";
             this.SelMenuClientes.Size = new System.Drawing.Size(6, 20);
             this.SelMenuClientes.TabIndex = 34;
@@ -188,7 +224,7 @@
             // SelMenuPedido
             // 
             this.SelMenuPedido.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuPedido.Location = new System.Drawing.Point(23, 235);
+            this.SelMenuPedido.Location = new System.Drawing.Point(23, 217);
             this.SelMenuPedido.Name = "SelMenuPedido";
             this.SelMenuPedido.Size = new System.Drawing.Size(6, 20);
             this.SelMenuPedido.TabIndex = 28;
@@ -205,7 +241,7 @@
             this.btn_opc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_opc.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_opc.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_opc.Location = new System.Drawing.Point(27, 374);
+            this.btn_opc.Location = new System.Drawing.Point(27, 339);
             this.btn_opc.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btn_opc.Name = "btn_opc";
             this.btn_opc.Size = new System.Drawing.Size(184, 40);
@@ -227,7 +263,7 @@
             this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPedido.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedido.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPedido.Location = new System.Drawing.Point(27, 226);
+            this.btnPedido.Location = new System.Drawing.Point(27, 208);
             this.btnPedido.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btnPedido.Name = "btnPedido";
             this.btnPedido.Size = new System.Drawing.Size(142, 40);
@@ -248,7 +284,7 @@
             this.btn_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Clientes.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Clientes.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_Clientes.Location = new System.Drawing.Point(27, 265);
+            this.btn_Clientes.Location = new System.Drawing.Point(27, 254);
             this.btn_Clientes.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btn_Clientes.Name = "btn_Clientes";
             this.btn_Clientes.Size = new System.Drawing.Size(142, 40);
@@ -269,7 +305,7 @@
             this.btn_config.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_config.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_config.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_config.Location = new System.Drawing.Point(27, 410);
+            this.btn_config.Location = new System.Drawing.Point(27, 425);
             this.btn_config.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btn_config.Name = "btn_config";
             this.btn_config.Size = new System.Drawing.Size(142, 40);
@@ -278,27 +314,6 @@
             this.btn_config.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_config.UseVisualStyleBackColor = false;
             this.btn_config.Click += new System.EventHandler(this.btn_config_Click_1);
-            // 
-            // btn_relatorio
-            // 
-            this.btn_relatorio.BackColor = System.Drawing.Color.Transparent;
-            this.btn_relatorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_relatorio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_relatorio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_relatorio.FlatAppearance.BorderSize = 0;
-            this.btn_relatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btn_relatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_relatorio.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_relatorio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_relatorio.Location = new System.Drawing.Point(27, 339);
-            this.btn_relatorio.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.btn_relatorio.Name = "btn_relatorio";
-            this.btn_relatorio.Size = new System.Drawing.Size(142, 40);
-            this.btn_relatorio.TabIndex = 31;
-            this.btn_relatorio.Text = "RELATÓRIOS ";
-            this.btn_relatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_relatorio.UseVisualStyleBackColor = false;
-            this.btn_relatorio.Click += new System.EventHandler(this.btn_relatorio_Click);
             // 
             // btn_Bebidas
             // 
@@ -311,7 +326,7 @@
             this.btn_Bebidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Bebidas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Bebidas.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_Bebidas.Location = new System.Drawing.Point(27, 304);
+            this.btn_Bebidas.Location = new System.Drawing.Point(27, 293);
             this.btn_Bebidas.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btn_Bebidas.Name = "btn_Bebidas";
             this.btn_Bebidas.Size = new System.Drawing.Size(142, 40);
@@ -461,36 +476,34 @@
             this.panel3.Size = new System.Drawing.Size(235, 648);
             this.panel3.TabIndex = 0;
             // 
-            // pictureBox1
+            // SelMenuRelatorio
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Firebrick;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 198);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(6, 20);
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
+            this.SelMenuRelatorio.BackColor = System.Drawing.Color.Firebrick;
+            this.SelMenuRelatorio.Location = new System.Drawing.Point(23, 394);
+            this.SelMenuRelatorio.Name = "SelMenuRelatorio";
+            this.SelMenuRelatorio.Size = new System.Drawing.Size(6, 20);
+            this.SelMenuRelatorio.TabIndex = 46;
+            this.SelMenuRelatorio.TabStop = false;
             // 
-            // btnInicio
+            // btn_relatorio
             // 
-            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
-            this.btnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnInicio.Location = new System.Drawing.Point(27, 189);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(142, 40);
-            this.btnInicio.TabIndex = 42;
-            this.btnInicio.Text = "INÍCIO";
-            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.UseVisualStyleBackColor = false;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            this.btn_relatorio.BackColor = System.Drawing.Color.Transparent;
+            this.btn_relatorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_relatorio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_relatorio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_relatorio.FlatAppearance.BorderSize = 0;
+            this.btn_relatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btn_relatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_relatorio.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_relatorio.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_relatorio.Location = new System.Drawing.Point(27, 385);
+            this.btn_relatorio.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.btn_relatorio.Name = "btn_relatorio";
+            this.btn_relatorio.Size = new System.Drawing.Size(142, 40);
+            this.btn_relatorio.TabIndex = 45;
+            this.btn_relatorio.Text = "RELATÓRIOS ";
+            this.btn_relatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_relatorio.UseVisualStyleBackColor = false;
             // 
             // MenuPrincipal
             // 
@@ -509,9 +522,10 @@
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LogoPizzaHot)).EndInit();
             this.PainelMenu.ResumeLayout(false);
+            this.PainelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuOpc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuConfig)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SelMenuRelatorio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuBebidas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuPedido)).EndInit();
@@ -522,7 +536,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SelMenuRelatorio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -533,7 +547,6 @@
         private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.PictureBox SelMenuOpc;
         private System.Windows.Forms.PictureBox SelMenuConfig;
-        private System.Windows.Forms.PictureBox SelMenuRelatorio;
         private System.Windows.Forms.PictureBox SelMenuBebidas;
         private System.Windows.Forms.PictureBox SelMenuClientes;
         private System.Windows.Forms.PictureBox SelMenuPedido;
@@ -541,7 +554,6 @@
         private System.Windows.Forms.Button btnPedido;
         private System.Windows.Forms.Button btn_Clientes;
         private System.Windows.Forms.Button btn_config;
-        private System.Windows.Forms.Button btn_relatorio;
         private System.Windows.Forms.Button btn_Bebidas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
@@ -557,5 +569,8 @@
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Label lblNomeFuncionario;
+        private System.Windows.Forms.PictureBox SelMenuRelatorio;
+        private System.Windows.Forms.Button btn_relatorio;
     }
 }
