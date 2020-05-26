@@ -20,6 +20,28 @@ namespace PizzariaPim.View
             InitializeComponent();
             AlterarBotoes(2);
         }
+        public static void Moeda(ref TextBox txt)
+        {
+            String n = string.Empty;
+            double v = 0;
+            try
+            {
+                n = txt.Text.Replace(",", "").Replace(".", "");
+                if (n.Equals(""))
+                    n = "";
+                n = n.PadLeft(3, '0');
+                if (n.Length > 3 & n.Substring(0, 1) == "0")
+
+                    n = n.Substring(1, n.Length - 1);
+                v = Convert.ToDouble(n) / 100;
+                txt.Text = String.Format("{0:N}", v);
+                txt.SelectionStart = txt.Text.Length;
+            }
+            catch (Exception)
+            {
+
+            }
+        }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleasCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -209,19 +231,7 @@ namespace PizzariaPim.View
                 e.Handled = true;
             }
         }
-
-        private void txbValor_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-           
-        }
-
-        private void txbValor_KeyPress_2(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44)
-            {
-                e.Handled = true;
-            }
-        }
+       
 
         private void dgGride_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -250,12 +260,20 @@ namespace PizzariaPim.View
 
         private void txbValor_TextChanged(object sender, EventArgs e)
         {
-
+            Moeda(ref txbValor);
         }
 
         private void txbNome_TextChanged(object sender, EventArgs e)
         {
             Localizar();
+        }
+
+        private void txbValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44 && e.KeyChar != (char)1)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

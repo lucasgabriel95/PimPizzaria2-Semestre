@@ -239,8 +239,9 @@
             this.txbValor.Name = "txbValor";
             this.txbValor.Size = new System.Drawing.Size(121, 20);
             this.txbValor.TabIndex = 77;
+            this.txbValor.Text = "0,00";
             this.txbValor.TextChanged += new System.EventHandler(this.txbValor_TextChanged);
-            this.txbValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbValor_KeyPress_2);
+            this.txbValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbValor_KeyPress);
             // 
             // label1
             // 

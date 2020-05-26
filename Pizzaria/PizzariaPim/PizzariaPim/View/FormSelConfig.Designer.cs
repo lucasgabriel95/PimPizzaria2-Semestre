@@ -46,7 +46,7 @@
             this.txt_configuser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_configuser.AutoSize = true;
             this.txt_configuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_configuser.Location = new System.Drawing.Point(273, 223);
+            this.txt_configuser.Location = new System.Drawing.Point(282, 244);
             this.txt_configuser.Name = "txt_configuser";
             this.txt_configuser.Size = new System.Drawing.Size(63, 13);
             this.txt_configuser.TabIndex = 8;
@@ -58,7 +58,7 @@
             this.txt_configImp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_configImp.AutoSize = true;
             this.txt_configImp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_configImp.Location = new System.Drawing.Point(390, 223);
+            this.txt_configImp.Location = new System.Drawing.Point(399, 244);
             this.txt_configImp.Name = "txt_configImp";
             this.txt_configImp.Size = new System.Drawing.Size(88, 13);
             this.txt_configImp.TabIndex = 9;
@@ -70,7 +70,7 @@
             this.btn_imp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_imp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_imp.BackgroundImage")));
             this.btn_imp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_imp.Location = new System.Drawing.Point(390, 239);
+            this.btn_imp.Location = new System.Drawing.Point(399, 260);
             this.btn_imp.Name = "btn_imp";
             this.btn_imp.Size = new System.Drawing.Size(90, 84);
             this.btn_imp.TabIndex = 2;
@@ -82,7 +82,7 @@
             this.btn_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_user.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_user.BackgroundImage")));
             this.btn_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_user.Location = new System.Drawing.Point(259, 239);
+            this.btn_user.Location = new System.Drawing.Point(268, 260);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(90, 84);
             this.btn_user.TabIndex = 1;

@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.LogoPizzaHot = new System.Windows.Forms.PictureBox();
             this.PainelMenu = new System.Windows.Forms.Panel();
+            this.SelMenuRelatorio = new System.Windows.Forms.PictureBox();
+            this.btn_relatorio = new System.Windows.Forms.Button();
             this.lblNomeFuncionario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnInicio = new System.Windows.Forms.Button();
@@ -57,10 +59,9 @@
             this.btnRestaura = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.SelMenuRelatorio = new System.Windows.Forms.PictureBox();
-            this.btn_relatorio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPizzaHot)).BeginInit();
             this.PainelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SelMenuRelatorio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuOpc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuConfig)).BeginInit();
@@ -74,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SelMenuRelatorio)).BeginInit();
             this.SuspendLayout();
             // 
             // LogoPizzaHot
@@ -118,6 +118,36 @@
             this.PainelMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PainelMenu.Size = new System.Drawing.Size(233, 646);
             this.PainelMenu.TabIndex = 1;
+            // 
+            // SelMenuRelatorio
+            // 
+            this.SelMenuRelatorio.BackColor = System.Drawing.Color.Firebrick;
+            this.SelMenuRelatorio.Location = new System.Drawing.Point(23, 394);
+            this.SelMenuRelatorio.Name = "SelMenuRelatorio";
+            this.SelMenuRelatorio.Size = new System.Drawing.Size(6, 20);
+            this.SelMenuRelatorio.TabIndex = 46;
+            this.SelMenuRelatorio.TabStop = false;
+            // 
+            // btn_relatorio
+            // 
+            this.btn_relatorio.BackColor = System.Drawing.Color.Transparent;
+            this.btn_relatorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_relatorio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_relatorio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_relatorio.FlatAppearance.BorderSize = 0;
+            this.btn_relatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btn_relatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_relatorio.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_relatorio.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_relatorio.Location = new System.Drawing.Point(27, 385);
+            this.btn_relatorio.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.btn_relatorio.Name = "btn_relatorio";
+            this.btn_relatorio.Size = new System.Drawing.Size(142, 40);
+            this.btn_relatorio.TabIndex = 45;
+            this.btn_relatorio.Text = "RELATÓRIOS ";
+            this.btn_relatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_relatorio.UseVisualStyleBackColor = false;
+            this.btn_relatorio.Click += new System.EventHandler(this.btn_relatorio_Click);
             // 
             // lblNomeFuncionario
             // 
@@ -476,35 +506,6 @@
             this.panel3.Size = new System.Drawing.Size(235, 648);
             this.panel3.TabIndex = 0;
             // 
-            // SelMenuRelatorio
-            // 
-            this.SelMenuRelatorio.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuRelatorio.Location = new System.Drawing.Point(23, 394);
-            this.SelMenuRelatorio.Name = "SelMenuRelatorio";
-            this.SelMenuRelatorio.Size = new System.Drawing.Size(6, 20);
-            this.SelMenuRelatorio.TabIndex = 46;
-            this.SelMenuRelatorio.TabStop = false;
-            // 
-            // btn_relatorio
-            // 
-            this.btn_relatorio.BackColor = System.Drawing.Color.Transparent;
-            this.btn_relatorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_relatorio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_relatorio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_relatorio.FlatAppearance.BorderSize = 0;
-            this.btn_relatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btn_relatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_relatorio.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_relatorio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_relatorio.Location = new System.Drawing.Point(27, 385);
-            this.btn_relatorio.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.btn_relatorio.Name = "btn_relatorio";
-            this.btn_relatorio.Size = new System.Drawing.Size(142, 40);
-            this.btn_relatorio.TabIndex = 45;
-            this.btn_relatorio.Text = "RELATÓRIOS ";
-            this.btn_relatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_relatorio.UseVisualStyleBackColor = false;
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,6 +524,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoPizzaHot)).EndInit();
             this.PainelMenu.ResumeLayout(false);
             this.PainelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SelMenuRelatorio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuOpc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuConfig)).EndInit();
@@ -536,7 +538,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SelMenuRelatorio)).EndInit();
             this.ResumeLayout(false);
 
         }

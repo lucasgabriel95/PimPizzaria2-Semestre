@@ -17,6 +17,7 @@ using System.Windows.Forms;
 
 namespace PizzariaPim
 {
+
     public partial class FormPedido : Form
     {
         public FormPedido()
@@ -36,7 +37,29 @@ namespace PizzariaPim
         public double contadorMais = 0;
         public double ContadorMenos = 500;
         String Categoria;
-        
+        public static void Moeda(ref TextBox txt)
+        {
+            String n = string.Empty;
+            double v = 0;
+            try
+            {
+                n = txt.Text.Replace(",", "").Replace(".", "");
+                if (n.Equals(""))
+                    n = "";
+                n = n.PadLeft(3, '0');
+                if (n.Length > 3 & n.Substring(0, 1) == "0")
+
+                    n = n.Substring(1, n.Length - 1);
+                v = Convert.ToDouble(n) / 100;
+                txt.Text = String.Format("{0:N}", v);
+                txt.SelectionStart = txt.Text.Length;
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
         public void Maximizar()
         {
             this.WindowState = FormWindowState.Maximized;
@@ -332,7 +355,7 @@ namespace PizzariaPim
         }
         private void txbDesconto_TextChanged(object sender, EventArgs e)
         {
-          
+            Moeda(ref txbDesconto);
         }
         int V = 1;       
 
@@ -479,7 +502,7 @@ namespace PizzariaPim
 
         private void txbDesconto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44)
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44 && e.KeyChar != (char)1)
             {
                 e.Handled = true;
             }

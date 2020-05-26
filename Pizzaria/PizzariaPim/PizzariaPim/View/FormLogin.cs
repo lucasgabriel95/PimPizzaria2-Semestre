@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using PizzariaPim.View;
 
 namespace PizzariaPim
 {
@@ -18,6 +19,8 @@ namespace PizzariaPim
         public Login()
         {
             InitializeComponent();
+         
+
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleasCapture();
