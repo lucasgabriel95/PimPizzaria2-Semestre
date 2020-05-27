@@ -27,7 +27,7 @@ namespace PizzariaPim
         }       
         public void CarregarDadosFuncionario (String Nome, String Cargo)
         {
-            lblNomeFuncionario.Text = "Bem-Vindo-" + Nome;
+            lblNomeFuncionario.Text = "Bem Vindo, " + Nome;
 
             if (Cargo == "Balconista")
             {
@@ -194,6 +194,16 @@ namespace PizzariaPim
         private void btnInicio_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormHome());
+        }
+
+        private void lblNomeFuncionario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMinimizaAgenda_MouseEnter(object sender, EventArgs e)
+        {
+          
         }
     }
 }

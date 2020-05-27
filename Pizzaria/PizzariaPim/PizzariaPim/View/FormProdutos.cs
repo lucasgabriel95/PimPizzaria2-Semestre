@@ -275,6 +275,11 @@ namespace PizzariaPim.View
                 e.Handled = true;
             }
         }
+
+        private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

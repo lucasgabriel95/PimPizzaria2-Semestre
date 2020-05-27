@@ -118,6 +118,11 @@ namespace PizzariaPim.View
             this.Close();
         }
 
+        private void dgGride_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void Calendario_DateChanged(object sender, DateRangeEventArgs e)
         {
             Data1 = Calendario.SelectionStart.ToString("yyyy/MM/dd HH:mm:dd");

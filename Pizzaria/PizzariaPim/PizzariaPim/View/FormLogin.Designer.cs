@@ -99,7 +99,7 @@
             this.btnEntrar.Location = new System.Drawing.Point(280, 258);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(276, 36);
-            this.btnEntrar.TabIndex = 3;
+            this.btnEntrar.TabIndex = 0;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -135,7 +135,7 @@
             this.label1.ForeColor = System.Drawing.Color.Coral;
             this.label1.Location = new System.Drawing.Point(12, 207);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 19);
+            this.label1.Size = new System.Drawing.Size(172, 19);
             this.label1.TabIndex = 19;
             this.label1.Text = "AQUI VOCÊ COME BEM!";
             // 
@@ -213,11 +213,11 @@
             // btnMinimizaAgenda
             // 
             this.btnMinimizaAgenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizaAgenda.BackColor = System.Drawing.Color.Black;
+            this.btnMinimizaAgenda.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizaAgenda.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizaAgenda.Image")));
-            this.btnMinimizaAgenda.Location = new System.Drawing.Point(407, 5);
+            this.btnMinimizaAgenda.Location = new System.Drawing.Point(405, 4);
             this.btnMinimizaAgenda.Name = "btnMinimizaAgenda";
-            this.btnMinimizaAgenda.Size = new System.Drawing.Size(18, 18);
+            this.btnMinimizaAgenda.Size = new System.Drawing.Size(22, 22);
             this.btnMinimizaAgenda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizaAgenda.TabIndex = 27;
             this.btnMinimizaAgenda.TabStop = false;
@@ -226,11 +226,11 @@
             // btnFechar
             // 
             this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.BackColor = System.Drawing.Color.Black;
+            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(431, 5);
+            this.btnFechar.Location = new System.Drawing.Point(429, 4);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.Size = new System.Drawing.Size(22, 22);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnFechar.TabIndex = 26;
             this.btnFechar.TabStop = false;

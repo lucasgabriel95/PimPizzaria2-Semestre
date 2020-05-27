@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.LogoPizzaHot = new System.Windows.Forms.PictureBox();
             this.PainelMenu = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.BtnExit = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.SelMenuRelatorio = new System.Windows.Forms.PictureBox();
             this.btn_relatorio = new System.Windows.Forms.Button();
             this.lblNomeFuncionario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.SelMenuOpc = new System.Windows.Forms.PictureBox();
             this.SelMenuConfig = new System.Windows.Forms.PictureBox();
             this.SelMenuBebidas = new System.Windows.Forms.PictureBox();
@@ -61,6 +63,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPizzaHot)).BeginInit();
             this.PainelMenu.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuRelatorio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuOpc)).BeginInit();
@@ -79,9 +83,10 @@
             // 
             // LogoPizzaHot
             // 
+            this.LogoPizzaHot.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LogoPizzaHot.BackColor = System.Drawing.Color.Transparent;
             this.LogoPizzaHot.Image = ((System.Drawing.Image)(resources.GetObject("LogoPizzaHot.Image")));
-            this.LogoPizzaHot.Location = new System.Drawing.Point(51, 27);
+            this.LogoPizzaHot.Location = new System.Drawing.Point(51, 24);
             this.LogoPizzaHot.Name = "LogoPizzaHot";
             this.LogoPizzaHot.Size = new System.Drawing.Size(118, 102);
             this.LogoPizzaHot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,16 +97,15 @@
             // 
             this.PainelMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.PainelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.PainelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PainelMenu.BackgroundImage")));
-            this.PainelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PainelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PainelMenu.CausesValidation = false;
+            this.PainelMenu.Controls.Add(this.panel9);
+            this.PainelMenu.Controls.Add(this.panel4);
             this.PainelMenu.Controls.Add(this.SelMenuRelatorio);
             this.PainelMenu.Controls.Add(this.btn_relatorio);
             this.PainelMenu.Controls.Add(this.lblNomeFuncionario);
             this.PainelMenu.Controls.Add(this.pictureBox1);
             this.PainelMenu.Controls.Add(this.btnInicio);
-            this.PainelMenu.Controls.Add(this.LogoPizzaHot);
-            this.PainelMenu.Controls.Add(this.BtnExit);
             this.PainelMenu.Controls.Add(this.SelMenuOpc);
             this.PainelMenu.Controls.Add(this.SelMenuConfig);
             this.PainelMenu.Controls.Add(this.SelMenuBebidas);
@@ -119,10 +123,56 @@
             this.PainelMenu.Size = new System.Drawing.Size(233, 646);
             this.PainelMenu.TabIndex = 1;
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Controls.Add(this.BtnExit);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 388);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(233, 258);
+            this.panel9.TabIndex = 0;
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExit.FlatAppearance.BorderSize = 0;
+            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            this.BtnExit.Location = new System.Drawing.Point(51, 3);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(100, 49);
+            this.BtnExit.TabIndex = 41;
+            this.BtnExit.Text = "SAIR";
+            this.BtnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.panel4.Controls.Add(this.LogoPizzaHot);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(233, 126);
+            this.panel4.TabIndex = 0;
+            // 
             // SelMenuRelatorio
             // 
             this.SelMenuRelatorio.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuRelatorio.Location = new System.Drawing.Point(23, 394);
+            this.SelMenuRelatorio.Location = new System.Drawing.Point(8, 310);
             this.SelMenuRelatorio.Name = "SelMenuRelatorio";
             this.SelMenuRelatorio.Size = new System.Drawing.Size(6, 20);
             this.SelMenuRelatorio.TabIndex = 46;
@@ -137,12 +187,12 @@
             this.btn_relatorio.FlatAppearance.BorderSize = 0;
             this.btn_relatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_relatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_relatorio.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_relatorio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_relatorio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_relatorio.Location = new System.Drawing.Point(27, 385);
+            this.btn_relatorio.Location = new System.Drawing.Point(12, 305);
             this.btn_relatorio.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btn_relatorio.Name = "btn_relatorio";
-            this.btn_relatorio.Size = new System.Drawing.Size(142, 40);
+            this.btn_relatorio.Size = new System.Drawing.Size(201, 30);
             this.btn_relatorio.TabIndex = 45;
             this.btn_relatorio.Text = "RELATÓRIOS ";
             this.btn_relatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,18 +203,19 @@
             // 
             this.lblNomeFuncionario.AutoSize = true;
             this.lblNomeFuncionario.BackColor = System.Drawing.Color.Transparent;
-            this.lblNomeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeFuncionario.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeFuncionario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNomeFuncionario.Location = new System.Drawing.Point(8, 141);
+            this.lblNomeFuncionario.Location = new System.Drawing.Point(10, 139);
             this.lblNomeFuncionario.Name = "lblNomeFuncionario";
-            this.lblNomeFuncionario.Size = new System.Drawing.Size(122, 15);
+            this.lblNomeFuncionario.Size = new System.Drawing.Size(124, 18);
             this.lblNomeFuncionario.TabIndex = 44;
             this.lblNomeFuncionario.Text = "Nome do funcionario";
+            this.lblNomeFuncionario.Click += new System.EventHandler(this.lblNomeFuncionario_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Firebrick;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 178);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 180);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(6, 20);
             this.pictureBox1.TabIndex = 43;
@@ -180,45 +231,22 @@
             this.btnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnInicio.Location = new System.Drawing.Point(27, 169);
+            this.btnInicio.Location = new System.Drawing.Point(12, 175);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(142, 40);
+            this.btnInicio.Size = new System.Drawing.Size(201, 30);
             this.btnInicio.TabIndex = 42;
             this.btnInicio.Text = "INÍCIO";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
-            // BtnExit
-            // 
-            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
-            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnExit.FlatAppearance.BorderSize = 0;
-            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
-            this.BtnExit.Location = new System.Drawing.Point(51, 552);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(102, 49);
-            this.BtnExit.TabIndex = 41;
-            this.BtnExit.Text = "SAIR";
-            this.BtnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.BtnExit.UseVisualStyleBackColor = true;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
             // SelMenuOpc
             // 
             this.SelMenuOpc.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuOpc.Location = new System.Drawing.Point(23, 349);
+            this.SelMenuOpc.Location = new System.Drawing.Point(8, 284);
             this.SelMenuOpc.Name = "SelMenuOpc";
             this.SelMenuOpc.Size = new System.Drawing.Size(6, 20);
             this.SelMenuOpc.TabIndex = 39;
@@ -227,7 +255,7 @@
             // SelMenuConfig
             // 
             this.SelMenuConfig.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuConfig.Location = new System.Drawing.Point(23, 435);
+            this.SelMenuConfig.Location = new System.Drawing.Point(8, 336);
             this.SelMenuConfig.Name = "SelMenuConfig";
             this.SelMenuConfig.Size = new System.Drawing.Size(6, 20);
             this.SelMenuConfig.TabIndex = 38;
@@ -236,7 +264,7 @@
             // SelMenuBebidas
             // 
             this.SelMenuBebidas.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuBebidas.Location = new System.Drawing.Point(23, 302);
+            this.SelMenuBebidas.Location = new System.Drawing.Point(8, 258);
             this.SelMenuBebidas.Name = "SelMenuBebidas";
             this.SelMenuBebidas.Size = new System.Drawing.Size(6, 20);
             this.SelMenuBebidas.TabIndex = 35;
@@ -245,7 +273,7 @@
             // SelMenuClientes
             // 
             this.SelMenuClientes.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuClientes.Location = new System.Drawing.Point(23, 263);
+            this.SelMenuClientes.Location = new System.Drawing.Point(8, 232);
             this.SelMenuClientes.Name = "SelMenuClientes";
             this.SelMenuClientes.Size = new System.Drawing.Size(6, 20);
             this.SelMenuClientes.TabIndex = 34;
@@ -254,7 +282,7 @@
             // SelMenuPedido
             // 
             this.SelMenuPedido.BackColor = System.Drawing.Color.Firebrick;
-            this.SelMenuPedido.Location = new System.Drawing.Point(23, 217);
+            this.SelMenuPedido.Location = new System.Drawing.Point(8, 206);
             this.SelMenuPedido.Name = "SelMenuPedido";
             this.SelMenuPedido.Size = new System.Drawing.Size(6, 20);
             this.SelMenuPedido.TabIndex = 28;
@@ -269,12 +297,12 @@
             this.btn_opc.FlatAppearance.BorderSize = 0;
             this.btn_opc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_opc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_opc.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_opc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_opc.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_opc.Location = new System.Drawing.Point(27, 339);
+            this.btn_opc.Location = new System.Drawing.Point(12, 279);
             this.btn_opc.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btn_opc.Name = "btn_opc";
-            this.btn_opc.Size = new System.Drawing.Size(184, 40);
+            this.btn_opc.Size = new System.Drawing.Size(201, 30);
             this.btn_opc.TabIndex = 33;
             this.btn_opc.Text = "SATISFAÇÃO CLIENTES";
             this.btn_opc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,12 +319,12 @@
             this.btnPedido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedido.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedido.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPedido.Location = new System.Drawing.Point(27, 208);
+            this.btnPedido.Location = new System.Drawing.Point(12, 201);
             this.btnPedido.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btnPedido.Name = "btnPedido";
-            this.btnPedido.Size = new System.Drawing.Size(142, 40);
+            this.btnPedido.Size = new System.Drawing.Size(201, 30);
             this.btnPedido.TabIndex = 9;
             this.btnPedido.Text = "PEDIDOS";
             this.btnPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,12 +340,12 @@
             this.btn_Clientes.FlatAppearance.BorderSize = 0;
             this.btn_Clientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Clientes.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Clientes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Clientes.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_Clientes.Location = new System.Drawing.Point(27, 254);
+            this.btn_Clientes.Location = new System.Drawing.Point(12, 227);
             this.btn_Clientes.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btn_Clientes.Name = "btn_Clientes";
-            this.btn_Clientes.Size = new System.Drawing.Size(142, 40);
+            this.btn_Clientes.Size = new System.Drawing.Size(201, 30);
             this.btn_Clientes.TabIndex = 28;
             this.btn_Clientes.Text = "CLIENTES";
             this.btn_Clientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,12 +361,12 @@
             this.btn_config.FlatAppearance.BorderSize = 0;
             this.btn_config.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_config.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_config.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_config.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_config.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_config.Location = new System.Drawing.Point(27, 425);
+            this.btn_config.Location = new System.Drawing.Point(12, 331);
             this.btn_config.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btn_config.Name = "btn_config";
-            this.btn_config.Size = new System.Drawing.Size(142, 40);
+            this.btn_config.Size = new System.Drawing.Size(201, 30);
             this.btn_config.TabIndex = 32;
             this.btn_config.Text = "CONFIGURAÇÕES";
             this.btn_config.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,12 +382,12 @@
             this.btn_Bebidas.FlatAppearance.BorderSize = 0;
             this.btn_Bebidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_Bebidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Bebidas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Bebidas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Bebidas.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_Bebidas.Location = new System.Drawing.Point(27, 293);
+            this.btn_Bebidas.Location = new System.Drawing.Point(12, 253);
             this.btn_Bebidas.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btn_Bebidas.Name = "btn_Bebidas";
-            this.btn_Bebidas.Size = new System.Drawing.Size(142, 40);
+            this.btn_Bebidas.Size = new System.Drawing.Size(201, 30);
             this.btn_Bebidas.TabIndex = 29;
             this.btn_Bebidas.Text = "PRODUTOS";
             this.btn_Bebidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -384,7 +412,7 @@
             // 
             // PainelLogo
             // 
-            this.PainelLogo.BackColor = System.Drawing.Color.Silver;
+            this.PainelLogo.BackColor = System.Drawing.Color.White;
             this.PainelLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PainelLogo.Location = new System.Drawing.Point(245, 38);
             this.PainelLogo.Name = "PainelLogo";
@@ -394,7 +422,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.Silver;
+            this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(245, 28);
             this.panel6.Name = "panel6";
@@ -403,7 +431,7 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.Silver;
+            this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(245, 638);
             this.panel8.Name = "panel8";
@@ -412,7 +440,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.Silver;
+            this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel7.Location = new System.Drawing.Point(1288, 28);
             this.panel7.Name = "panel7";
@@ -421,7 +449,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Silver;
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(235, 28);
             this.panel5.Name = "panel5";
@@ -430,7 +458,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnMaximizar);
             this.panel2.Controls.Add(this.btnMinimizaAgenda);
@@ -447,10 +475,11 @@
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(1012, 3);
+            this.btnMaximizar.Location = new System.Drawing.Point(1014, 2);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(18, 18);
+            this.btnMaximizar.Size = new System.Drawing.Size(22, 22);
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMaximizar.TabIndex = 5;
             this.btnMaximizar.TabStop = false;
@@ -460,23 +489,26 @@
             // 
             this.btnMinimizaAgenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizaAgenda.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizaAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizaAgenda.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizaAgenda.Image")));
-            this.btnMinimizaAgenda.Location = new System.Drawing.Point(988, 3);
+            this.btnMinimizaAgenda.Location = new System.Drawing.Point(988, 2);
             this.btnMinimizaAgenda.Name = "btnMinimizaAgenda";
-            this.btnMinimizaAgenda.Size = new System.Drawing.Size(18, 18);
+            this.btnMinimizaAgenda.Size = new System.Drawing.Size(22, 22);
             this.btnMinimizaAgenda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizaAgenda.TabIndex = 6;
             this.btnMinimizaAgenda.TabStop = false;
             this.btnMinimizaAgenda.Click += new System.EventHandler(this.btnMinimizaAgenda_Click);
+            this.btnMinimizaAgenda.MouseEnter += new System.EventHandler(this.btnMinimizaAgenda_MouseEnter);
             // 
             // btnRestaura
             // 
             this.btnRestaura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaura.BackColor = System.Drawing.Color.White;
+            this.btnRestaura.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestaura.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaura.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaura.Image")));
-            this.btnRestaura.Location = new System.Drawing.Point(1012, 3);
+            this.btnRestaura.Location = new System.Drawing.Point(1012, 2);
             this.btnRestaura.Name = "btnRestaura";
-            this.btnRestaura.Size = new System.Drawing.Size(18, 18);
+            this.btnRestaura.Size = new System.Drawing.Size(22, 22);
             this.btnRestaura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnRestaura.TabIndex = 7;
             this.btnRestaura.TabStop = false;
@@ -486,10 +518,11 @@
             // 
             this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFechar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(1036, 3);
+            this.btnFechar.Location = new System.Drawing.Point(1036, 2);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.Size = new System.Drawing.Size(22, 22);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnFechar.TabIndex = 4;
             this.btnFechar.TabStop = false;
@@ -524,6 +557,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoPizzaHot)).EndInit();
             this.PainelMenu.ResumeLayout(false);
             this.PainelMenu.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuRelatorio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelMenuOpc)).EndInit();
@@ -550,7 +585,6 @@
         private System.Windows.Forms.PictureBox SelMenuConfig;
         private System.Windows.Forms.PictureBox SelMenuBebidas;
         private System.Windows.Forms.PictureBox SelMenuClientes;
-        private System.Windows.Forms.PictureBox SelMenuPedido;
         private System.Windows.Forms.Button btn_opc;
         private System.Windows.Forms.Button btnPedido;
         private System.Windows.Forms.Button btn_Clientes;
@@ -573,5 +607,8 @@
         private System.Windows.Forms.Label lblNomeFuncionario;
         private System.Windows.Forms.PictureBox SelMenuRelatorio;
         private System.Windows.Forms.Button btn_relatorio;
+        private System.Windows.Forms.PictureBox SelMenuPedido;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel9;
     }
 }

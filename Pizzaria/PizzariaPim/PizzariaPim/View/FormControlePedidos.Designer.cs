@@ -56,6 +56,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimizaAgenda = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizaAgenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
@@ -82,44 +84,46 @@
             this.panel1.Controls.Add(this.btnAlterar);
             this.panel1.Location = new System.Drawing.Point(25, 46);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(910, 110);
+            this.panel1.Size = new System.Drawing.Size(910, 76);
             this.panel1.TabIndex = 6;
             // 
             // lblCodigoCliente
             // 
             this.lblCodigoCliente.AutoSize = true;
-            this.lblCodigoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoCliente.Location = new System.Drawing.Point(468, 13);
+            this.lblCodigoCliente.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoCliente.Location = new System.Drawing.Point(423, 15);
             this.lblCodigoCliente.Name = "lblCodigoCliente";
-            this.lblCodigoCliente.Size = new System.Drawing.Size(19, 20);
+            this.lblCodigoCliente.Size = new System.Drawing.Size(14, 15);
             this.lblCodigoCliente.TabIndex = 5;
             this.lblCodigoCliente.Text = "0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(175, 49);
+            this.label2.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(167, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 13);
+            this.label2.Size = new System.Drawing.Size(113, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "Pesquisa por Nome";
             // 
             // lblNomeCliente
             // 
             this.lblNomeCliente.AutoSize = true;
-            this.lblNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeCliente.Location = new System.Drawing.Point(500, 13);
+            this.lblNomeCliente.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeCliente.Location = new System.Drawing.Point(444, 15);
             this.lblNomeCliente.Name = "lblNomeCliente";
-            this.lblNomeCliente.Size = new System.Drawing.Size(141, 20);
+            this.lblNomeCliente.Size = new System.Drawing.Size(100, 15);
             this.lblNomeCliente.TabIndex = 7;
             this.lblNomeCliente.Text = "Nome do Cliente";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 48);
+            this.label1.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.Size = new System.Drawing.Size(132, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "Pesquisa por Categoria";
             // 
@@ -133,7 +137,7 @@
             "Concluido",
             "Cancelado",
             "Todas"});
-            this.cbPesquisaCategoria.Location = new System.Drawing.Point(31, 67);
+            this.cbPesquisaCategoria.Location = new System.Drawing.Point(15, 40);
             this.cbPesquisaCategoria.Name = "cbPesquisaCategoria";
             this.cbPesquisaCategoria.Size = new System.Drawing.Size(121, 21);
             this.cbPesquisaCategoria.TabIndex = 3;
@@ -147,14 +151,14 @@
             "Entrega",
             "Concluido",
             "Cancelado"});
-            this.cbAlterarStatus.Location = new System.Drawing.Point(503, 68);
+            this.cbAlterarStatus.Location = new System.Drawing.Point(493, 40);
             this.cbAlterarStatus.Name = "cbAlterarStatus";
             this.cbAlterarStatus.Size = new System.Drawing.Size(121, 21);
             this.cbAlterarStatus.TabIndex = 1;
             // 
             // txbNomeCliente
             // 
-            this.txbNomeCliente.Location = new System.Drawing.Point(168, 68);
+            this.txbNomeCliente.Location = new System.Drawing.Point(167, 41);
             this.txbNomeCliente.Name = "txbNomeCliente";
             this.txbNomeCliente.Size = new System.Drawing.Size(208, 20);
             this.txbNomeCliente.TabIndex = 2;
@@ -167,7 +171,7 @@
             this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
-            this.btnAlterar.Location = new System.Drawing.Point(654, 67);
+            this.btnAlterar.Location = new System.Drawing.Point(412, 38);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 23);
             this.btnAlterar.TabIndex = 0;
@@ -217,10 +221,10 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.dgGride.DataSource = this.cad_Venda_INNER_JOINBindingSource;
-            this.dgGride.Location = new System.Drawing.Point(25, 187);
+            this.dgGride.Location = new System.Drawing.Point(25, 128);
             this.dgGride.Name = "dgGride";
             this.dgGride.ReadOnly = true;
-            this.dgGride.Size = new System.Drawing.Size(910, 353);
+            this.dgGride.Size = new System.Drawing.Size(910, 412);
             this.dgGride.TabIndex = 0;
             this.dgGride.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgGride_CellClick);
             this.dgGride.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgGride_CellContentClick);
@@ -304,6 +308,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.btnMinimizaAgenda);
             this.panel3.Controls.Add(this.btnFechar);
             this.panel3.Controls.Add(this.label3);
@@ -314,14 +319,26 @@
             this.panel3.TabIndex = 56;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(193, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 75;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnMinimizaAgenda
             // 
             this.btnMinimizaAgenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizaAgenda.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizaAgenda.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizaAgenda.Image")));
-            this.btnMinimizaAgenda.Location = new System.Drawing.Point(908, 4);
+            this.btnMinimizaAgenda.Location = new System.Drawing.Point(906, 4);
             this.btnMinimizaAgenda.Name = "btnMinimizaAgenda";
-            this.btnMinimizaAgenda.Size = new System.Drawing.Size(18, 18);
+            this.btnMinimizaAgenda.Size = new System.Drawing.Size(22, 22);
             this.btnMinimizaAgenda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizaAgenda.TabIndex = 74;
             this.btnMinimizaAgenda.TabStop = false;
@@ -334,7 +351,7 @@
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
             this.btnFechar.Location = new System.Drawing.Point(930, 4);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.Size = new System.Drawing.Size(22, 22);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnFechar.TabIndex = 73;
             this.btnFechar.TabStop = false;
@@ -372,6 +389,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizaAgenda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
@@ -407,5 +425,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnMinimizaAgenda;
         private System.Windows.Forms.PictureBox btnFechar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

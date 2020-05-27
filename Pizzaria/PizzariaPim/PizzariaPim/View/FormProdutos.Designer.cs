@@ -228,6 +228,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.cbCategoria);
             this.panel2.Controls.Add(this.label2);
+            this.panel2.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
             this.panel2.Location = new System.Drawing.Point(9, 31);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(674, 153);
@@ -237,7 +238,7 @@
             // 
             this.txbValor.Location = new System.Drawing.Point(379, 124);
             this.txbValor.Name = "txbValor";
-            this.txbValor.Size = new System.Drawing.Size(121, 20);
+            this.txbValor.Size = new System.Drawing.Size(121, 23);
             this.txbValor.TabIndex = 77;
             this.txbValor.Text = "0,00";
             this.txbValor.TextChanged += new System.EventHandler(this.txbValor_TextChanged);
@@ -246,18 +247,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 69;
             this.label1.Text = "CODIGO";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(379, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.Size = new System.Drawing.Size(73, 15);
             this.label6.TabIndex = 75;
             this.label6.Text = "CATEGORIA";
             // 
@@ -281,23 +284,24 @@
             this.txbCodigo.Enabled = false;
             this.txbCodigo.Location = new System.Drawing.Point(14, 29);
             this.txbCodigo.Name = "txbCodigo";
-            this.txbCodigo.Size = new System.Drawing.Size(39, 20);
+            this.txbCodigo.Size = new System.Drawing.Size(39, 23);
             this.txbCodigo.TabIndex = 58;
             // 
             // txbNome
             // 
             this.txbNome.Location = new System.Drawing.Point(13, 80);
             this.txbNome.Name = "txbNome";
-            this.txbNome.Size = new System.Drawing.Size(201, 20);
+            this.txbNome.Size = new System.Drawing.Size(201, 23);
             this.txbNome.TabIndex = 59;
             this.txbNome.TextChanged += new System.EventHandler(this.txbNome_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(379, 108);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 13);
+            this.label5.Size = new System.Drawing.Size(107, 15);
             this.label5.TabIndex = 73;
             this.label5.Text = "VALOR UNITARIO";
             // 
@@ -305,15 +309,16 @@
             // 
             this.txbDescricao.Location = new System.Drawing.Point(13, 124);
             this.txbDescricao.Name = "txbDescricao";
-            this.txbDescricao.Size = new System.Drawing.Size(314, 20);
+            this.txbDescricao.Size = new System.Drawing.Size(314, 23);
             this.txbDescricao.TabIndex = 61;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(379, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 13);
+            this.label4.Size = new System.Drawing.Size(85, 15);
             this.label4.TabIndex = 72;
             this.label4.Text = "QUANTIDADE";
             // 
@@ -321,16 +326,17 @@
             // 
             this.txbQuantidade.Location = new System.Drawing.Point(379, 80);
             this.txbQuantidade.Name = "txbQuantidade";
-            this.txbQuantidade.Size = new System.Drawing.Size(121, 20);
+            this.txbQuantidade.Size = new System.Drawing.Size(121, 23);
             this.txbQuantidade.TabIndex = 62;
             this.txbQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbQuantidade_KeyPress_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(13, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.Size = new System.Drawing.Size(72, 15);
             this.label3.TabIndex = 71;
             this.label3.Text = "DESCRIÇÃO";
             // 
@@ -342,16 +348,18 @@
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(379, 29);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cbCategoria.Size = new System.Drawing.Size(121, 23);
             this.cbCategoria.TabIndex = 63;
             this.cbCategoria.ValueMember = "codigo_Categoria";
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(13, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(42, 15);
             this.label2.TabIndex = 70;
             this.label2.Text = "NOME";
             // 
