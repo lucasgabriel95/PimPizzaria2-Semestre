@@ -34,7 +34,6 @@
             this.btn_imp = new System.Windows.Forms.Button();
             this.btn_user = new System.Windows.Forms.Button();
             this.panelll = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelll.SuspendLayout();
@@ -68,33 +67,36 @@
             // btn_imp
             // 
             this.btn_imp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_imp.BackColor = System.Drawing.Color.Transparent;
             this.btn_imp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_imp.BackgroundImage")));
             this.btn_imp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_imp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_imp.Location = new System.Drawing.Point(399, 260);
             this.btn_imp.Name = "btn_imp";
             this.btn_imp.Size = new System.Drawing.Size(90, 84);
             this.btn_imp.TabIndex = 2;
-            this.btn_imp.UseVisualStyleBackColor = true;
+            this.btn_imp.UseVisualStyleBackColor = false;
             this.btn_imp.Click += new System.EventHandler(this.btn_imp_Click);
             // 
             // btn_user
             // 
             this.btn_user.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_user.BackColor = System.Drawing.Color.Transparent;
             this.btn_user.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_user.BackgroundImage")));
             this.btn_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_user.Location = new System.Drawing.Point(268, 260);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(90, 84);
             this.btn_user.TabIndex = 1;
             this.btn_user.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_user.UseVisualStyleBackColor = true;
+            this.btn_user.UseVisualStyleBackColor = false;
             this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
             // 
             // panelll
             // 
             this.panelll.BackColor = System.Drawing.Color.White;
             this.panelll.Controls.Add(this.btn_user);
-            this.panelll.Controls.Add(this.label2);
             this.panelll.Controls.Add(this.btn_imp);
             this.panelll.Controls.Add(this.txt_configImp);
             this.panelll.Controls.Add(this.pictureBox2);
@@ -106,22 +108,12 @@
             this.panelll.Size = new System.Drawing.Size(763, 571);
             this.panelll.TabIndex = 13;
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(663, 549);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Versão 2020v2.1";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(12, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 70);
+            this.pictureBox2.Size = new System.Drawing.Size(64, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
@@ -130,7 +122,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(93, 34);
+            this.label1.Location = new System.Drawing.Point(82, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(358, 25);
             this.label1.TabIndex = 14;
@@ -164,6 +156,5 @@
         private System.Windows.Forms.Panel panelll;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
     }
 }

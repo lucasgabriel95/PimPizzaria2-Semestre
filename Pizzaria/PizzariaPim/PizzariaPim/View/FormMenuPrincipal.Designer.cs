@@ -210,7 +210,6 @@
             this.lblNomeFuncionario.Size = new System.Drawing.Size(124, 18);
             this.lblNomeFuncionario.TabIndex = 44;
             this.lblNomeFuncionario.Text = "Nome do funcionario";
-            this.lblNomeFuncionario.Click += new System.EventHandler(this.lblNomeFuncionario_Click);
             // 
             // pictureBox1
             // 
@@ -418,7 +417,6 @@
             this.PainelLogo.Name = "PainelLogo";
             this.PainelLogo.Size = new System.Drawing.Size(1043, 600);
             this.PainelLogo.TabIndex = 5;
-            this.PainelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.PainelLogo_Paint);
             // 
             // panel6
             // 
@@ -498,7 +496,6 @@
             this.btnMinimizaAgenda.TabIndex = 6;
             this.btnMinimizaAgenda.TabStop = false;
             this.btnMinimizaAgenda.Click += new System.EventHandler(this.btnMinimizaAgenda_Click);
-            this.btnMinimizaAgenda.MouseEnter += new System.EventHandler(this.btnMinimizaAgenda_MouseEnter);
             // 
             // btnRestaura
             // 

@@ -135,7 +135,7 @@
             this.label1.ForeColor = System.Drawing.Color.Coral;
             this.label1.Location = new System.Drawing.Point(12, 207);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 19);
+            this.label1.Size = new System.Drawing.Size(121, 19);
             this.label1.TabIndex = 19;
             this.label1.Text = "AQUI VOCÊ COME BEM!";
             // 
@@ -192,7 +192,7 @@
             this.EsqueceuSenha.Location = new System.Drawing.Point(371, 317);
             this.EsqueceuSenha.Name = "EsqueceuSenha";
             this.EsqueceuSenha.Size = new System.Drawing.Size(102, 13);
-            this.EsqueceuSenha.TabIndex = 5;
+            this.EsqueceuSenha.TabIndex = 3;
             this.EsqueceuSenha.TabStop = true;
             this.EsqueceuSenha.Text = "Esqueceu a senha?";
             // 

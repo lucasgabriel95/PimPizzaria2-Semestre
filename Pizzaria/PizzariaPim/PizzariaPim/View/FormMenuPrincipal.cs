@@ -112,9 +112,7 @@ namespace PizzariaPim
         {
             Application.Exit();
         }
-
-      
-
+              
         private void btnPedido_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormSelPedido());
@@ -139,10 +137,6 @@ namespace PizzariaPim
             btnMaximizar.Visible = true;
         }
        
-        private void PainelLogo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btn_Clientes_Click(object sender, EventArgs e)
         {
@@ -150,10 +144,6 @@ namespace PizzariaPim
             form.ShowDialog();
         }
 
-        private void btn_Sabores_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btn_relatorio_Click(object sender, EventArgs e)
         {
@@ -196,14 +186,6 @@ namespace PizzariaPim
             AbrirFormulario(new FormHome());
         }
 
-        private void lblNomeFuncionario_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnMinimizaAgenda_MouseEnter(object sender, EventArgs e)
-        {
-          
-        }
     }
 }

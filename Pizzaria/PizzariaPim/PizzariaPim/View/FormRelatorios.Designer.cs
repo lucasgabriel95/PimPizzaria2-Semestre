@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRelatorios));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,12 +36,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRelatorios));
             this.cbSatisfacao = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgGride = new System.Windows.Forms.DataGridView();
+            this.codigoVendaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorpagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obsVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cadVendaINNERJOINBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bDpizzariaDataSet = new PizzariaPim.BDpizzariaDataSet();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,20 +74,11 @@
             this.lblMenssagem = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cad_Intens_Venda_INNER_JOINTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_Intens_Venda_INNER_JOINTableAdapter();
             this.cad_Venda_INNER_JOINTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_Venda_INNER_JOINTableAdapter();
-            this.codigoVendaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorpagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obsVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadVendaINNERJOINBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).BeginInit();
@@ -85,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cadIntensVendaINNERJOINBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,7 +125,7 @@
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(166, 284);
+            this.btnBuscar.Location = new System.Drawing.Point(141, 284);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 5;
@@ -180,6 +182,103 @@
             this.dgGride.TabIndex = 1;
             this.dgGride.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgGride_CellClick);
             this.dgGride.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgGride_CellContentClick);
+            // 
+            // codigoVendaDataGridViewTextBoxColumn1
+            // 
+            this.codigoVendaDataGridViewTextBoxColumn1.DataPropertyName = "Codigo_Venda";
+            dataGridViewCellStyle1.NullValue = null;
+            this.codigoVendaDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.codigoVendaDataGridViewTextBoxColumn1.HeaderText = "COD.";
+            this.codigoVendaDataGridViewTextBoxColumn1.Name = "codigoVendaDataGridViewTextBoxColumn1";
+            this.codigoVendaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.codigoVendaDataGridViewTextBoxColumn1.Width = 45;
+            // 
+            // valorDataGridViewTextBoxColumn
+            // 
+            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.valorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.valorDataGridViewTextBoxColumn.HeaderText = "VALOR TOTAL";
+            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
+            this.valorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // descontoDataGridViewTextBoxColumn
+            // 
+            this.descontoDataGridViewTextBoxColumn.DataPropertyName = "Desconto";
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.descontoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.descontoDataGridViewTextBoxColumn.HeaderText = "DESCONTO";
+            this.descontoDataGridViewTextBoxColumn.Name = "descontoDataGridViewTextBoxColumn";
+            this.descontoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descontoDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // valorpagoDataGridViewTextBoxColumn
+            // 
+            this.valorpagoDataGridViewTextBoxColumn.DataPropertyName = "Valor_pago";
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.valorpagoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.valorpagoDataGridViewTextBoxColumn.HeaderText = "VALOR PAGO";
+            this.valorpagoDataGridViewTextBoxColumn.Name = "valorpagoDataGridViewTextBoxColumn";
+            this.valorpagoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorpagoDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // codigoClienteDataGridViewTextBoxColumn
+            // 
+            this.codigoClienteDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Cliente";
+            dataGridViewCellStyle5.NullValue = null;
+            this.codigoClienteDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.codigoClienteDataGridViewTextBoxColumn.HeaderText = "COD. CLIENTE";
+            this.codigoClienteDataGridViewTextBoxColumn.Name = "codigoClienteDataGridViewTextBoxColumn";
+            this.codigoClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoClienteDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // nomeClienteDataGridViewTextBoxColumn
+            // 
+            this.nomeClienteDataGridViewTextBoxColumn.DataPropertyName = "nome_Cliente";
+            this.nomeClienteDataGridViewTextBoxColumn.HeaderText = "NOME DO CLIENTE";
+            this.nomeClienteDataGridViewTextBoxColumn.Name = "nomeClienteDataGridViewTextBoxColumn";
+            this.nomeClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeClienteDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // statusVendaDataGridViewTextBoxColumn
+            // 
+            this.statusVendaDataGridViewTextBoxColumn.DataPropertyName = "Status_Venda";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.statusVendaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.statusVendaDataGridViewTextBoxColumn.HeaderText = "STATUS DA VENDA";
+            this.statusVendaDataGridViewTextBoxColumn.Name = "statusVendaDataGridViewTextBoxColumn";
+            this.statusVendaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusVendaDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // dataVendaDataGridViewTextBoxColumn
+            // 
+            this.dataVendaDataGridViewTextBoxColumn.DataPropertyName = "data_Venda";
+            dataGridViewCellStyle7.Format = "g";
+            dataGridViewCellStyle7.NullValue = null;
+            this.dataVendaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataVendaDataGridViewTextBoxColumn.HeaderText = "DATA DA VENDA";
+            this.dataVendaDataGridViewTextBoxColumn.Name = "dataVendaDataGridViewTextBoxColumn";
+            this.dataVendaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataVendaDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // obsVendaDataGridViewTextBoxColumn
+            // 
+            this.obsVendaDataGridViewTextBoxColumn.DataPropertyName = "Obs_Venda";
+            this.obsVendaDataGridViewTextBoxColumn.HeaderText = "OBS DO PEDIDO";
+            this.obsVendaDataGridViewTextBoxColumn.Name = "obsVendaDataGridViewTextBoxColumn";
+            this.obsVendaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // elogioRlecamacaoVendaDataGridViewTextBoxColumn
+            // 
+            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn.DataPropertyName = "ElogioRlecamacao_Venda";
+            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn.HeaderText = "ELOGIOS/RECLAMAÇÕES";
+            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn.Name = "elogioRlecamacaoVendaDataGridViewTextBoxColumn";
+            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn.Width = 180;
             // 
             // cadVendaINNERJOINBindingSource
             // 
@@ -244,7 +343,7 @@
             // codigoProdutoDataGridViewTextBoxColumn
             // 
             this.codigoProdutoDataGridViewTextBoxColumn.DataPropertyName = "codigo_Produto";
-            this.codigoProdutoDataGridViewTextBoxColumn.HeaderText = "CODIGO";
+            this.codigoProdutoDataGridViewTextBoxColumn.HeaderText = "COD.";
             this.codigoProdutoDataGridViewTextBoxColumn.Name = "codigoProdutoDataGridViewTextBoxColumn";
             this.codigoProdutoDataGridViewTextBoxColumn.ReadOnly = true;
             this.codigoProdutoDataGridViewTextBoxColumn.Width = 50;
@@ -388,6 +487,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.btnFechar);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -396,6 +496,18 @@
             this.panel3.Size = new System.Drawing.Size(1278, 28);
             this.panel3.TabIndex = 75;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(113, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 74;
+            this.pictureBox1.TabStop = false;
             // 
             // btnFechar
             // 
@@ -431,102 +543,6 @@
             // 
             this.cad_Venda_INNER_JOINTableAdapter.ClearBeforeFill = true;
             // 
-            // codigoVendaDataGridViewTextBoxColumn1
-            // 
-            this.codigoVendaDataGridViewTextBoxColumn1.DataPropertyName = "Codigo_Venda";
-            dataGridViewCellStyle1.NullValue = null;
-            this.codigoVendaDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.codigoVendaDataGridViewTextBoxColumn1.HeaderText = "CODIGO";
-            this.codigoVendaDataGridViewTextBoxColumn1.Name = "codigoVendaDataGridViewTextBoxColumn1";
-            this.codigoVendaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.codigoVendaDataGridViewTextBoxColumn1.Width = 74;
-            // 
-            // valorDataGridViewTextBoxColumn
-            // 
-            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.valorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.valorDataGridViewTextBoxColumn.HeaderText = "VALOR TOTAL";
-            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
-            this.valorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // descontoDataGridViewTextBoxColumn
-            // 
-            this.descontoDataGridViewTextBoxColumn.DataPropertyName = "Desconto";
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.descontoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.descontoDataGridViewTextBoxColumn.HeaderText = "DESCONTO";
-            this.descontoDataGridViewTextBoxColumn.Name = "descontoDataGridViewTextBoxColumn";
-            this.descontoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descontoDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // valorpagoDataGridViewTextBoxColumn
-            // 
-            this.valorpagoDataGridViewTextBoxColumn.DataPropertyName = "Valor_pago";
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.valorpagoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.valorpagoDataGridViewTextBoxColumn.HeaderText = "VALOR PAGO";
-            this.valorpagoDataGridViewTextBoxColumn.Name = "valorpagoDataGridViewTextBoxColumn";
-            this.valorpagoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorpagoDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // codigoClienteDataGridViewTextBoxColumn
-            // 
-            this.codigoClienteDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Cliente";
-            dataGridViewCellStyle5.NullValue = null;
-            this.codigoClienteDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.codigoClienteDataGridViewTextBoxColumn.HeaderText = "CODIGO CLIENTE";
-            this.codigoClienteDataGridViewTextBoxColumn.Name = "codigoClienteDataGridViewTextBoxColumn";
-            this.codigoClienteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoClienteDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // nomeClienteDataGridViewTextBoxColumn
-            // 
-            this.nomeClienteDataGridViewTextBoxColumn.DataPropertyName = "nome_Cliente";
-            this.nomeClienteDataGridViewTextBoxColumn.HeaderText = "NOME DO CLIENTE";
-            this.nomeClienteDataGridViewTextBoxColumn.Name = "nomeClienteDataGridViewTextBoxColumn";
-            this.nomeClienteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeClienteDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // statusVendaDataGridViewTextBoxColumn
-            // 
-            this.statusVendaDataGridViewTextBoxColumn.DataPropertyName = "Status_Venda";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.statusVendaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.statusVendaDataGridViewTextBoxColumn.HeaderText = "STATUS DA VENDA";
-            this.statusVendaDataGridViewTextBoxColumn.Name = "statusVendaDataGridViewTextBoxColumn";
-            this.statusVendaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusVendaDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // dataVendaDataGridViewTextBoxColumn
-            // 
-            this.dataVendaDataGridViewTextBoxColumn.DataPropertyName = "data_Venda";
-            dataGridViewCellStyle7.Format = "g";
-            dataGridViewCellStyle7.NullValue = null;
-            this.dataVendaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dataVendaDataGridViewTextBoxColumn.HeaderText = "DATA DA VENDA";
-            this.dataVendaDataGridViewTextBoxColumn.Name = "dataVendaDataGridViewTextBoxColumn";
-            this.dataVendaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // obsVendaDataGridViewTextBoxColumn
-            // 
-            this.obsVendaDataGridViewTextBoxColumn.DataPropertyName = "Obs_Venda";
-            this.obsVendaDataGridViewTextBoxColumn.HeaderText = "OBS DO PEDIDO";
-            this.obsVendaDataGridViewTextBoxColumn.Name = "obsVendaDataGridViewTextBoxColumn";
-            this.obsVendaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // elogioRlecamacaoVendaDataGridViewTextBoxColumn
-            // 
-            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn.DataPropertyName = "ElogioRlecamacao_Venda";
-            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn.HeaderText = "ELOGIOS/RECLAMAÇÕES";
-            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn.Name = "elogioRlecamacaoVendaDataGridViewTextBoxColumn";
-            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.elogioRlecamacaoVendaDataGridViewTextBoxColumn.Width = 180;
-            // 
             // FormRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,6 +563,7 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
 
@@ -577,11 +594,6 @@
         private BDpizzariaDataSetTableAdapters.Cad_Intens_Venda_INNER_JOINTableAdapter cad_Intens_Venda_INNER_JOINTableAdapter;
         private System.Windows.Forms.BindingSource cadVendaINNERJOINBindingSource;
         private BDpizzariaDataSetTableAdapters.Cad_Venda_INNER_JOINTableAdapter cad_Venda_INNER_JOINTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoProdutoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeProdutoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorUnitarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoVendaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox btnFechar;
@@ -595,5 +607,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataVendaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn obsVendaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn elogioRlecamacaoVendaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoProdutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeProdutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorUnitarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoVendaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
