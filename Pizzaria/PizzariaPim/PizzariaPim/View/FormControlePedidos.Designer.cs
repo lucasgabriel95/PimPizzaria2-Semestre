@@ -91,7 +91,7 @@
             // 
             this.lblCodigoCliente.AutoSize = true;
             this.lblCodigoCliente.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoCliente.Location = new System.Drawing.Point(423, 15);
+            this.lblCodigoCliente.Location = new System.Drawing.Point(409, 15);
             this.lblCodigoCliente.Name = "lblCodigoCliente";
             this.lblCodigoCliente.Size = new System.Drawing.Size(14, 15);
             this.lblCodigoCliente.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             this.lblNomeCliente.AutoSize = true;
             this.lblNomeCliente.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeCliente.Location = new System.Drawing.Point(444, 15);
+            this.lblNomeCliente.Location = new System.Drawing.Point(438, 15);
             this.lblNomeCliente.Name = "lblNomeCliente";
             this.lblNomeCliente.Size = new System.Drawing.Size(100, 15);
             this.lblNomeCliente.TabIndex = 7;

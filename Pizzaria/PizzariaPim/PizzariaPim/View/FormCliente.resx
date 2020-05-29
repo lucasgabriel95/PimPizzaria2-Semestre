@@ -144,16 +144,19 @@
   </data>
   <data name="btnFechar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAHQSURBVGhD7ZhJSwNBEIXzbzx5EhQ1HoS4xDVEUOPuRRS3q3/Yo7jhvsSvsDoM7TQZE2fSkfrg
-        QdLzeqoeleloSoZhGIZhGEZ8NJvNQVTTt13DvSZRWd8WAwWH0TV6Rzu63DHcYxG9oEdU0eV8odAIukGO
-        rsKw14VwSJgpvZwfFKmjV6mY4A2tqiUz7KmgB7lBgk90oJZ8oVAVPUnVBB9oVy1twbuEkpMQZLoNtRQD
-        BWdRWpg9tQTBs4z8EDLVdbUUC4XTwshH41AtP+BaXCEcNDCDMoVhrYbSQqyppbfQSCjMkVriD+GgoWmU
-        GgZJiD856QqBxkIn0fP3yxZyKOzrtjihQZmMfKmFiHcSPjS6gPwpCJmO52ig2QaSj5SPPDPHaosbGt1A
-        aSEcEuZE7XFCg/3/sNPYJvInIUfuCppA97KQQCZzqtvjgIaCIdQinrjD0MgWSgtRV0sL1kJhztTSG2gg
-        cwgH18oonjAU3kZ+CHmo59USBI+EuZMNCSTMuVqKgYKhEHNqaQveceSHES7Uki8U+h//6lJkAF1KRUUm
-        UdXLv4a9/mRu0ahezhcKuTDyZ3vHIRzcYwxJmCs0pMvFQMH+/4HOMAzDMAzDyECp9AUkcnqUu+2LigAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAKGSURBVHhe7Zy9btRAFEYN4ZVw2ggvj5D3QQLqVFQsBbQ8Xja18UjzIcsar3/GP/fa50hXila7
+        k5lzvIW3cAEAAAAAAAAAAAAAAJBD/aV4H/90i9sz1E9PH96q8u9rVf70eIiw57D3cIZwlviyDyT/VpV1
+        GG8RJF/7dxWhK1/jJUJXvsZFhD75GusR+uRrTEcYkq+xGmFIvsZkhLHyNdYijJWvMRWhfn5+uF3KP6mN
+        3p3Lx5e4xO6EvST3eG+aM4ezxyX2pbl6vic3OTB7fxOmXvntCWeOy9jAW4RDyRdeIhxSvrAe4dDyhdUI
+        p5AvrEU4lXxhJcIp5Yu9I5xavtgrAvJbbB0B+Qm2ipAl/1J+i8sck7UjhPc07792Pz9mDi9frBUB+RMI
+        B06JGJq+CMifwVIRkJ9BbgTkL8DcCM1cb5fyV+L1wUF+h4wIkwf5PWwRAfkDrBkB+SNZIwLyJ7JkBOTP
+        ZIkIyM9k7s8WYV4/H/RXza3IucmKc23fMcMEFpCvIcJUFpSvIcJYVpCvIcIQK8rXEKGPDeRriNAlyp/1
+        q+bMIYLIkR9usjJu1oiQKz8uk3PHfN4IWfI/PX6Ny/yHCBNYWr4gwgjWki+IcIe15QsiJNhKviBCi63l
+        CyI07CVfnDrC3vLFKSNYkS/Cmqn/NWL8RbAmX5wiglX54tARrMsXh4zgRb44VARv8sUhIniVL9xH8P7A
+        proo3s16YFNV/jbzwKZwiLfq8Udik8mxcOV3mfJNCGcNZ44ftcHYCBblizERTMoXQxEsyxf3IpiWL/oi
+        eJAvUhFcyBfdCJ7ki3YEV/KFIniUL8LeXcoX5u4YJxLEez8DAAAAAAAAAAAAAADsTVH8A0axCOA/1GXQ
+        AAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="cadClienteBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
