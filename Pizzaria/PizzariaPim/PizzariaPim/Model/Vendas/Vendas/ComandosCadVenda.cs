@@ -59,7 +59,7 @@ namespace PizzariaPim.Model.Vendas.Vendas
         public void IncluirClienteNull(int codigo)
         {
             cmd.Connection = con.Conectar();
-            cmd.CommandText = "INSERT INTO Cad_Venda VALUES(null,null,null,@codigo,null,null, null,null)";
+            cmd.CommandText = "INSERT INTO Cad_Venda VALUES(null,null,null,null,null,null,@codigo,null,null, null,null)";
             cmd.Parameters.AddWithValue("@codigo", codigo);
             SqlDataReader registro = cmd.ExecuteReader();
             registro.Read();
@@ -107,11 +107,14 @@ namespace PizzariaPim.Model.Vendas.Vendas
         {
 
             cmd.Connection = con.Conectar();
-            cmd.CommandText = "update Cad_Venda set valor=@valor,Desconto=@desconto,Valor_pago=@pago,Codigo_Cliente=@cliente,Status_Venda=@status,Obs_Venda=@obs,ElogioRlecamacao_Venda=@ElogioRlecamacao,data_Venda=@time where Codigo_Venda = @codigo ";
+            cmd.CommandText = "update Cad_Venda set valor=@valor,Desconto=@desconto,Valor_pago=@pago,Recebido=@Recebido,Troco=@Troco,FormaPagamento=@FormaPagamento,Codigo_Cliente=@cliente,Status_Venda=@status,Obs_Venda=@obs,ElogioRlecamacao_Venda=@ElogioRlecamacao,data_Venda=@time where Codigo_Venda = @codigo ";
             cmd.Parameters.AddWithValue("@codigo", dados.Codigo);
             cmd.Parameters.AddWithValue("@valor", dados.Valor);
             cmd.Parameters.AddWithValue("@desconto", dados.Desconto);
             cmd.Parameters.AddWithValue("@pago", dados.ValorPago);
+            cmd.Parameters.AddWithValue("@Recebido", dados.Recebido);
+            cmd.Parameters.AddWithValue("@Troco", dados.Troco);
+            cmd.Parameters.AddWithValue("@FormaPagamento", dados.FormaPagamento);
             cmd.Parameters.AddWithValue("@cliente", dados.CodigoCliente);
             cmd.Parameters.AddWithValue("@status", dados.Status);
             cmd.Parameters.AddWithValue("@obs", dados.obs);

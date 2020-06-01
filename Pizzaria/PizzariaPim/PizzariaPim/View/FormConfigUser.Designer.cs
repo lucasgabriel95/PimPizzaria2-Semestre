@@ -457,7 +457,7 @@
             // boxCPF
             // 
             this.boxCPF.Location = new System.Drawing.Point(17, 63);
-            this.boxCPF.Mask = "999.999.999-99";
+            this.boxCPF.Mask = "999,999,999-99";
             this.boxCPF.Name = "boxCPF";
             this.boxCPF.Size = new System.Drawing.Size(100, 20);
             this.boxCPF.TabIndex = 2;

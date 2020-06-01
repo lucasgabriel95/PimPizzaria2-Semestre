@@ -36,6 +36,7 @@ namespace PizzariaPim
         public double Total;
         public double contadorMais = 0;
         public double ContadorMenos = 500;
+        int VendaRealizada;
         String Categoria;
         public static void Moeda(ref TextBox txt)
         {
@@ -58,6 +59,10 @@ namespace PizzariaPim
             {
 
             }
+        }
+        public void VendaFinalizada (int valor)
+        {
+             this.VendaRealizada = valor; 
         }
 
         public void Maximizar()
@@ -392,29 +397,22 @@ namespace PizzariaPim
                 mensagemConfirmacao = MessageBox.Show("Finalizar Pedido ?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (mensagemConfirmacao.ToString() == "Yes")
                 {
-                    ComandosCadVenda comandos = new ComandosCadVenda();
-                    DadosCadVenda dados = new DadosCadVenda();
-                    dados.Codigo = Convert.ToInt32(lblCodigoVenda.Text);
-                    dados.Valor = Total;
-                    dados.Desconto = Convert.ToDouble(txbDesconto.Text);
-                    dados.ValorPago = Convert.ToDouble(lblSubTotal.Text);
-                    dados.CodigoCliente = Convert.ToInt32(lblCodigoCliente.Text);
-                    dados.Status = "Cozinha";
-                    
-                    dados.obs = txbObs.Text;
-                    dados.DataTime = Convert.ToString(DateTime.Now.ToString("yyyy/MM/dd HH:mm:dd"));
-                    ControleVendas controle = new ControleVendas();
-                    controle.Alterar(dados);
-                    MessageBox.Show("Pedido Realizado Com Sucesso !!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimparVenda();       
-                    comandos.UpDateInicializacao();
-                    Inicializacao();
+                    formPagamento form = new formPagamento();
+                    form.PassarDadosVenda(Convert.ToInt32(lblCodigoVenda.Text), Total,Convert.ToInt32(lblCodigoCliente.Text),txbObs.Text);                    
+                    form.ShowDialog();
 
+                    if (form.VendaRealizada == 2)
+                    {
+                        LimparVenda();
+                        Inicializacao();
+                    }
+                    
                 }
             }
             else
             {
                 MessageBox.Show("Selecione 1 CLIENTE e 1 PRODUTO !! ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                
             }    
         }
 
@@ -511,6 +509,6 @@ namespace PizzariaPim
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        }        
     }
 }

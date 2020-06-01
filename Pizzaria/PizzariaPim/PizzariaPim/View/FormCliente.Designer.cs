@@ -34,13 +34,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.boxCPF = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.boxCodigo = new System.Windows.Forms.TextBox();
             this.btn_Incluir = new System.Windows.Forms.Button();
             this.boxNomeCompleto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.boxTelefone = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
@@ -64,7 +62,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.boxLogadouro = new System.Windows.Forms.TextBox();
-            this.boxCEP = new System.Windows.Forms.TextBox();
             this.boxNumero = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -72,6 +69,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.boxCPF = new System.Windows.Forms.MaskedTextBox();
+            this.boxTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.boxCEP = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -104,15 +104,15 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.boxTelefone);
+            this.panel2.Controls.Add(this.boxCPF);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.boxCPF);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.boxCodigo);
             this.panel2.Controls.Add(this.btn_Incluir);
             this.panel2.Controls.Add(this.boxNomeCompleto);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.boxTelefone);
             this.panel2.Location = new System.Drawing.Point(7, 30);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(727, 180);
@@ -137,15 +137,6 @@
             this.label1.Size = new System.Drawing.Size(27, 15);
             this.label1.TabIndex = 10;
             this.label1.Text = "CPF";
-            // 
-            // boxCPF
-            // 
-            this.boxCPF.Location = new System.Drawing.Point(12, 58);
-            this.boxCPF.Name = "boxCPF";
-            this.boxCPF.Size = new System.Drawing.Size(167, 20);
-            this.boxCPF.TabIndex = 0;
-            this.boxCPF.TextChanged += new System.EventHandler(this.boxCPF_TextChanged);
-            this.boxCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxCPF_KeyPress);
             // 
             // label2
             // 
@@ -174,7 +165,7 @@
             this.btn_Incluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Incluir.ForeColor = System.Drawing.Color.White;
             this.btn_Incluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Incluir.Location = new System.Drawing.Point(191, 56);
+            this.btn_Incluir.Location = new System.Drawing.Point(118, 63);
             this.btn_Incluir.Name = "btn_Incluir";
             this.btn_Incluir.Size = new System.Drawing.Size(75, 23);
             this.btn_Incluir.TabIndex = 41;
@@ -199,14 +190,6 @@
             this.label6.Size = new System.Drawing.Size(62, 15);
             this.label6.TabIndex = 15;
             this.label6.Text = "TELEFONE";
-            // 
-            // boxTelefone
-            // 
-            this.boxTelefone.Location = new System.Drawing.Point(12, 141);
-            this.boxTelefone.Name = "boxTelefone";
-            this.boxTelefone.Size = new System.Drawing.Size(167, 20);
-            this.boxTelefone.TabIndex = 2;
-            this.boxTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxTelefone_KeyPress);
             // 
             // panel3
             // 
@@ -406,10 +389,10 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.boxCEP);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.boxLogadouro);
-            this.panel4.Controls.Add(this.boxCEP);
             this.panel4.Controls.Add(this.boxNumero);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label12);
@@ -425,7 +408,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(182, 6);
+            this.label8.Location = new System.Drawing.Point(113, 5);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 15);
             this.label8.TabIndex = 22;
@@ -443,22 +426,14 @@
             // 
             // boxLogadouro
             // 
-            this.boxLogadouro.Location = new System.Drawing.Point(182, 21);
+            this.boxLogadouro.Location = new System.Drawing.Point(113, 20);
             this.boxLogadouro.Name = "boxLogadouro";
             this.boxLogadouro.Size = new System.Drawing.Size(167, 20);
             this.boxLogadouro.TabIndex = 6;
             // 
-            // boxCEP
-            // 
-            this.boxCEP.Location = new System.Drawing.Point(12, 20);
-            this.boxCEP.Name = "boxCEP";
-            this.boxCEP.Size = new System.Drawing.Size(167, 20);
-            this.boxCEP.TabIndex = 5;
-            this.boxCEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxCEP_KeyPress);
-            // 
             // boxNumero
             // 
-            this.boxNumero.Location = new System.Drawing.Point(368, 20);
+            this.boxNumero.Location = new System.Drawing.Point(286, 20);
             this.boxNumero.Name = "boxNumero";
             this.boxNumero.Size = new System.Drawing.Size(73, 20);
             this.boxNumero.TabIndex = 7;
@@ -468,7 +443,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(368, 5);
+            this.label9.Location = new System.Drawing.Point(285, 4);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(21, 15);
             this.label9.TabIndex = 24;
@@ -478,7 +453,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(182, 49);
+            this.label12.Location = new System.Drawing.Point(189, 49);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 15);
             this.label12.TabIndex = 33;
@@ -503,7 +478,7 @@
             // 
             // boxComplemento
             // 
-            this.boxComplemento.Location = new System.Drawing.Point(182, 64);
+            this.boxComplemento.Location = new System.Drawing.Point(192, 64);
             this.boxComplemento.Name = "boxComplemento";
             this.boxComplemento.Size = new System.Drawing.Size(167, 20);
             this.boxComplemento.TabIndex = 9;
@@ -518,6 +493,30 @@
             this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 47;
             this.label5.Text = "ENDEREÇO";
+            // 
+            // boxCPF
+            // 
+            this.boxCPF.Location = new System.Drawing.Point(12, 63);
+            this.boxCPF.Mask = "999,999,999-99";
+            this.boxCPF.Name = "boxCPF";
+            this.boxCPF.Size = new System.Drawing.Size(100, 20);
+            this.boxCPF.TabIndex = 44;
+            // 
+            // boxTelefone
+            // 
+            this.boxTelefone.Location = new System.Drawing.Point(12, 143);
+            this.boxTelefone.Mask = "(99)99999-9999";
+            this.boxTelefone.Name = "boxTelefone";
+            this.boxTelefone.Size = new System.Drawing.Size(100, 20);
+            this.boxTelefone.TabIndex = 45;
+            // 
+            // boxCEP
+            // 
+            this.boxCEP.Location = new System.Drawing.Point(12, 20);
+            this.boxCEP.Mask = "99999-999";
+            this.boxCEP.Name = "boxCEP";
+            this.boxCEP.Size = new System.Drawing.Size(95, 20);
+            this.boxCEP.TabIndex = 46;
             // 
             // FormCliente
             // 
@@ -554,7 +553,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox boxLogadouro;
-        private System.Windows.Forms.TextBox boxCEP;
         private System.Windows.Forms.TextBox boxNumero;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
@@ -568,7 +566,6 @@
         private System.Windows.Forms.Button btn_Incluir;
         private System.Windows.Forms.TextBox boxNomeCompleto;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox boxTelefone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.Button btn_Cancelar;
@@ -585,11 +582,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bairroClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn complementeClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox boxCPF;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox boxCPF;
+        private System.Windows.Forms.MaskedTextBox boxTelefone;
+        private System.Windows.Forms.MaskedTextBox boxCEP;
     }
 }

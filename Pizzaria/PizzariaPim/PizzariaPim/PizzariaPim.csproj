@@ -80,12 +80,6 @@
     <Compile Include="Model\Relatorios\ComandosRelatorios.cs" />
     <Compile Include="Model\Vendas\Vendas\ComandosCadVenda.cs" />
     <Compile Include="Model\Vendas\Vendas\DadosCadVenda.cs" />
-    <Compile Include="View\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\FormCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +115,12 @@
     </Compile>
     <Compile Include="View\FormConfigUser.Designer.cs">
       <DependentUpon>FormConfigUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\formPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\formPagamento.Designer.cs">
+      <DependentUpon>formPagamento.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormProdutos.cs">
       <SubType>Form</SubType>
@@ -162,9 +162,6 @@
     <Compile Include="View\FormSelPedido.Designer.cs">
       <DependentUpon>FormSelPedido.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormConfigUser.resx">
       <DependentUpon>FormConfigUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\formPagamento.resx">
+      <DependentUpon>formPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormProdutos.resx">
       <DependentUpon>FormProdutos.cs</DependentUpon>

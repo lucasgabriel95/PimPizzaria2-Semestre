@@ -37,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRelatorios));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbSatisfacao = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -59,11 +60,6 @@
             this.Calendario = new System.Windows.Forms.MonthCalendar();
             this.label3 = new System.Windows.Forms.Label();
             this.dgGrideItens = new System.Windows.Forms.DataGridView();
-            this.codigoProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cadIntensVendaINNERJOINBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -79,6 +75,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cad_Intens_Venda_INNER_JOINTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_Intens_Venda_INNER_JOINTableAdapter();
             this.cad_Venda_INNER_JOINTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_Venda_INNER_JOINTableAdapter();
+            this.codigoProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadVendaINNERJOINBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).BeginInit();
@@ -340,45 +341,6 @@
             this.dgGrideItens.Size = new System.Drawing.Size(285, 269);
             this.dgGrideItens.TabIndex = 9;
             // 
-            // codigoProdutoDataGridViewTextBoxColumn
-            // 
-            this.codigoProdutoDataGridViewTextBoxColumn.DataPropertyName = "codigo_Produto";
-            this.codigoProdutoDataGridViewTextBoxColumn.HeaderText = "COD.";
-            this.codigoProdutoDataGridViewTextBoxColumn.Name = "codigoProdutoDataGridViewTextBoxColumn";
-            this.codigoProdutoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoProdutoDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nomeProdutoDataGridViewTextBoxColumn
-            // 
-            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "Nome_Produto";
-            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "PRODUTO";
-            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
-            this.nomeProdutoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantidadeDataGridViewTextBoxColumn
-            // 
-            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "QTDE";
-            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
-            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantidadeDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // valorUnitarioDataGridViewTextBoxColumn
-            // 
-            this.valorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "Valor_Unitario";
-            this.valorUnitarioDataGridViewTextBoxColumn.HeaderText = "VALOR ";
-            this.valorUnitarioDataGridViewTextBoxColumn.Name = "valorUnitarioDataGridViewTextBoxColumn";
-            this.valorUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorUnitarioDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // codigoVendaDataGridViewTextBoxColumn
-            // 
-            this.codigoVendaDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Venda";
-            this.codigoVendaDataGridViewTextBoxColumn.HeaderText = "CODIGO VENDA";
-            this.codigoVendaDataGridViewTextBoxColumn.Name = "codigoVendaDataGridViewTextBoxColumn";
-            this.codigoVendaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoVendaDataGridViewTextBoxColumn.Visible = false;
-            // 
             // cadIntensVendaINNERJOINBindingSource
             // 
             this.cadIntensVendaINNERJOINBindingSource.DataMember = "Cad_Intens_Venda INNER JOIN";
@@ -543,6 +505,48 @@
             // 
             this.cad_Venda_INNER_JOINTableAdapter.ClearBeforeFill = true;
             // 
+            // codigoProdutoDataGridViewTextBoxColumn
+            // 
+            this.codigoProdutoDataGridViewTextBoxColumn.DataPropertyName = "codigo_Produto";
+            this.codigoProdutoDataGridViewTextBoxColumn.HeaderText = "COD.";
+            this.codigoProdutoDataGridViewTextBoxColumn.Name = "codigoProdutoDataGridViewTextBoxColumn";
+            this.codigoProdutoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoProdutoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nomeProdutoDataGridViewTextBoxColumn
+            // 
+            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "Nome_Produto";
+            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "PRODUTO";
+            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
+            this.nomeProdutoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantidadeDataGridViewTextBoxColumn
+            // 
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "QTDE";
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // valorUnitarioDataGridViewTextBoxColumn
+            // 
+            this.valorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "Valor_Unitario";
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.valorUnitarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.valorUnitarioDataGridViewTextBoxColumn.HeaderText = "VALOR ";
+            this.valorUnitarioDataGridViewTextBoxColumn.Name = "valorUnitarioDataGridViewTextBoxColumn";
+            this.valorUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorUnitarioDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // codigoVendaDataGridViewTextBoxColumn
+            // 
+            this.codigoVendaDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Venda";
+            this.codigoVendaDataGridViewTextBoxColumn.HeaderText = "CODIGO VENDA";
+            this.codigoVendaDataGridViewTextBoxColumn.Name = "codigoVendaDataGridViewTextBoxColumn";
+            this.codigoVendaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoVendaDataGridViewTextBoxColumn.Visible = false;
+            // 
             // FormRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,11 +611,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataVendaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn obsVendaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn elogioRlecamacaoVendaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorUnitarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoVendaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
