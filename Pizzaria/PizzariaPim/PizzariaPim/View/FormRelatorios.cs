@@ -123,11 +123,20 @@ namespace PizzariaPim.View
 
         }
 
-        private void Calendario_DateChanged(object sender, DateRangeEventArgs e)
+        private void Caledario1_ValueChanged(object sender, EventArgs e)
         {
-            Data1 = Calendario.SelectionStart.ToString("yyyy/MM/dd HH:mm:dd");
-            Data2 = Calendario.SelectionEnd.ToString("yyyy/MM/dd HH:mm:dd");
+            Data1 = Calendario1.Value.ToString("yyyy/MM/dd HH:mm:dd");
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
+
+        private void Calendario2_ValueChanged(object sender, EventArgs e)
+        {
+            Data2 = Calendario2.Value.ToString("yyyy/MM/dd HH:mm:dd");
+        }       
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {

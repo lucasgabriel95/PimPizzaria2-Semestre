@@ -18,7 +18,7 @@ namespace PizzariaPim.Model.Bebidas
             this.Categoria = 0;
         }
         public DadosProdutos(int codigo,String nome,String descricao,int Categoria,  
-            int quantidade,double valor) 
+            int quantidade,decimal valor) 
         {
             this.Codigo = codigo;
             this.Nome = nome;
@@ -38,8 +38,8 @@ namespace PizzariaPim.Model.Bebidas
         public int Categoria { get {return this.Categoria_Produtos; } set {this.Categoria_Produtos = value; } }
         int quanitade_Bebidas;
         public int Quantidade { get { return this.quanitade_Bebidas; } set {this.quanitade_Bebidas = value; } }
-        Double valor_Bebidas;
-        public Double Valor { get {return this.valor_Bebidas; } set {this.valor_Bebidas = value; } }
+        decimal valor_Bebidas;
+        public decimal Valor { get {return this.valor_Bebidas; } set {this.valor_Bebidas = value; } }
 
 
 

@@ -75,7 +75,7 @@ namespace PizzariaPim.Model.Bebidas
                 dados.Codigo = Convert.ToInt32(registro["Codigo_Produto"]);
                 dados.Nome= Convert.ToString(registro["Nome_Produto"]);
                 dados.Descricao = Convert.ToString(registro["Descricao_Produto"]);
-                dados.Valor = Convert.ToDouble(registro["Valor_Produto"]);
+                dados.Valor = Convert.ToDecimal(registro["Valor_Produto"]);
                 dados.Quantidade = Convert.ToInt32(registro["quantidade_sabor"]);
                 dados.Categoria = Convert.ToInt32(registro["codigo_Categoria"]);
             }

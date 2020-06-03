@@ -19,7 +19,38 @@ namespace PizzariaPim.View
     {
         public FormSatisfacao()
         {
-            InitializeComponent();            
+            InitializeComponent();
+           
+            
+        }
+        int codigo;
+        public void CarregarVenda (int codigo)
+        {
+            this.codigo = codigo;
+            Consultar();
+        }
+        public void Consultar ()
+        {
+            txbCodigoCliente.Text = codigo.ToString();
+            if (txbCodigoCliente.Text != "")
+            {
+                
+                ComandosElogioReclamacoes comandos = new ComandosElogioReclamacoes();
+                comandos.ConsultaUmtimaCompraCliente(Convert.ToInt32(txbCodigoCliente.Text));
+
+                ComandosClientes clientes = new ComandosClientes();
+                DadosClientes dados = clientes.carregar(Convert.ToInt32(txbCodigoCliente.Text));
+
+                lblNomeCliente.Text = dados.nome;
+                lblCodigoVenda.Text = comandos.CodigoVenda;
+                lblValorVenda.Text = comandos.valor;
+
+
+            }
+            else
+            {
+                lblErro.Text = "O Campo codigo do cliente não pode ficar vazio!!";
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -28,24 +59,7 @@ namespace PizzariaPim.View
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (txbCodigoCliente.Text != "")
-            {        
-                    ComandosElogioReclamacoes comandos = new ComandosElogioReclamacoes();
-                    comandos.ConsultaUmtimaCompraCliente(Convert.ToInt32(txbCodigoCliente.Text));
-
-                    ComandosClientes clientes = new ComandosClientes();
-                    DadosClientes dados = clientes.carregar(Convert.ToInt32(txbCodigoCliente.Text));
-
-                    lblNomeCliente.Text = dados.nome;
-                    lblCodigoVenda.Text = comandos.CodigoVenda;
-                    lblValorVenda.Text = comandos.valor;
-                    
-                
-            }
-            else
-            {
-                lblErro.Text = "O Campo codigo do cliente não pode ficar vazio!!";
-            }
+            Consultar();
         }
 
         private void lblValorVenda_TextChanged(object sender, EventArgs e)
@@ -115,6 +129,11 @@ namespace PizzariaPim.View
             {
                 e.Handled = true;
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }    
 }

@@ -34,7 +34,7 @@ namespace PizzariaPim.View
 
                     n = n.Substring(1, n.Length - 1);
                 v = Convert.ToDouble(n) / 100;
-                txt.Text = String.Format("{0:N}", v);
+                txt.Text = String.Format("{2:N}", v);
                 txt.SelectionStart = txt.Text.Length;
             }
             catch (Exception)
@@ -55,7 +55,7 @@ namespace PizzariaPim.View
             txbNome.Clear();
             txbDescricao.Clear();
             txbQuantidade.Clear();
-            txbValor.Clear();
+            txbValor.Text = "0,00";
             cbCategoria.Text = "";
         }
         String Categoria;
@@ -153,7 +153,7 @@ namespace PizzariaPim.View
                         dados.Nome = txbNome.Text;
                         dados.Descricao = txbDescricao.Text;
                         dados.Quantidade = Convert.ToInt32(txbQuantidade.Text);
-                        dados.Valor = Convert.ToDouble(txbValor.Text);
+                        dados.Valor = Convert.ToDecimal(txbValor.Text);
                         if (dados.Categoria == 2)
                         {
                             cbCategoria.Text = "Pizza";
@@ -261,6 +261,8 @@ namespace PizzariaPim.View
         private void txbValor_TextChanged(object sender, EventArgs e)
         {
             Moeda(ref txbValor);
+            txbValor.Text = String.Format("{0:#,##0.00}", double.Parse(txbValor.Text));
+
         }
 
         private void txbNome_TextChanged(object sender, EventArgs e)

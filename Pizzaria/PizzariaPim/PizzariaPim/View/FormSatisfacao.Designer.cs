@@ -39,11 +39,14 @@
             this.lblValorVenda = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblErro = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -111,30 +114,30 @@
             // lblCodigoVenda
             // 
             this.lblCodigoVenda.AutoSize = true;
-            this.lblCodigoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoVenda.Location = new System.Drawing.Point(172, 52);
+            this.lblCodigoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoVenda.Location = new System.Drawing.Point(245, 49);
             this.lblCodigoVenda.Name = "lblCodigoVenda";
-            this.lblCodigoVenda.Size = new System.Drawing.Size(129, 16);
+            this.lblCodigoVenda.Size = new System.Drawing.Size(13, 13);
             this.lblCodigoVenda.TabIndex = 5;
-            this.lblCodigoVenda.Text = "Codigo da Venda";
+            this.lblCodigoVenda.Text = "0";
             // 
             // lblNomeCliente
             // 
             this.lblNomeCliente.AutoSize = true;
-            this.lblNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeCliente.Location = new System.Drawing.Point(172, 77);
+            this.lblNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeCliente.Location = new System.Drawing.Point(243, 69);
             this.lblNomeCliente.Name = "lblNomeCliente";
-            this.lblNomeCliente.Size = new System.Drawing.Size(123, 16);
+            this.lblNomeCliente.Size = new System.Drawing.Size(0, 13);
             this.lblNomeCliente.TabIndex = 6;
-            this.lblNomeCliente.Text = "Nome do Cliente";
             // 
             // lblValorVenda
             // 
             this.lblValorVenda.AutoSize = true;
-            this.lblValorVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorVenda.Location = new System.Drawing.Point(172, 100);
+            this.lblValorVenda.BackColor = System.Drawing.Color.Transparent;
+            this.lblValorVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorVenda.Location = new System.Drawing.Point(256, 89);
             this.lblValorVenda.Name = "lblValorVenda";
-            this.lblValorVenda.Size = new System.Drawing.Size(36, 16);
+            this.lblValorVenda.Size = new System.Drawing.Size(28, 13);
             this.lblValorVenda.TabIndex = 7;
             this.lblValorVenda.Text = "0,00";
             this.lblValorVenda.TextChanged += new System.EventHandler(this.lblValorVenda_TextChanged);
@@ -143,6 +146,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblErro);
@@ -165,14 +171,27 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnFechar);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(402, 28);
             this.panel2.TabIndex = 11;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(373, 0);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(22, 22);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnFechar.TabIndex = 73;
+            this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // label3
             // 
@@ -186,19 +205,6 @@
             this.label3.TabIndex = 72;
             this.label3.Text = "SATISFAÇÃO";
             this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label3_MouseDown);
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
-            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(375, 3);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(18, 18);
-            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnFechar.TabIndex = 4;
-            this.btnFechar.TabStop = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // label2
             // 
@@ -229,6 +235,37 @@
             this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Codigo do Cliente";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(147, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Codigo da Venda:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(149, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Nome do Cliente:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(156, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Valor da venda: R$";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // FormSatisfacao
             // 
@@ -264,7 +301,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox btnFechar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

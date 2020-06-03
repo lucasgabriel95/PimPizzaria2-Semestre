@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCliente));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.boxTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.boxCPF = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,6 +61,7 @@
             this.cadClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bDpizzariaDataSet = new PizzariaPim.BDpizzariaDataSet();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.boxCEP = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.boxLogadouro = new System.Windows.Forms.TextBox();
@@ -69,9 +72,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.boxComplemento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.boxCPF = new System.Windows.Forms.MaskedTextBox();
-            this.boxTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.boxCEP = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -118,6 +118,22 @@
             this.panel2.Size = new System.Drawing.Size(727, 180);
             this.panel2.TabIndex = 48;
             // 
+            // boxTelefone
+            // 
+            this.boxTelefone.Location = new System.Drawing.Point(12, 143);
+            this.boxTelefone.Mask = "(99)99999-9999";
+            this.boxTelefone.Name = "boxTelefone";
+            this.boxTelefone.Size = new System.Drawing.Size(100, 20);
+            this.boxTelefone.TabIndex = 4;
+            // 
+            // boxCPF
+            // 
+            this.boxCPF.Location = new System.Drawing.Point(12, 63);
+            this.boxCPF.Mask = "999,999,999-99";
+            this.boxCPF.Name = "boxCPF";
+            this.boxCPF.Size = new System.Drawing.Size(100, 20);
+            this.boxCPF.TabIndex = 2;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -154,7 +170,7 @@
             this.boxCodigo.Location = new System.Drawing.Point(12, 13);
             this.boxCodigo.Name = "boxCodigo";
             this.boxCodigo.Size = new System.Drawing.Size(26, 20);
-            this.boxCodigo.TabIndex = 42;
+            this.boxCodigo.TabIndex = 0;
             // 
             // btn_Incluir
             // 
@@ -168,7 +184,7 @@
             this.btn_Incluir.Location = new System.Drawing.Point(118, 63);
             this.btn_Incluir.Name = "btn_Incluir";
             this.btn_Incluir.Size = new System.Drawing.Size(75, 23);
-            this.btn_Incluir.TabIndex = 41;
+            this.btn_Incluir.TabIndex = 1;
             this.btn_Incluir.Text = "Incluir";
             this.btn_Incluir.UseVisualStyleBackColor = false;
             this.btn_Incluir.Click += new System.EventHandler(this.btn_Incluir_Click_1);
@@ -178,7 +194,7 @@
             this.boxNomeCompleto.Location = new System.Drawing.Point(12, 102);
             this.boxNomeCompleto.Name = "boxNomeCompleto";
             this.boxNomeCompleto.Size = new System.Drawing.Size(294, 20);
-            this.boxNomeCompleto.TabIndex = 1;
+            this.boxNomeCompleto.TabIndex = 3;
             this.boxNomeCompleto.TextChanged += new System.EventHandler(this.boxNomeCompleto_TextChanged);
             // 
             // label6
@@ -250,7 +266,7 @@
             this.btn_Excluir.Location = new System.Drawing.Point(411, 499);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn_Excluir.TabIndex = 53;
+            this.btn_Excluir.TabIndex = 12;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = false;
             this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
@@ -266,7 +282,7 @@
             this.btn_Cancelar.Location = new System.Drawing.Point(330, 499);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Cancelar.TabIndex = 52;
+            this.btn_Cancelar.TabIndex = 11;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
@@ -282,7 +298,7 @@
             this.btn_Salvar.Location = new System.Drawing.Point(249, 499);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Salvar.TabIndex = 51;
+            this.btn_Salvar.TabIndex = 10;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = false;
             this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
@@ -404,6 +420,14 @@
             this.panel4.Size = new System.Drawing.Size(727, 100);
             this.panel4.TabIndex = 49;
             // 
+            // boxCEP
+            // 
+            this.boxCEP.Location = new System.Drawing.Point(12, 20);
+            this.boxCEP.Mask = "99999-999";
+            this.boxCEP.Name = "boxCEP";
+            this.boxCEP.Size = new System.Drawing.Size(95, 20);
+            this.boxCEP.TabIndex = 5;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -493,30 +517,6 @@
             this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 47;
             this.label5.Text = "ENDEREÇO";
-            // 
-            // boxCPF
-            // 
-            this.boxCPF.Location = new System.Drawing.Point(12, 63);
-            this.boxCPF.Mask = "999,999,999-99";
-            this.boxCPF.Name = "boxCPF";
-            this.boxCPF.Size = new System.Drawing.Size(100, 20);
-            this.boxCPF.TabIndex = 44;
-            // 
-            // boxTelefone
-            // 
-            this.boxTelefone.Location = new System.Drawing.Point(12, 143);
-            this.boxTelefone.Mask = "(99)99999-9999";
-            this.boxTelefone.Name = "boxTelefone";
-            this.boxTelefone.Size = new System.Drawing.Size(100, 20);
-            this.boxTelefone.TabIndex = 45;
-            // 
-            // boxCEP
-            // 
-            this.boxCEP.Location = new System.Drawing.Point(12, 20);
-            this.boxCEP.Mask = "99999-999";
-            this.boxCEP.Name = "boxCEP";
-            this.boxCEP.Size = new System.Drawing.Size(95, 20);
-            this.boxCEP.TabIndex = 46;
             // 
             // FormCliente
             // 

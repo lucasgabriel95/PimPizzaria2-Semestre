@@ -82,8 +82,7 @@ namespace PizzariaPim
         public void LimparVenda()
         {
             lblNomeDocliente.Text = "";
-            lblCodigoCliente.Text = "0";
-            txbDesconto.Text = "0";
+            lblCodigoCliente.Text = "0";           
             dgGrideItens.Rows.Clear();
             lblSubTotal.Text = "0";
             Subtotal = 0;
@@ -353,41 +352,13 @@ namespace PizzariaPim
                 mensagemConfirmacao = MessageBox.Show("A ultima Compra do "+lblNomeDocliente.Text+" foi no dia "+ comandos.DataMaxima +", deseja cadastrar um elogio ou reclamação ?","AVISO",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                 if (mensagemConfirmacao.ToString() == "Yes")
                 {                                     
-                    FormSatisfacao form = new FormSatisfacao();   
+                    FormSatisfacao form = new FormSatisfacao();
+                    form.CarregarVenda(Convert.ToInt32(lblCodigoCliente.Text));
                     form.ShowDialog();                    
                 }
             }
-        }
-        private void txbDesconto_TextChanged(object sender, EventArgs e)
-        {
-            Moeda(ref txbDesconto);
-        }
-        int V = 1;       
-
-        private void btnIncluirDesconto_Click(object sender, EventArgs e)
-        {
-            if (V == 1)
-            {
-                if (txbDesconto.Text != "")
-                {
-                    if (Subtotal < 0)
-                    {
-                        Subtotal = 0;
-                    }
-                    Subtotal -= Convert.ToDouble(txbDesconto.Text);
-                    V = 0;
-                    btnIncluirDesconto.Text = "DESFAZER";                    
-                }
-            }
-            else if (V == 0)
-            {
-                Subtotal = Total;
-                btnIncluirDesconto.Text = "INCLUIR";
-                V = 1;
-            }
-            lblSubTotal.Text = Subtotal.ToString();
-        }
-       
+        }      
+        
         private void btnFinalizarPedido_Click_1(object sender, EventArgs e)
         {
             ControleIncluirNull = 1;
@@ -428,8 +399,7 @@ namespace PizzariaPim
                     ComandosCadVenda comandos = new ComandosCadVenda();
                     DadosCadVenda dados = new DadosCadVenda();
                     dados.Codigo = Convert.ToInt32(lblCodigoVenda.Text);
-                    dados.Valor = Total;
-                    dados.Desconto = Convert.ToDouble(txbDesconto.Text);
+                    dados.Valor = Total;                  
                     dados.ValorPago = Convert.ToDouble(lblSubTotal.Text);
                     dados.CodigoCliente = Convert.ToInt32(lblCodigoCliente.Text);
                     dados.Status = "Cancelado";
@@ -460,8 +430,7 @@ namespace PizzariaPim
                     ComandosCadVenda comandos = new ComandosCadVenda();
                     DadosCadVenda dados = new DadosCadVenda();
                     dados.Codigo = Convert.ToInt32(lblCodigoVenda.Text);
-                    dados.Valor = Total;
-                    dados.Desconto = Convert.ToDouble(txbDesconto.Text);
+                    dados.Valor = Total;                    
                     dados.ValorPago = Convert.ToDouble(lblSubTotal.Text);
                     dados.CodigoCliente = Convert.ToInt32(lblCodigoCliente.Text);
                     dados.Status = "Cancelado";
@@ -509,6 +478,12 @@ namespace PizzariaPim
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }        
+        }
+
+        private void btnConsultarPedido_Click(object sender, EventArgs e)
+        {
+            FormControlePedidos form = new FormControlePedidos();
+            form.ShowDialog();
+        }
     }
 }

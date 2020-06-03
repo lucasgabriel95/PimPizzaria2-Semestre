@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPedido));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.txbObs = new System.Windows.Forms.TextBox();
-            this.btnIncluirDesconto = new System.Windows.Forms.Button();
+            this.btnConsultarPedido = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.txbDesconto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.lblNomeDocliente = new System.Windows.Forms.Label();
             this.lblCodigoCliente = new System.Windows.Forms.Label();
@@ -151,9 +150,8 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.txbObs);
-            this.panel5.Controls.Add(this.btnIncluirDesconto);
+            this.panel5.Controls.Add(this.btnConsultarPedido);
             this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.txbDesconto);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.lblNomeDocliente);
             this.panel5.Controls.Add(this.lblCodigoCliente);
@@ -189,42 +187,31 @@
             this.txbObs.Size = new System.Drawing.Size(338, 63);
             this.txbObs.TabIndex = 65;
             // 
-            // btnIncluirDesconto
+            // btnConsultarPedido
             // 
-            this.btnIncluirDesconto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnIncluirDesconto.BackColor = System.Drawing.Color.Black;
-            this.btnIncluirDesconto.FlatAppearance.BorderSize = 0;
-            this.btnIncluirDesconto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIncluirDesconto.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirDesconto.Location = new System.Drawing.Point(114, 542);
-            this.btnIncluirDesconto.Name = "btnIncluirDesconto";
-            this.btnIncluirDesconto.Size = new System.Drawing.Size(72, 23);
-            this.btnIncluirDesconto.TabIndex = 63;
-            this.btnIncluirDesconto.Text = "INCLUIR";
-            this.btnIncluirDesconto.UseVisualStyleBackColor = false;
-            this.btnIncluirDesconto.Click += new System.EventHandler(this.btnIncluirDesconto_Click);
+            this.btnConsultarPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnConsultarPedido.BackColor = System.Drawing.Color.Black;
+            this.btnConsultarPedido.FlatAppearance.BorderSize = 0;
+            this.btnConsultarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarPedido.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarPedido.Location = new System.Drawing.Point(12, 544);
+            this.btnConsultarPedido.Name = "btnConsultarPedido";
+            this.btnConsultarPedido.Size = new System.Drawing.Size(72, 23);
+            this.btnConsultarPedido.TabIndex = 63;
+            this.btnConsultarPedido.Text = "Consultar";
+            this.btnConsultarPedido.UseVisualStyleBackColor = false;
+            this.btnConsultarPedido.Click += new System.EventHandler(this.btnConsultarPedido_Click);
             // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(5, 528);
+            this.label12.Location = new System.Drawing.Point(9, 526);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 15);
+            this.label12.Size = new System.Drawing.Size(105, 15);
             this.label12.TabIndex = 62;
-            this.label12.Text = "DESCONTO";
-            // 
-            // txbDesconto
-            // 
-            this.txbDesconto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txbDesconto.Location = new System.Drawing.Point(8, 544);
-            this.txbDesconto.Name = "txbDesconto";
-            this.txbDesconto.Size = new System.Drawing.Size(100, 20);
-            this.txbDesconto.TabIndex = 61;
-            this.txbDesconto.Text = "0";
-            this.txbDesconto.TextChanged += new System.EventHandler(this.txbDesconto_TextChanged);
-            this.txbDesconto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbDesconto_KeyPress);
+            this.label12.Text = "Consultar Pedidos";
             // 
             // label11
             // 
@@ -370,9 +357,9 @@
             // 
             // Column4
             // 
-            dataGridViewCellStyle19.Format = "N2";
-            dataGridViewCellStyle19.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column4.HeaderText = "VALOR UNITÁRIO";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -380,8 +367,8 @@
             // 
             // Column5
             // 
-            dataGridViewCellStyle20.NullValue = null;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column5.HeaderText = "VALOR TOTAL";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -590,16 +577,16 @@
             this.quantidadesaborDataGridViewTextBoxColumn,
             this.codigoCategoriaDataGridViewTextBoxColumn});
             this.dgGride.DataSource = this.cadProdutosBindingSource;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.Format = "N2";
-            dataGridViewCellStyle24.NullValue = null;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgGride.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgGride.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgGride.GridColor = System.Drawing.Color.LightGray;
             this.dgGride.Location = new System.Drawing.Point(122, 197);
             this.dgGride.Name = "dgGride";
@@ -611,9 +598,9 @@
             // codigoProdutoDataGridViewTextBoxColumn
             // 
             this.codigoProdutoDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Produto";
-            dataGridViewCellStyle21.Format = "N0";
-            dataGridViewCellStyle21.NullValue = null;
-            this.codigoProdutoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.codigoProdutoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.codigoProdutoDataGridViewTextBoxColumn.HeaderText = "CODIGO";
             this.codigoProdutoDataGridViewTextBoxColumn.Name = "codigoProdutoDataGridViewTextBoxColumn";
             this.codigoProdutoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -642,9 +629,9 @@
             // quantidadesaborDataGridViewTextBoxColumn
             // 
             this.quantidadesaborDataGridViewTextBoxColumn.DataPropertyName = "quantidade_sabor";
-            dataGridViewCellStyle22.Format = "N0";
-            dataGridViewCellStyle22.NullValue = null;
-            this.quantidadesaborDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = null;
+            this.quantidadesaborDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.quantidadesaborDataGridViewTextBoxColumn.HeaderText = "QUANTIDADE";
             this.quantidadesaborDataGridViewTextBoxColumn.Name = "quantidadesaborDataGridViewTextBoxColumn";
             this.quantidadesaborDataGridViewTextBoxColumn.ReadOnly = true;
@@ -652,9 +639,9 @@
             // codigoCategoriaDataGridViewTextBoxColumn
             // 
             this.codigoCategoriaDataGridViewTextBoxColumn.DataPropertyName = "codigo_Categoria";
-            dataGridViewCellStyle23.Format = "N0";
-            dataGridViewCellStyle23.NullValue = null;
-            this.codigoCategoriaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.NullValue = null;
+            this.codigoCategoriaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.codigoCategoriaDataGridViewTextBoxColumn.HeaderText = "CODIGO";
             this.codigoCategoriaDataGridViewTextBoxColumn.Name = "codigoCategoriaDataGridViewTextBoxColumn";
             this.codigoCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
@@ -869,13 +856,13 @@
             this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFechar.BackColor = System.Drawing.Color.Transparent;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(1249, 7);
+            this.btnFechar.Location = new System.Drawing.Point(1248, 6);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.Size = new System.Drawing.Size(22, 22);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnFechar.TabIndex = 45;
+            this.btnFechar.TabIndex = 73;
             this.btnFechar.TabStop = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.btnFechar.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // lblData
             // 
@@ -1048,9 +1035,8 @@
         private System.Windows.Forms.Label lblNomeDocliente;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txbDesconto;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button btnIncluirDesconto;
+        private System.Windows.Forms.Button btnConsultarPedido;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -1072,12 +1058,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bairroClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn complementeClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadesaborDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoCategoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox btnFechar;
     }
 }
