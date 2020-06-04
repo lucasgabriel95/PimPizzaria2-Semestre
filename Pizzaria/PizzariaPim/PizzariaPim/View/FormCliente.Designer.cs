@@ -525,9 +525,10 @@
             this.ClientSize = new System.Drawing.Size(742, 534);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCliente";
+            this.Text = "Clientes";
             this.Load += new System.EventHandler(this.FormCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

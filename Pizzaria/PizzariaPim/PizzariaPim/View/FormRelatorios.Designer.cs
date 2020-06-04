@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRelatorios));
             this.cbSatisfacao = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
@@ -73,17 +73,17 @@
             this.lblQuantidadeVendas = new System.Windows.Forms.Label();
             this.lblMenssagem = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Calendario2 = new System.Windows.Forms.DateTimePicker();
+            this.Calendario1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cad_Intens_Venda_INNER_JOINTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_Intens_Venda_INNER_JOINTableAdapter();
             this.cad_Venda_INNER_JOINTableAdapter = new PizzariaPim.BDpizzariaDataSetTableAdapters.Cad_Venda_INNER_JOINTableAdapter();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Calendario1 = new System.Windows.Forms.DateTimePicker();
-            this.Calendario2 = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadVendaINNERJOINBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).BeginInit();
@@ -191,8 +191,8 @@
             // codigoVendaDataGridViewTextBoxColumn1
             // 
             this.codigoVendaDataGridViewTextBoxColumn1.DataPropertyName = "Codigo_Venda";
-            dataGridViewCellStyle25.NullValue = null;
-            this.codigoVendaDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.NullValue = null;
+            this.codigoVendaDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             this.codigoVendaDataGridViewTextBoxColumn1.HeaderText = "COD.";
             this.codigoVendaDataGridViewTextBoxColumn1.Name = "codigoVendaDataGridViewTextBoxColumn1";
             this.codigoVendaDataGridViewTextBoxColumn1.ReadOnly = true;
@@ -201,9 +201,9 @@
             // valorDataGridViewTextBoxColumn
             // 
             this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
-            dataGridViewCellStyle26.Format = "N2";
-            dataGridViewCellStyle26.NullValue = null;
-            this.valorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.valorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.valorDataGridViewTextBoxColumn.HeaderText = "VALOR TOTAL";
             this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
             this.valorDataGridViewTextBoxColumn.ReadOnly = true;
@@ -212,9 +212,9 @@
             // descontoDataGridViewTextBoxColumn
             // 
             this.descontoDataGridViewTextBoxColumn.DataPropertyName = "Desconto";
-            dataGridViewCellStyle27.Format = "N2";
-            dataGridViewCellStyle27.NullValue = null;
-            this.descontoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.descontoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.descontoDataGridViewTextBoxColumn.HeaderText = "DESCONTO";
             this.descontoDataGridViewTextBoxColumn.Name = "descontoDataGridViewTextBoxColumn";
             this.descontoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -223,9 +223,9 @@
             // valorpagoDataGridViewTextBoxColumn
             // 
             this.valorpagoDataGridViewTextBoxColumn.DataPropertyName = "Valor_pago";
-            dataGridViewCellStyle28.Format = "N2";
-            dataGridViewCellStyle28.NullValue = null;
-            this.valorpagoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.valorpagoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.valorpagoDataGridViewTextBoxColumn.HeaderText = "VALOR PAGO";
             this.valorpagoDataGridViewTextBoxColumn.Name = "valorpagoDataGridViewTextBoxColumn";
             this.valorpagoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -234,8 +234,8 @@
             // codigoClienteDataGridViewTextBoxColumn
             // 
             this.codigoClienteDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Cliente";
-            dataGridViewCellStyle29.NullValue = null;
-            this.codigoClienteDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle5.NullValue = null;
+            this.codigoClienteDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.codigoClienteDataGridViewTextBoxColumn.HeaderText = "COD. CLIENTE";
             this.codigoClienteDataGridViewTextBoxColumn.Name = "codigoClienteDataGridViewTextBoxColumn";
             this.codigoClienteDataGridViewTextBoxColumn.ReadOnly = true;
@@ -252,8 +252,8 @@
             // statusVendaDataGridViewTextBoxColumn
             // 
             this.statusVendaDataGridViewTextBoxColumn.DataPropertyName = "Status_Venda";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.statusVendaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.statusVendaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.statusVendaDataGridViewTextBoxColumn.HeaderText = "STATUS DA VENDA";
             this.statusVendaDataGridViewTextBoxColumn.Name = "statusVendaDataGridViewTextBoxColumn";
             this.statusVendaDataGridViewTextBoxColumn.ReadOnly = true;
@@ -262,9 +262,9 @@
             // dataVendaDataGridViewTextBoxColumn
             // 
             this.dataVendaDataGridViewTextBoxColumn.DataPropertyName = "data_Venda";
-            dataGridViewCellStyle31.Format = "g";
-            dataGridViewCellStyle31.NullValue = null;
-            this.dataVendaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle7.Format = "g";
+            dataGridViewCellStyle7.NullValue = null;
+            this.dataVendaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataVendaDataGridViewTextBoxColumn.HeaderText = "DATA DA VENDA";
             this.dataVendaDataGridViewTextBoxColumn.Name = "dataVendaDataGridViewTextBoxColumn";
             this.dataVendaDataGridViewTextBoxColumn.ReadOnly = true;
@@ -360,9 +360,9 @@
             // valorUnitarioDataGridViewTextBoxColumn
             // 
             this.valorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "Valor_Unitario";
-            dataGridViewCellStyle32.Format = "N2";
-            dataGridViewCellStyle32.NullValue = null;
-            this.valorUnitarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.valorUnitarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.valorUnitarioDataGridViewTextBoxColumn.HeaderText = "VALOR ";
             this.valorUnitarioDataGridViewTextBoxColumn.Name = "valorUnitarioDataGridViewTextBoxColumn";
             this.valorUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
@@ -485,6 +485,49 @@
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 8;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(14, 101);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 15);
+            this.label9.TabIndex = 80;
+            this.label9.Text = "Data Final";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(14, 53);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 15);
+            this.label8.TabIndex = 79;
+            this.label8.Text = "Data Inicial";
+            // 
+            // Calendario2
+            // 
+            this.Calendario2.Location = new System.Drawing.Point(17, 119);
+            this.Calendario2.Name = "Calendario2";
+            this.Calendario2.Size = new System.Drawing.Size(200, 23);
+            this.Calendario2.TabIndex = 78;
+            this.Calendario2.ValueChanged += new System.EventHandler(this.Calendario2_ValueChanged);
+            // 
+            // Calendario1
+            // 
+            this.Calendario1.Location = new System.Drawing.Point(17, 71);
+            this.Calendario1.Name = "Calendario1";
+            this.Calendario1.Size = new System.Drawing.Size(200, 23);
+            this.Calendario1.TabIndex = 77;
+            this.Calendario1.ValueChanged += new System.EventHandler(this.Caledario1_ValueChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(-16, -16);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 76;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
@@ -544,49 +587,6 @@
             // 
             this.cad_Venda_INNER_JOINTableAdapter.ClearBeforeFill = true;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(-16, -16);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 76;
-            // 
-            // Calendario1
-            // 
-            this.Calendario1.Location = new System.Drawing.Point(17, 71);
-            this.Calendario1.Name = "Calendario1";
-            this.Calendario1.Size = new System.Drawing.Size(200, 23);
-            this.Calendario1.TabIndex = 77;
-            this.Calendario1.ValueChanged += new System.EventHandler(this.Caledario1_ValueChanged);
-            // 
-            // Calendario2
-            // 
-            this.Calendario2.Location = new System.Drawing.Point(17, 119);
-            this.Calendario2.Name = "Calendario2";
-            this.Calendario2.Size = new System.Drawing.Size(200, 23);
-            this.Calendario2.TabIndex = 78;
-            this.Calendario2.ValueChanged += new System.EventHandler(this.Calendario2_ValueChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(14, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 15);
-            this.label8.TabIndex = 79;
-            this.label8.Text = "Data Inicial";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(14, 101);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 15);
-            this.label9.TabIndex = 80;
-            this.label9.Text = "Data Final";
-            // 
             // FormRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -594,9 +594,9 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRelatorios";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormRelatorios";
+            this.Text = "Relatorios";
             this.Load += new System.EventHandler(this.FormRelatorios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgGride)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadVendaINNERJOINBindingSource)).EndInit();

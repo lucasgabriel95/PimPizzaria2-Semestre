@@ -350,15 +350,16 @@
             // 
             // cbCategoria
             // 
-            this.cbCategoria.DataSource = this.cad_CategoriasBindingSource;
-            this.cbCategoria.DisplayMember = "descricao_Categoria";
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Items.AddRange(new object[] {
+            "Bebidas",
+            "Pizzas",
+            "Todos"});
             this.cbCategoria.Location = new System.Drawing.Point(379, 29);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(121, 23);
             this.cbCategoria.TabIndex = 63;
-            this.cbCategoria.ValueMember = "codigo_Categoria";
             this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
             // label2
@@ -443,9 +444,10 @@
             this.ClientSize = new System.Drawing.Size(696, 495);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormProdutos";
+            this.Text = "Produtos";
             this.Load += new System.EventHandler(this.FormProdutos_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.bDpizzariaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cad_ProdutosBindingSource)).EndInit();

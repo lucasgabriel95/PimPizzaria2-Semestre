@@ -1,4 +1,5 @@
 ﻿using PizzariaPim.Control;
+using PizzariaPim.Geral.Formatar_Dados;
 using PizzariaPim.Model.Bebidas;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace PizzariaPim.View
             InitializeComponent();
             AlterarBotoes(2);
         }
+       
         public static void Moeda(ref TextBox txt)
         {
             String n = string.Empty;
@@ -34,8 +36,9 @@ namespace PizzariaPim.View
 
                     n = n.Substring(1, n.Length - 1);
                 v = Convert.ToDouble(n) / 100;
-                txt.Text = String.Format("{2:N}", v);
+                txt.Text = String.Format("{0:N}", v);
                 txt.SelectionStart = txt.Text.Length;
+
             }
             catch (Exception)
             {
@@ -61,21 +64,21 @@ namespace PizzariaPim.View
         String Categoria;
         public void Localizar()
         {
-           if (cbCategoria.Text == "Bebidas")
-           {
+            if (cbCategoria.Text == "Bebidas")
+            {
                 Categoria = "1";
-           }
-           else if (cbCategoria.Text == "Pizzas")
-           {
+            }
+            else if (cbCategoria.Text == "Pizzas")
+            {
                 Categoria = "2";
-           }
-           else
-           {
+            }
+            else
+            {
                 Categoria = "";
-           }
-            
+            }
+
             ComandosProdutos cf = new ComandosProdutos();
-            dgGride.DataSource = cf.LocalizarDescricao(txbNome.Text,Categoria);            
+            dgGride.DataSource = cf.LocalizarDescricao(txbNome.Text, Categoria);
         }
 
         public void AlterarBotoes(int op)
@@ -232,7 +235,7 @@ namespace PizzariaPim.View
             }
         }
        
-
+         
         private void dgGride_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0)
@@ -248,9 +251,10 @@ namespace PizzariaPim.View
             txbNome.Text = dados.Nome;
             txbDescricao.Text = dados.Descricao;
             txbQuantidade.Text = dados.Quantidade.ToString();
-            txbValor.Text = dados.Valor.ToString();
+            txbValor.Text = dados.Valor.ToString("N2");
             salvarEditar = "Alterar";
             AlterarBotoes(1);
+            
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -261,7 +265,7 @@ namespace PizzariaPim.View
         private void txbValor_TextChanged(object sender, EventArgs e)
         {
             Moeda(ref txbValor);
-            txbValor.Text = String.Format("{0:#,##0.00}", double.Parse(txbValor.Text));
+            
 
         }
 
@@ -280,7 +284,7 @@ namespace PizzariaPim.View
 
         private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Localizar();
         }
     }
 }
